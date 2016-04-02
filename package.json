@@ -1,0 +1,27 @@
+
+{
+  "name": "jekyll-portfolio",
+  "version": "0.0.1",
+  "description": "My new portfolio built in Jekyll with Gulp magicks for the sass, autoprefixer, browsersync stuffs",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Morten Christoffersen",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mortenc/portfolio-jekyll.git"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.9.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.6.0",
+  },
+  "bugs": {
+    "url": "https://github.com/mortenc/portfolio-jekyll/issues"
+  },
+  "homepage": "https://github.com/mortenc/portfolio-jekyll"
+}

@@ -1,0 +1,638 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"add",
+				"add	.add()"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"backgr",
+				"background"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"ine",
+				"inline-block"
+			],
+			[
+				"remove",
+				"removeClass	.removeClass()"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"play",
+				"playVideo"
+			],
+			[
+				"translat",
+				"translateX"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"background",
+				"background-image"
+			],
+			[
+				"u",
+				"uppercase"
+			],
+			[
+				"sidenav-widt",
+				"sidenav-width-large"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"text-",
+				"text-transform"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"has",
+				"hasClass	.hasClass()"
+			],
+			[
+				"fun",
+				"funcy"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "_config.yml",
+			"settings":
+			{
+				"buffer_size": 928,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/mortenchristoffersen/Development/git/mortenchristoffersen/mortenchristoffersen.sublime-project",
+			"settings":
+			{
+				"buffer_size": 45,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/head.html",
+			"settings":
+			{
+				"buffer_size": 786,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"isntal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 408.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/mortenchristoffersen/Development/personal/git/portfolio-jekyll",
+		"/Users/mortenchristoffersen/Development/personal/git/portfolio-jekyll/_includes",
+		"/Users/mortenchristoffersen/Development/personal/git/portfolio-jekyll/_sass",
+		"/Users/mortenchristoffersen/Development/personal/git/portfolio-jekyll/css"
+	],
+	"file_history":
+	[
+		"/Users/mortenchristoffersen/Desktop/Misc/Old DropBox/All/SBS Discovery Sweden/prototype/sbsdiscovery/sass/base/_base.scss",
+		"/Users/mortenchristoffersen/Development/personal/freckles/app/styles/styles.css",
+		"/Users/mortenchristoffersen/Desktop/styles.css",
+		"/Users/mortenchristoffersen/Development/personal/freckles/app/sitemap.xml",
+		"/Users/mortenchristoffersen/Development/personal/freckles/app/styles/scss/pages/_login.scss",
+		"/Users/mortenchristoffersen/Development/personal/freckles/app/styles/scss/config/_mixins.scss",
+		"/Users/mortenchristoffersen/Development/git/mortenchristoffersen/mortenchristoffersen.sublime-project",
+		"/Users/mortenchristoffersen/Desktop/index.html",
+		"/Users/mortenchristoffersen/Development/git/ffw-prototype/README.md",
+		"/Users/mortenchristoffersen/Development/git/ffw-prototype/.gitignore",
+		"/Users/mortenchristoffersen/Development/git/ffw-prototype/scss/base/_grid.scss",
+		"/Users/mortenchristoffersen/Development/git/ffw-prototype/scss/pages/_index.scss",
+		"/Users/mortenchristoffersen/Development/git/ffw-prototype/templates/blocks/block-example.twig",
+		"/Users/mortenchristoffersen/Development/git/ffw-prototype/scss/vendors/_chosen.scss",
+		"/Users/mortenchristoffersen/Development/git/ffw-prototype/scss/_styles-main.scss",
+		"/Users/mortenchristoffersen/Development/git/ffw-prototype/scss/blocks/_index-links.scss",
+		"/Users/mortenchristoffersen/Development/git/ffw-prototype/templates/blocks/index-links.twig",
+		"/Users/mortenchristoffersen/Desktop/button.scss",
+		"/Users/mortenchristoffersen/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/mortenchristoffersen/Development/git/maerskline/index.php",
+		"/Users/mortenchristoffersen/Development/git/maerskline/assets/scss/screen.scss",
+		"/Users/mortenchristoffersen/Development/git/maerskline/shipping-network.php",
+		"/Users/mortenchristoffersen/Development/git/maerskline/modules/entity.php",
+		"/Users/mortenchristoffersen/Development/git/maerskline/README.md",
+		"/Users/mortenchristoffersen/Development/git/maerskline/modules/header.php",
+		"/Users/mortenchristoffersen/Development/git/maerskline/gulpfile.js",
+		"/Users/mortenchristoffersen/Development/git/maerskline/front2.php",
+		"/Users/mortenchristoffersen/Development/git/maerskline/front.php",
+		"/Users/mortenchristoffersen/Development/git/maerskline/scss/base/_base.scss",
+		"/Users/mortenchristoffersen/Development/git/maerskline/js/base.js",
+		"/Users/mortenchristoffersen/Development/git/maerskline/scss/layouts/_shipping-network.scss",
+		"/Users/mortenchristoffersen/Development/git/maerskline/scss/modules/_header.scss",
+		"/Users/mortenchristoffersen/Development/git/maerskline/modules/front-twitter.php",
+		"/Users/mortenchristoffersen/Development/git/maerskline/modules/front-insights.php",
+		"/Users/mortenchristoffersen/Development/git/maerskline/scss/layouts/_front.scss",
+		"/Users/mortenchristoffersen/Development/git/maerskline/js/modules/shipping-network.js",
+		"/Users/mortenchristoffersen/Development/git/maerskline/scss/screen.scss",
+		"/Users/mortenchristoffersen/Development/git/maerskline/scss/modules/_action-panel.scss",
+		"/Users/mortenchristoffersen/Development/git/maerskline/modules/footer.php",
+		"/Users/mortenchristoffersen/Development/git/maerskline/scss/modules/_nav.scss",
+		"/Users/mortenchristoffersen/Development/git/maerskline/scss/modules/_cards.scss",
+		"/Users/mortenchristoffersen/Development/git/maerskline/modules/end.php",
+		"/Users/mortenchristoffersen/Development/git/maerskline/modules/head.php",
+		"/Users/mortenchristoffersen/Development/git/maerskline/scss/base/_variables.scss",
+		"/Users/mortenchristoffersen/Development/git/maerskline/scss/base/_fonts.scss",
+		"/Users/mortenchristoffersen/Development/git/maerskline/scss/layouts/_front--old.scss",
+		"/Users/mortenchristoffersen/Development/git/maerskline/scss/layouts/_front--new.scss",
+		"/Users/mortenchristoffersen/Development/git/maerskline/package.json",
+		"/Users/mortenchristoffersen/Development/git/maerskline/.gitignore",
+		"/Users/mortenchristoffersen/Development/git/maerskline/front--old.php",
+		"/Users/mortenchristoffersen/Development/git/maerskline/front--new.php",
+		"/Users/mortenchristoffersen/Development/git/maerskline/modules/livereload.php",
+		"/Users/mortenchristoffersen/Development/git/ppprototype/modules/head.php",
+		"/Users/mortenchristoffersen/Downloads/Sublime Text Yosemite Icon/Sublime Text.icns"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 106.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"no-touch",
+			"p",
+			"easeIn",
+			"pushEn",
+			"30px",
+			"date"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "_config.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 928,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								432,
+								432
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/YAML/YAML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/mortenchristoffersen/Development/git/mortenchristoffersen/mortenchristoffersen.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 45,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_includes/head.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 786,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 65.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "portfolio-jekyll.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"modules/entity.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"%.d:"
+			]
+		],
+		"width": 896.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 190.0,
+	"status_bar_visible": false,
+	"template_settings":
+	{
+	}
+}
