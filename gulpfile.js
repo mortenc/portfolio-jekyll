@@ -8,16 +8,16 @@ var gulp        	= require('gulp'),
 	childprocess	= require('child_process'),
 	src = {
 		scss: '_assets/scss/{,*/}*.{scss,sass}',
-		javascripts: '_assets/js/{,*/}*.js'
+		js: '_assets/js/{,*/}*.js'
 	};
 
-//Compile and minify Sass, generate sourceemaps, and place CSS in both root /assets/ folder and in _site/assets/ for reloading
+/**
+ * Compile and minify sass files + generate generate sourceemaps + place compiled css in both '/assets/' and '_site/assets/' for reloading
+ */
 gulp.task('sass', function () {
   gulp.src(src.scss)
   	.pipe(sourcemaps.init())
-    .pipe(sass({
-      errLogToConsole: true
-    }))
+    .pipe(sass())
     .on('error', function (err) {
     	browserSync.notify("Uh oh, there's an error!");
 		gutil.log(
@@ -39,7 +39,9 @@ gulp.task('sass', function () {
     }));
 });
 
-//Start BrowserSync to serve up site
+/**
+ * Start a BrowserSync server
+ */
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
@@ -48,7 +50,20 @@ gulp.task('browser-sync', function() {
     });
 });
 
-//Serve site and watch for changes
-gulp.task('serve', ['sass', 'browser-sync'], function () {
+/**
+ * Build Jekyll Site with an incremental build
+ */
+gulp.task('jekyll', function (done) {
+    browserSync.notify('Building Jekyll site...');
+    return childprocess.spawn('jekyll', ['build', '--incremental'], {stdio: 'inherit'})
+    .on('close', done);
+});
+
+/**
+ * Serve site, watch for changes and run tasks as needed
+ */
+gulp.task('serve', ['sass', 'jekyll', 'browser-sync'], function () {
     gulp.watch(src.scss, ['sass']);
+    gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '*.md', '_posts/*', '_projects/*'], ['jekyll']);
+	gulp.watch(['_site/**/*.html']).on('change', browserSync.reload);
 });
