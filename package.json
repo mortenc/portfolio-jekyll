@@ -14,11 +14,11 @@
     "url": "https://github.com/mortenc/portfolio-jekyll.git"
   },
   "devDependencies": {
-    "browser-sync": "^2.9.6",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-sass": "^2.0.4",
-    "gulp-sourcemaps": "^1.6.0",
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*"
   },
   "bugs": {
     "url": "https://github.com/mortenc/portfolio-jekyll/issues"
