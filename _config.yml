@@ -17,7 +17,7 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-exclude: ["*.sublime-project", "*.sublime-workspace", "gulpfile.js", "package.json", "node_modules", "README.md"]
+exclude: ["*.sublime-project", "*.sublime-workspace", "gulpfile.js", "package.json", "node_modules", "README.md", "assets/_src"]
 
 # Collections
 collections:

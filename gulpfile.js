@@ -5,18 +5,24 @@ var gulp        	= require('gulp'),
 	cssnano   		= require('gulp-cssnano'),
 	sourcemaps   	= require('gulp-sourcemaps'),
 	gutil   		= require('gulp-util'),
-	childprocess	= require('child_process'),
-	src = {
-		scss: '_assets/scss/{,*/}*.{scss,sass}',
-		js: '_assets/js/{,*/}*.js'
-	};
+	childprocess	= require('child_process');
+
+var src = {
+	scss: 'assets/_src/scss/{,*/}*.{scss,sass}',
+	js: 'assets/_src/js/{,*/}*.js'
+};
+
+var config = {
+	production: !!gutil.env.production
+};
 
 /**
  * Compile and minify sass files + generate generate sourceemaps + place compiled css in both '/assets/' and '_site/assets/' for reloading
+ * Passing --production flag disables sourcemaps
  */
 gulp.task('sass', function () {
   gulp.src(src.scss)
-  	.pipe(sourcemaps.init())
+  	.pipe(config.production ? gutil.noop() : sourcemaps.init()) // Skip sourcemaps if --production
     .pipe(sass())
     .on('error', function (err) {
     	browserSync.notify("Uh oh, there's an error!");
@@ -31,7 +37,7 @@ gulp.task('sass', function () {
     })
     .pipe(autoprefixer({browsers: ['last 2 versions', 'ie 9']}))
     .pipe(cssnano())
-    .pipe(sourcemaps.write())
+    .pipe(config.production ? gutil.noop() : sourcemaps.write()) // Skip sourcemaps if --production
     .pipe(gulp.dest('_site/assets/css'))
     .pipe(gulp.dest('assets/css'))
     .pipe(browserSync.reload({
