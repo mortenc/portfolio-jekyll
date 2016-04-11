@@ -15,11 +15,15 @@
   "devDependencies": {
     "browser-sync": "*",
     "gulp": "*",
-    "gulp-autoprefixer": "*",
+    "gulp-concat": "*",
     "gulp-cssnano": "*",
+    "gulp-filter": "*",
+    "gulp-jshint": "*",
     "gulp-sass": "*",
     "gulp-sourcemaps": "*",
-    "gulp-util": "*"
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "jshint": "*"
   },
   "bugs": {
     "url": "https://github.com/mortenc/portfolio-jekyll/issues"
