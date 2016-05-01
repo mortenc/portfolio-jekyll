@@ -1,7 +1,7 @@
 # mortenchristoffersen.com
 
 ##What's this?
-This, my friend, is the repo for a new version of my personal website, [mortenchristoffersen.com](http://mortenchristoffersen.com). I'm currently rebuilding the site in Jekyll as a learning experience.
+This is the repo for a new version of my personal website, [mortenchristoffersen.com](http://mortenchristoffersen.com). I'm currently rebuilding the site in Jekyll as a learning experience.
 
 ##Technologies:
 

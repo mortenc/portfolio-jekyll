@@ -58,7 +58,7 @@ gulp.task('sass', function () {
  * Passing --production flag disables sourcemaps
  */
 gulp.task('scripts', function () {
-    var excludeVendorFilter = filter(['**','!*assets/_src/js/vendor/*.js'], {restore: true});
+    var excludeVendorFilter = filter(['**','!*assets/_src/js/vendor/*.js'], {restore: true}); //Filter for excluding vendor js files from linting
 
     return gulp.src(src.js)
         .pipe(excludeVendorFilter)

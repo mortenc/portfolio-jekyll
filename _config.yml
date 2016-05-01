@@ -12,8 +12,8 @@ description: > # this means to ignore newlines until "baseurl:"
   Morten Christoffersen is a UX designer living in San Francisco, CA, and working as Creative Director, US, at FFW.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://mortenchristoffersen.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: morten_ec
+github_username:  mortenc
 
 # Build settings
 markdown: kramdown
