@@ -4,9 +4,24 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+<div class="hero"></div>
 
-  <ul class="post-list">
+  <h1 class="page-heading">Featured Work</h1>
+
+  <ul class="project-list">
+    {% for project in site.projects %}
+      <li class="project-list__project">
+        <span class="project-list__project__client">{{ project.client }}</span>
+
+        <h2>
+          <a class="project-list__project__title" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+
+<!--   <ul class="post-list">
     {% for post in site.posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -16,8 +31,6 @@ layout: default
         </h2>
       </li>
     {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  </ul> -->
 
 </div>
