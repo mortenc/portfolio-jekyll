@@ -3,13 +3,13 @@ layout: default
 ---
 <article class="project" itemscope itemtype="http://schema.org/CreativeWork">
 
-  <header class="project__header">
-    <h1 class="project__title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="project__meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
+	<header class="project__hero" style="background-image: url('{{ page.hero | prepend: site.baseurl }}')">
+	<!-- <h2 class="project__client">{{ page.client }}</h2> -->
+	<h1 class="project__title">{{ page.title }}</h1>
+	</header>
 
-  <div class="project__content">
-    {{ content }}
-  </div>
+	<div class="project__content">
+		<div class="wrapper">{{ content }}</div>
+	</div>
 
 </article>

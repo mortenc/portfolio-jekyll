@@ -1,0 +1,52 @@
+.project {
+	&__hero {
+		display: block;
+		overflow: hidden;
+		background-size: cover;
+		height: 800px;
+		max-width: 100%;
+		background-color: blue;
+		background-blend-mode: multiply;
+	}
+	&__title {
+		color: white;
+		display: block;
+		font-size: 4.815em;
+		font-weight: 800;
+		line-height: 1.125;
+		max-width: 50%;
+		//text-transform: uppercase;
+		//font-style: italic;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		font-family: $headings-font-family;
+		border-bottom: 5px solid white;
+		padding: 1em 0 0 1em;
+		margin-bottom: 1em;
+	}
+	&__client {
+		//color: white;
+	}
+
+	// h1 {
+	// 	font-size: 4.768em;
+	// 	font-family: $headings-font-family;
+	// 	font-weight: 800;
+	// 	//font-style: italic;
+	// 	line-height: 1.125;
+	// 	//text-transform: uppercase;
+	// 	padding: 1em 0 .5em 0;
+	// 	color: #eee;
+	// 	margin-left: -2em;
+
+	// }
+
+	h2 {
+		font-family: $headings-font-family;
+		font-size: 1.953em;
+		text-align: center;
+		padding-top: 2em;
+	}
+}
