@@ -5,10 +5,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-
-
     display: none;
-
 
     &__nav {
         float: right;
@@ -30,6 +27,6 @@
  * Site footer
  */
 .footer {
-    padding: $spacing-unit 0;
+    padding: $base-line-height 0;
 }
 

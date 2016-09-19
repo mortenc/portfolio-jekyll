@@ -4,18 +4,23 @@ layout: default
 
 <div class="home">
 
-<div class="hero"></div>
-
-  <h1 class="page-heading">Featured Work</h1>
+  <div class="intro">
+    <div class="intro__name">
+      <h1>Morten Christoffersen</h1>
+    </div>
+    <div class="intro__blurb">
+      <h2>UX & Design Director with a passion for problem-solving and digital technologies.</h2>
+    </div>
+    <div class="intro__desc">
+      <p>I work as Creative Director, US at FFW Agency. I believe that the best digital products are made, when we break down the silos between design and development, and instead focus our collective attention on creating intriguing experiences and interactions.</p>
+    </div>
+  </div>
 
   <ul class="project-list">
     {% for project in site.projects %}
       <li class="project-list__project">
         <span class="project-list__project__client">{{ project.client }}</span>
-
-        <h2>
-          <a class="project-list__project__title" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
-        </h2>
+        <a class="project-list__project__title" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
       </li>
     {% endfor %}
   </ul>

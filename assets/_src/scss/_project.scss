@@ -1,52 +1,154 @@
 .project {
+	.sidenav {
+		position: fixed;
+		height: 100%;
+		width: $base-line-height*2;
+		border-right: 1px solid rgba(white,0.1);
+		z-index: 200;
+	}
 	&__hero {
 		display: block;
+		position: relative;
 		overflow: hidden;
 		background-size: cover;
-		height: 800px;
+		background-position: center right;
+		height: 100vh;
 		max-width: 100%;
-		background-color: blue;
-		background-blend-mode: multiply;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: black;
+			z-index: 100;
+			opacity: .4;
+		}
+
+		&__overlay {
+			top: 0;
+			left: 0;
+			right: 50%;
+			bottom: $base-line-height * 6;
+			position: absolute;
+			padding-left: $base-line-height*2;
+			opacity: 1;
+			border-right: 1px solid rgba(white,0.1);
+			z-index: 200;
+		}
 	}
 	&__title {
-		color: white;
-		display: block;
-		font-size: 4.815em;
-		font-weight: 800;
-		line-height: 1.125;
-		max-width: 50%;
-		//text-transform: uppercase;
-		//font-style: italic;
 		position: absolute;
 		bottom: 0;
-		left: 0;
-		z-index: 2;
-		font-family: $headings-font-family;
-		border-bottom: 5px solid white;
-		padding: 1em 0 0 1em;
-		margin-bottom: 1em;
+		color: white;
+		font-size: 5.063rem;
+		font-weight: 100;
+		line-height: $base-line-height * 3;
+		padding: $base-line-height $base-line-height*2;
 	}
+	&__info {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		right: 0;
+		padding-left: $base-line-height*2;
+		border-top: 1px solid rgba(white,0.1);
+		z-index: 300;
+
+		li {
+			color: white;
+			display: block;
+			float: left;
+			padding: $base-line-height*2;
+
+			&+ li {
+				//padding-left: $base-line-height*2;
+			}
+		}
+
+		span {
+			display: block;
+			text-transform: uppercase;
+			letter-spacing: .25rem;
+			font-size: 0.6rem;
+			font-weight: bold;
+		}
+	}
+
 	&__client {
-		//color: white;
 	}
+	&__content {
+		@include outer-container;
+		padding-top: $base-line-height*2;
 
-	// h1 {
-	// 	font-size: 4.768em;
-	// 	font-family: $headings-font-family;
-	// 	font-weight: 800;
-	// 	//font-style: italic;
-	// 	line-height: 1.125;
-	// 	//text-transform: uppercase;
-	// 	padding: 1em 0 .5em 0;
-	// 	color: #eee;
-	// 	margin-left: -2em;
+		p, h1, h2 {
+			@include span-columns(6);
+			@include shift(3);
+			@include omega();
+		}
 
-	// }
+		h1 {
+		  font-size: 3.375rem;
+		  font-weight: 400;
+		  line-height: $base-line-height * 2.5;
+		  border-bottom: 1px solid lighten($text-color, 65%);
+		  padding-bottom: $base-line-height;
+		}
 
-	h2 {
-		font-family: $headings-font-family;
-		font-size: 1.953em;
-		text-align: center;
-		padding-top: 2em;
+		* + h1 {
+		    margin-top: $base-line-height * 5;
+		}
+
+		h1 + * {
+		    margin-top: $base-line-height * 1.75 !important;
+		}
+
+		h2 {
+		  font-size: 1.5rem;
+		  font-weight: 500;
+		  line-height: $base-line-height * 1.75;
+		  @include span-columns(12);
+		}
+
+		* + h2 {
+		  margin-top: $base-line-height * 2;
+		}
+
+		h3 {
+		  font-size: 0.75rem;
+		  text-transform: uppercase;
+		  letter-spacing: .1rem;
+		  line-height: $base-line-height;
+
+		  &::before {
+		    display: inline-block;
+		    content:"";
+		    height: 1px;
+		    width: 2rem;
+		    margin-right: 1rem;
+		    background-color: blue;
+		    vertical-align: middle;
+		  }
+		}
+
+		* + h3 {
+		  margin-top: $base-line-height * 1.5;
+		}
+
+		* + h4, * + h5 {
+		  margin-top: $base-line-height * 1;
+		}
+
+		* + p, * + ul, * + ol, * + li {
+		  margin-top: $base-line-height / 2;
+		}
+
+		//Lists
+		ul,ol {
+		  list-style-position: inside;
+		  margin-left: $base-line-height;
+		}
 	}
 }

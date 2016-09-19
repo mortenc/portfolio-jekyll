@@ -1,0 +1,50 @@
+/**
+ * Front page
+ */
+.intro {
+    &__name {
+        @include outer-container;
+        padding: $base-line-height 0;
+
+        h1 {
+            font-size: 0.667rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: .25rem;
+        }
+    }
+
+    &__blurb {
+        @include outer-container;
+
+        h2 {
+            @include span-columns(7);
+            font-size: 2rem;
+            font-weight: 100;
+            line-height: 1.2;
+            color: white;
+        }
+        &::before {
+            content:"";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            opacity: .05;
+        }
+    }
+    &__desc {
+    @include outer-container;
+        p {
+            @include span-columns(5);
+            @include shift(7);
+            @include omega();
+            color: white;
+            font-size: 1.25rem;
+        }
+    }
+}
+
