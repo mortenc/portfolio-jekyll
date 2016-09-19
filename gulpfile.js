@@ -9,6 +9,7 @@ var gulp            = require('gulp'),
     sass            = require('gulp-sass'),
     sourcemaps      = require('gulp-sourcemaps'),
     uglify          = require('gulp-uglify');
+    neat            = require("bourbon-neat").includePaths
 
 var src = {
     scss: 'assets/_src/scss/{,*/}*.{scss,sass}',
@@ -27,7 +28,9 @@ var config = {
 gulp.task('sass', function () {
     return gulp.src(src.scss)
         .pipe(config.production ? gutil.noop() : sourcemaps.init()) // Skip sourcemaps if --production
-        .pipe(sass())
+        .pipe(sass({
+            includePaths: ['styles'].concat(neat)
+        }))
         .on('error', function (err) {
             browserSync.notify("Uh oh, there's an error!");
             gutil.log(
@@ -89,6 +92,7 @@ gulp.task('scripts', function () {
 });
 
 /**
+ * $ gulp browser-sync
  * Start a BrowserSync server
  */
 gulp.task('browser-sync', function() {
@@ -100,6 +104,7 @@ gulp.task('browser-sync', function() {
 });
 
 /**
+ * $ gulp jekyll
  * Build Jekyll Site with an incremental build
  */
 gulp.task('jekyll', function (done) {
@@ -109,6 +114,7 @@ gulp.task('jekyll', function (done) {
 });
 
 /**
+ * $ gulp serve
  * Serve site, watch for changes and run tasks as needed
  */
 gulp.task('serve', ['sass', 'scripts', 'jekyll', 'browser-sync'], function () {

@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/mortenc/portfolio-jekyll/issues"
   },
-  "homepage": "https://github.com/mortenc/portfolio-jekyll"
+  "homepage": "https://github.com/mortenc/portfolio-jekyll",
+  "dependencies": {
+    "bourbon-neat": "^1.8.0"
+  }
 }
