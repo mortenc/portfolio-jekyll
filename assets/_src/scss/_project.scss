@@ -1,19 +1,46 @@
 .project {
 	.sidenav {
-		position: fixed;
-		height: 100%;
+		position: absolute;
+		height: $base-line-height*4;
 		width: $base-line-height*2;
 		border-right: 1px solid rgba(white,0.1);
-		z-index: 200;
+		z-index: 1000;
+		transition: background-color ease-in-out 0.335s;
+
+		@include media($xlarge) {
+			position: fixed;
+			height: 100%;
+		}
+
+		&:hover {
+				background-color: white;
+		}
+
+		a {
+			display: block;
+			color: white;
+			text-align: right;
+			padding-right: $base-line-height*2;
+			transform-origin: right top;
+			transform: rotate(-90deg) translateY(-150%);
+
+		}
 	}
 	&__hero {
-		display: block;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
 		position: relative;
 		overflow: hidden;
 		background-size: cover;
-		background-position: center right;
-		height: 100vh;
+		background-position: center;
+		min-height: 85vh;
 		max-width: 100%;
+
+		@include media($xlarge) {
+			background-position: center right;
+			min-height: 100vh;
+		}
 
 		&::after {
 			content: "";
@@ -27,46 +54,63 @@
 			opacity: .4;
 		}
 
-		&__overlay {
-			top: 0;
-			left: 0;
-			right: 50%;
-			bottom: $base-line-height * 6;
-			position: absolute;
-			padding-left: $base-line-height*2;
-			opacity: 1;
-			border-right: 1px solid rgba(white,0.1);
-			z-index: 200;
-		}
+		// &__overlay {
+		// 	top: 0;
+		// 	left: 0;
+		// 	right: 30%;
+		// 	bottom: $base-line-height * 6;
+		// 	position: absolute;
+		// 	padding-left: $base-line-height*2;
+		// 	opacity: 1;
+		// 	border-right: 1px solid rgba(white,0.1);
+		// 	z-index: 200;
+		// }
 	}
 	&__title {
-		position: absolute;
-		bottom: 0;
+		// position: absolute;
+		// bottom: 0;
 		color: white;
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: $base-line-height * 3;
-		padding: $base-line-height $base-line-height*2;
-		letter-spacing: -4px;
+		font-size: ms(3);
+		font-weight: 800;
+		line-height: $base-line-height * 2.5;
+		padding: $base-line-height;
+		letter-spacing: -0.04em;
+		z-index: 300;
+
+		@include media($xlarge) {
+			width: 70%;
+			font-size: ms(6);
+			line-height: $base-line-height * 4;
+			padding: $base-line-height $base-line-height*3.5 $base-line-height;
+		}
 	}
 	&__info {
-		position: absolute;
-		width: 100%;
-		bottom: 0;
-		right: 0;
-		padding-left: $base-line-height*2;
+		// position: absolute;
+		// width: 100%;
+		// bottom: 0;
+		// right: 0;
+		//padding-left: $base-line-height*2;
 		border-top: 1px solid rgba(white,0.1);
 		z-index: 300;
+
+		@include media($xlarge) {
+			padding-left: $base-line-height*2;
+		}
 
 		li {
 			color: white;
 			display: block;
 			float: left;
-			padding: $base-line-height*2;
-			font-weight: 500;
+			width: 50%;
+			padding: $base-line-height;
+			font-weight: 600;
 
-			&+ li {
-				//padding-left: $base-line-height*2;
+			@include media($xlarge) {
+				width: auto;
+				padding: $base-line-height*2;
+				&+ li {
+					padding-left: $base-line-height*2;
+				}
 			}
 		}
 
@@ -74,16 +118,18 @@
 			display: block;
 			text-transform: uppercase;
 			letter-spacing: .4em;
-			font-size: 0.7rem;
+			font-size: ms(-1);
 			font-weight: 500;
 		}
 	}
 
-	&__client {
-	}
 	&__content {
 		@include outer-container;
-		padding-top: $base-line-height*2;
+		padding: $base-line-height*2 $base-line-height;
+
+		@include media($xlarge) {
+			//padding-top: $base-line-height*2.5;
+		}
 
 		h1, h2, h3, h4, h5, h6 {
 		  font-weight: 700;
@@ -91,13 +137,15 @@
 		}
 
 		p, h1, h2 {
-			@include span-columns(6);
-			@include shift(3);
-			@include omega();
+			@include media($xlarge) {
+				@include span-columns(6);
+				@include shift(3);
+				@include omega();
+			}
 		}
 
 		h1 {
-		  font-size: 3.375rem;
+		  font-size: ms(3);
 		  line-height: $base-line-height * 2.5;
 		  border-bottom: 1px solid lighten($text-color, 65%);
 		  padding-bottom: $base-line-height;
@@ -112,9 +160,23 @@
 		}
 
 		h2 {
-		  font-size: 2rem;
-		  line-height: $base-line-height * 1.75;
-		  @include span-columns(12);
+			@include span-columns(11);
+			@include shift(1);
+		  font-size: ms(2);
+		  line-height: $base-line-height * 1.5;
+			position: relative;
+
+			&:after {
+				content: " ";
+				display: block;
+				position: absolute;
+				top: 50%;
+				transform: translateX(-200%);
+				width: $base-line-height;
+				height: 1px;
+				background: $grey-light;
+				opacity: 0.25;
+			}
 		}
 
 		* + h2 {
@@ -122,7 +184,7 @@
 		}
 
 		h3 {
-		  font-size: 0.75rem;
+		  font-size: ms(-1);
 		  text-transform: uppercase;
 		  letter-spacing: .1rem;
 		  line-height: $base-line-height;
@@ -148,6 +210,29 @@
 
 		* + p, * + ul, * + ol, * + li {
 		  margin-top: $base-line-height / 2;
+		}
+
+		p {
+			&:first-child {
+				font-size: ms(1);
+				line-height: $base-line-height*1.25;
+				color: $grey-light;
+
+				@include media($xlarge) {
+					@include span-columns(8);
+					@include shift(1);
+				}
+
+				&:first-letter {
+					float: left;
+					font-size: ms(5);
+					line-height: 4rem;
+					padding-top: 0.25rem;
+					padding-right: 10px;
+					color: darken($text-color, 10%);
+					font-weight: 600;
+				}
+			}
 		}
 
 		//Lists

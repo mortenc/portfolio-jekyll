@@ -24,6 +24,8 @@ In order to uncover potential technological solutions I dug into researching the
 
 A deciding factor for choosing a solution was speed – if the scanning process was not fast, it would not help YMCA solve their issues during peak hours. So while our developer began to set up to performance tests for both software and hardware scanning, I began mapping out user flows and sketching initial designs for both scenarios.
 
+![YMCA prototype](/assets/img/ymca-prototype-video-thumb.jpg)
+
 Prototyping the Flows and Interactions
 --------------------------------------
 As I worked on the initial mockups of the app, I began to prototype the various user flows using [Principle](http://principleformac.com/). This allowed me to quickly put together a working prototype, so we could test the interactions in the app on an actual device.
