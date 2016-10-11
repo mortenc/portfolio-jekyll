@@ -1,50 +1,106 @@
 /**
  * Front page
  */
+.body--front {
+   //background-color: $grey;
+}
+.grid {
+  @include outer-container;
+  //position: relative;
+  &__line {
+    position: absolute;
+    left: 0;
+    top: $base-line-height*4;
+    width: 100vw;
+    height: 1px;
+    background-color: white;
+    opacity: .05;
+  }
+}
+.front {
+  //@include outer-container;
+  padding: 0 $base-line-height;
+  background-color: $grey;
+  min-height:100vh;
+  margin-left: 10%;
+
+  @include media($xlarge) {
+    padding: 0 $base-line-height*3;
+  }
+}
 .intro {
-    &__name {
-        @include outer-container;
-        padding: $base-line-height 0;
-
-        h1 {
-            font-size: 0.667rem;
-            font-weight: 700;
-            line-height: 1.2;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: .25rem;
-        }
+  @include row();
+  &__name {
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: .4em;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding-top: $base-line-height*2;
+      color: white;
+      opacity: .5;
     }
+  }
 
-    &__blurb {
-        @include outer-container;
+  &__blurb {
+    @include row();
+    h2 {
+      margin-top: $base-line-height;
+      font-size: ms(2);
+      line-height: $base-line-height * 1.5;
+      color: white;
 
-        h2 {
-            @include span-columns(7);
-            font-size: 2rem;
-            font-weight: 100;
-            line-height: 1.2;
-            color: white;
-        }
-        &::before {
-            content:"";
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background-color: white;
-            opacity: .05;
-        }
+      @include media($medium) {
+        @include span-columns(5);
+        @include omega();
+      }
+      @include media($large) {
+        margin-top: $base-line-height*2;
+        font-size: ms(3);
+        line-height: $base-line-height * 1.75;
+      }
+      @include media($xlarge) {
+        @include span-columns(4);
+        @include omega();
+      }
+      @include media($xxlarge) {
+        @include span-columns(5);
+        @include omega();
+        font-weight: 400;
+        font-size: ms(5);
+        line-height: $base-line-height * 3;
+      }
     }
-    &__desc {
-    @include outer-container;
-        p {
-            @include span-columns(5);
-            @include shift(7);
-            @include omega();
-            color: white;
-            font-size: 1.25rem;
-        }
+    // &::before {
+    //     content:"";
+    //     position: absolute;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 1px;
+    //     background-color: white;
+    //     opacity: .05;
+    // }
+  }
+  &__desc {
+    @include row();
+    margin-top: $base-line-height*1.5;
+    p {
+      color: white;
+      opacity: .75;
+      @include media($medium) {
+        @include span-columns(7);
+        @include shift(5);
+        @include omega();
+      }
+      @include media($xlarge) {
+        @include span-columns(8);
+        @include shift(4);
+      }
     }
+  }
 }
 
+.project-list {
+  @include outer-container;
+  margin-top: $base-line-height;
+}
