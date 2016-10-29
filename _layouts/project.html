@@ -5,19 +5,21 @@ bodyclass: 'body--project'
 <article class="project" itemscope itemtype="http://schema.org/CreativeWork">
 	<nav class="sidenav"><a href="/">Back</a></nav>
 	<header class="project__hero" style="background-image: url('{{ page.hero | prepend: site.baseurl }}')">
+
+		{% include visual-grid.html lines="1,10,13" %}
+
 		<h1 class="project__title">{{ page.title }}</h1>
 		<ul class="project__info">
 			<li class="project__client"><span>Client</span>{{ page.client }}</li>
 			<li class="project__role"><span>Role</span>{{ page.role }}</li>
-			<li class="project__year"><span>Year</span>{{ page.year }}</li>
 			<li class="project__employer"><span>Employer</span>{{ page.employer }}</li>
+			<li class="project__year"><span>Year</span>{{ page.year }}</li>
 		</ul>
-		<!-- <div class ="project__hero__overlay">
-		</div> -->
 	</header>
 
 	<div class="project__content">
 		{{ content }}
+		{% include visual-grid.html lines="1" dark="true" %}
 	</div>
 
 </article>
