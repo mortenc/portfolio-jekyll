@@ -44,7 +44,8 @@ gulp.task('sass', function () {
             this.emit('end');
         })
         .pipe(cssnano({
-                autoprefixer: {browsers: ['last 2 versions', 'ie 9'], add: true}
+                autoprefixer: {browsers: ['last 2 versions', 'ie 9'], add: true},
+                zindex: false
             }))
         .pipe(config.production ? gutil.noop() : sourcemaps.write()) // Skip sourcemaps if --production
         .pipe(gulp.dest('_site/assets/css'))
