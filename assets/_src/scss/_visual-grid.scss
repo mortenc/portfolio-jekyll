@@ -1,0 +1,43 @@
+/**
+ * Grid component
+ */
+
+$line-style: 1px solid rgba(white,.15);
+
+.grid {
+  $root: &;
+
+  @include outer-container;
+  pointer-events: none;
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+
+  &__line {
+    @include span-columns(1);
+    border-left: $line-style;
+    height: 100%;
+    position: absolute;
+
+    @for $i from 2 through 12 {
+      &--#{$i} {
+        @include shift($i - 1);
+      }
+    }
+
+    &--13 {
+      @include shift(11);
+      border-left: none;
+      border-right: $line-style;
+    }
+  }
+
+  &--dark {
+    #{$root}__line {
+      border-color: rgba(black,.05);
+    }
+  }
+}

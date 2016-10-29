@@ -2,10 +2,13 @@
 layout: default
 bodyclass: 'body--front'
 ---
-<div class="grid">
-  <<div class="grid__line"></div></div>
-<div class="front">
+{% include visual-grid.html lines="2,4,7,11" %}
 
+<div class="front__sidebar">
+  hej
+</div>
+
+<div class="front__content">
   <div class="intro">
     <div class="intro__name">
       <h1>Morten Christoffersen</h1>
@@ -26,6 +29,7 @@ bodyclass: 'body--front'
       </li>
     {% endfor %}
   </ul>
+</div>
 
 
 <!--   <ul class="post-list">
@@ -39,5 +43,3 @@ bodyclass: 'body--front'
       </li>
     {% endfor %}
   </ul> -->
-
-</div>

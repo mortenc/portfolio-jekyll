@@ -1,0 +1,6 @@
+<div class="grid {% if include.dark %}grid--dark{% endif %}">
+  {% assign lines = include.lines | split: "," %}
+  {% for line in lines %}
+    <div class="grid__line grid__line--{{ line }}"></div>
+  {% endfor %}
+</div>
