@@ -2,7 +2,7 @@
  * Grid component
  */
 
-$line-style: 1px solid rgba(white,.15);
+$line-style: 1px solid rgba(white,.1);
 
 .grid {
   $root: &;
@@ -14,7 +14,7 @@ $line-style: 1px solid rgba(white,.15);
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: 300;
 
   &__line {
     @include span-columns(1);
