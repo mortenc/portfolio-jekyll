@@ -2,7 +2,8 @@
  * Grid component
  */
 
-$line-style: 1px solid rgba(white,.1);
+$grid-line-style--white: 1px solid rgba(white,.05);
+$grid-line-style--dark: 1px solid rgba(black,.05);
 
 .grid {
   $root: &;
@@ -18,7 +19,7 @@ $line-style: 1px solid rgba(white,.1);
 
   &__line {
     @include span-columns(1);
-    border-left: $line-style;
+    border-left: $grid-line-style--white;
     height: 100%;
     position: absolute;
 
@@ -31,7 +32,7 @@ $line-style: 1px solid rgba(white,.1);
     &--13 {
       @include shift(11);
       border-left: none;
-      border-right: $line-style;
+      border-right: $grid-line-style--white;
     }
   }
 

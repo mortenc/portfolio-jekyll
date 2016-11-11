@@ -3,22 +3,24 @@ layout: default
 bodyclass: 'body--project'
 ---
 <article class="project" itemscope itemtype="http://schema.org/CreativeWork">
-	<a class="sidenav "href="/"><span>Back<i></i></span></a>
+	<a class="project__sidenav" href="/"><span>Back<i></i></span></a>
 	<header class="project__hero" style="background-image: url('{{ page.hero | prepend: site.baseurl }}')">
 
 		{% include visual-grid.html lines="1,9,13" %}
 
 		<div class="project__intro">
-			<p class="project__clientname">{{ page.client }}</p>
-			<h1 class="project__title">{{ page.title }}</h1>
-			<p class="project__desc">{{ page.desc }}</p>
+			<div class="project__info">
+				<p class="project__info__client">{{ page.client }}</p>
+				<h1 class="project__info__title">{{ page.title }}</h1>
+				<p class="project__info__desc">{{ page.desc }}</p>
+			</div>
+			<ul class="project__details">
+				<li class="project__details__client"><span>Client</span>{{ page.client }}</li>
+				<li class="project__details__role"><span>Role</span>{{ page.role }}</li>
+				<li class="project__details__employer"><span>For</span>{{ page.employer }}</li>
+				<li class="project__details__year"><span>Year</span>{{ page.year }}</li>
+			</ul>
 		</div>
-		<ul class="project__info">
-			<li class="project__client"><span>Client</span>{{ page.client }}</li>
-			<li class="project__role"><span>Role</span>{{ page.role }}</li>
-			<li class="project__employer"><span>Employer</span>{{ page.employer }}</li>
-			<li class="project__year"><span>Year</span>{{ page.year }}</li>
-		</ul>
 	</header>
 
 	<div class="project__content">

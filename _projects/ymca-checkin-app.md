@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  "YMCA Twin Cities"
+title:  "Mobile Check-In App"
 desc:  "Speeding up the check in process at YMCA branches with a new iOS app."
 client: "YMCA Twin Cities"
 role: "UX & Design Lead"

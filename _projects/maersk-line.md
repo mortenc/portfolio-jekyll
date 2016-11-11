@@ -2,7 +2,7 @@
 layout: project
 title:  "Maersk Line"
 desc:  "Redesigned website for the world's largest container shipping company."
-client: "Maersk Line"
+client: "Website"
 role: "UX & Design Lead"
 employer: "FFW Agency"
 year: 2016
