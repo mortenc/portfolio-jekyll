@@ -2,31 +2,27 @@
  * Site header
  */
 .header {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: none;
 
-    &__nav {
-        float: right;
-        ul {
-            list-style: none;
-            margin:0;
-            padding: 0;
-            li {
-                display: inline-block;
-                a {
-                    color: white;
-                }
-            }
-        }
-    }
 }
 
 /**
  * Site footer
  */
 .footer {
-    padding: $base-line-height 0;
-}
+  @include outer-container;
+  @include clearfix;
+  padding: $base-line-height*2;
+  border-top: $grid-line-style--dark;
 
+  &__legal {
+    float: left;
+  }
+  .social-links{
+    float: right;
+    display: flex;
+    li {
+      display: block;
+      margin-left: $base-line-height;
+    }
+  }
+}
