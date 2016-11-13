@@ -2,11 +2,11 @@
 layout: default
 bodyclass: 'body--front'
 ---
-{% include visual-grid.html lines="2,4,7,11" %}
+{% include visual-grid.html lines="2,4,10,12" %}
 
-<div class="front__sidebar">
+<!-- <div class="front__sidebar">
   hej
-</div>
+</div> -->
 
 <div class="front__content">
   <div class="intro">
@@ -17,15 +17,24 @@ bodyclass: 'body--front'
       <h2>UX & Design Director with a passion for problem-solving and digital technologies.</h2>
     </div>
     <div class="intro__desc">
-      <p>I work as Creative Director, US at FFW Agency. I believe that the best digital products are made, when we break down the silos between design and development, and instead focus our collective attention on creating intriguing experiences and interactions.</p>
+      <p>I currently live and work in San Francisco, California as Creative Director, US for <a href="www.ffwagency.com">FFW Agency</a>.</p>
+      <p>I work in the cross section between strategy, interaction design, visual design and coding, and believe that the best digital products are made, when we break down the silos between design and development, and instead focus our collective attention on creating intriguing experiences and interactions.</p>
     </div>
   </div>
 
   <ul class="project-list">
     {% for project in site.projects %}
       <li class="project-list__project">
-        <span class="project-list__project__client">{{ project.client }}</span>
-        <a class="project-list__project__title" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
+        <a href="{{ project.url | prepend: site.baseurl }}">
+          <div class="project-list__project__info" style="background-color:{{ project.color }};">
+            <span class="project-list__project__client">{{ project.client }}</span>
+            <h3 class="project-list__project__title">{{ project.title }}</h3>
+            <!-- <p class="project-list__project__desc">{{ project.desc }}</p> -->
+          </div>
+          <div class="project-list__project__img">
+            <img src="{{ project.hero }}" alt="Image for the {{ project.client }} project" />
+          </div>
+        </a>
       </li>
     {% endfor %}
   </ul>
