@@ -99,100 +99,113 @@
 	// Hero
 	//-----
 	&__hero {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
 		position: relative;
 		overflow: hidden;
-		background-size: cover;
-		background-position: center;
+		//background-size: cover;
+		//background-position: center;
 		min-height: 90vh;
 		max-width: 100%;
-		padding: 0 $base-line-height $base-line-height;
+		//padding: 0 $base-line-height $base-line-height;
 
-		@include media($medium) {
-			background-position: center right;
+		@include media($large) {
+			display: flex;
+			align-items: stretch;
 			min-height: 100vh;
-			padding: 0 $base-line-height*2 $base-line-height*2;
+			//padding: 0 $base-line-height*2 $base-line-height*2;
 		}
 
-		&::before {
-			content: " ";
-			position: absolute;
-			top: $base-line-height*2;
-			left: 0;
-			width: 100%;
-			height: 1px;
-			background: white;
-			opacity: .05;
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background-color: black;
-			z-index: 100;
-			opacity: .2;
-		}
+		// &::before {
+		// 	content: " ";
+		// 	position: absolute;
+		// 	top: $base-line-height*2;
+		// 	left: 0;
+		// 	width: 100%;
+		// 	height: 1px;
+		// 	background: white;
+		// 	opacity: .05;
+		// }
+		//
+		// &::after {
+		// 	content: "";
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	right: 0;
+		// 	bottom: 0;
+		// 	background-color: black;
+		// 	z-index: 100;
+		// 	opacity: .2;
+		// }
 
 		&>.grid {
 			@include container;
 		}
-	}
 
-	// Intro element
-	//--------------
-	&__intro {
-		position: relative;
-		z-index: 300;
+		// Hero intro element
+		//--------------
+		&__intro {
 
-		@include media($large) {
-			@include span-columns(10);
+			@include media($large) {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				flex: 1 40%;
+				order: 1;
+				box-shadow: 0 0 rem(150px) rgba(black,.4);
+			}
+			//
+			// @include media($xlarge) {
+			// 	@include span-columns(7);
+			// }
 		}
 
-		@include media($xlarge) {
-			@include span-columns(7);
+		// Hero img element
+		//--------------
+		&__img {
+			position: relative;
+			background-size: cover;
+			background-position: center;
+			max-height: 85vh;
+
+			@include media($large) {
+				flex: 3 60%;
+				order: 2;
+				max-height: none;
+				//background-position: center right;
+			}
+
+			// @include media($large) {
+			// 	@include span-columns(10);
+			// }
+			//
+			// @include media($xlarge) {
+			// 	@include span-columns(7);
+			// }
 		}
 	}
 
 	// Intro - info
 	//-------------
 	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
 		padding: $base-line-height;
-		background-color: $purple;
 
 		@include media($medium) {
-			padding: $base-line-height*1.5 $base-line-height*1.5 $base-line-height*1.5;
+			padding: $base-line-height*2 $base-line-height*2 $base-line-height*1.5;
 		}
 
 		@include media($large) {
-			padding: $base-line-height*2 $base-line-height*1.5 $base-line-height*1.5;
-		}
-
-		&::before {
-			content: " ";
-			position: absolute;
-			bottom: -1px;
-			left: -$base-line-height*2;
-			width: 200%;
-			height: 1px;
-			background: white;
-			opacity: .05;
+			//padding: $base-line-height*2 $base-line-height*1.5 $base-line-height*1.5;
 		}
 
 		&__client {
-			text-transform: uppercase;
-			letter-spacing: .4em;
-			font-size: ms(-4);
-			font-weight: 500;
+			@include small-label;
 			color: white;
 			margin-bottom: $base-line-height*0.5;
 			padding-left: 0.25rem;
-			display: none;
+			opacity: .5;
 		}
 
 		&__title {
@@ -232,15 +245,19 @@
 	//----------------
 	&__details {
 		width: 100%;
-		background: white;
-		padding: $base-line-height 0 $base-line-height*0.5 0;
+		background: rgba(255,255,255,0.9);
+		padding: $base-line-height 0;
 		@include clearfix;
 		//display: none;
 
-		@include media($medium) {
-			display: flex;
-			justify-content: space-between;
-			padding: $base-line-height $base-line-height $base-line-height $base-line-height*1.5;
+		// @include media($medium) {
+		// 	display: flex;
+		// 	justify-content: space-between;
+		// 	padding: $base-line-height $base-line-height $base-line-height $base-line-height*1.5;
+		// }
+
+		@include media($large) {
+			padding: $base-line-height*1.5 $base-line-height*2;
 		}
 
 		li {
@@ -251,17 +268,18 @@
 			font-weight: 600;
 			font-size: ms(-1);
 			padding-bottom: $base-line-height*0.5;
+			opacity: .85;
 
-			@include media($medium) {
-				float: none;
-				width: auto;
-				//padding: $base-line-height 0 $base-line-height $base-line-height*1.5;
-			}
-
-			@include media($large) {
-				//font-size: ms(0);
-				//padding: $base-line-height 0 $base-line-height $base-line-height*1.5;
-			}
+			// @include media($medium) {
+			// 	float: none;
+			// 	width: auto;
+			// 	//padding: $base-line-height 0 $base-line-height $base-line-height*1.5;
+			// }
+			//
+			// @include media($large) {
+			// 	//font-size: ms(0);
+			// 	//padding: $base-line-height 0 $base-line-height $base-line-height*1.5;
+			// }
 
 			&:nth-child(odd) {
 				@include media(max-width $medium) {
@@ -281,7 +299,8 @@
 		span {
 			display: block;
 			@include small-label;
-			color: $grey;
+			color: $grey-dark;
+			opacity: .5;
 
 			@include media($large) {
 				//font-size: ms(-3);
@@ -328,7 +347,7 @@
 			@include span-columns(12);
 
 			@include media($xlarge) {
-				@include span-columns(5);
+				@include span-columns(6);
 				@include shift(3);
 				@include omega();
 				@include clearfix;
@@ -411,32 +430,17 @@
 			// }
 
 			&:first-of-type {
-				font-size: ms(1);
-				line-height: $base-line-height;
-				color: $grey-light;
-
-				@include media($large) {
-					font-size: ms(2);
-					line-height: $base-line-height*1.25;
-				}
-
-				@include media($xlarge) {
-					@include span-columns(6);
-					@include shift(2);
-				}
 
 				&:first-letter {
 					float: left;
 					font-size: ms(10);
-					line-height: $base-line-height*1.95;
-					padding-top: 2px;
-					padding-right: 8px;
+					line-height: $base-line-height*2;
+					padding-right: 0.5rem;
 					color: darken($text-color, 10%);
 					font-weight: 600;
 
 					@include media($large) {
-						font-size: ms(11);
-						line-height: $base-line-height*2.45;
+
 					}
 				}
 			}

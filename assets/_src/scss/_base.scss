@@ -29,11 +29,11 @@ body {
 
 @mixin container {
   @include outer-container;
-  width: calc(100% - #{$base-line-height});
-
-  @include media($medium) {
-    width: calc(100% - #{$base-line-height*4});
-  }
+  // width: calc(100% - #{$base-line-height});
+  //
+  // @include media($medium) {
+  //   width: calc(100% - #{$base-line-height*4});
+  // }
 }
 
 /**
