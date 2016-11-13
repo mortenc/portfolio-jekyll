@@ -3,7 +3,7 @@ layout: project
 title:  "Mobile Check-In App"
 desc:  "Speeding up the check in process at YMCA branches with a new iOS app."
 client: "YMCA Twin Cities"
-role: "UX & Design Lead"
+role: "Strategy, UX, Design"
 employer: "FFW Agency"
 year: 2016
 hero: "/assets/img/ymca-hero.jpg"
@@ -17,7 +17,7 @@ The YMCA of Greater Twin Cities is one of the largest YMCAs in the US. With more
 
 In order to fully understand the existing check-in flow, I visited a YMCA branch, where I was introduced to their check-in system, and saw how the staff currently handles member check-ins.
 
-{% include project-image.html file="ymca-prototype-video-thumb.jpg" caption="We designed several prototypes to ensure that the interactions felt smooth and natural." %}
+{% include project-image.html type="fit" file="ymca-prototype-video-thumb.jpg" caption="We designed several prototypes to ensure that the interactions felt smooth and natural." %}
 
 Defining the concept
 --------------------
@@ -25,9 +25,11 @@ It was clear from conversations with YMCA staff that a feasible (and very reques
 
 In order to uncover potential technological solutions I dug into researching the portable barcode scanner space, together with one of our developers. We found several potential solutions that could largely be divided into two groups: software or hardware scanners.
 
+{% include project-image.html type="wide" file="ymca-prototype-video-thumb.jpg" caption="We designed several prototypes to ensure that the interactions felt smooth and natural." %}
+
 A deciding factor for choosing a solution was speed – if the scanning process was not fast, it would not help YMCA solve their issues during peak hours. So while our developer began to set up to performance tests for both software and hardware scanning, I began mapping out user flows and sketching initial designs for both scenarios.
 
-{% include project-image.html type="wide" file="ymca-prototype-video-thumb.jpg" caption="We designed several prototypes to ensure that the interactions felt smooth and natural." %}
+{% include project-image.html type="full" file="ymca-prototype-video-thumb.jpg" caption="We designed several prototypes to ensure that the interactions felt smooth and natural." %}
 
 Prototyping the Flows and Interactions
 --------------------------------------

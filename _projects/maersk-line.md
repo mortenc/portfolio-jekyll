@@ -2,9 +2,10 @@
 layout: project
 title:  "Maersk Line"
 desc:  "Redesigned website for the world's largest container shipping company."
-client: "Website"
-role: "UX & Design Lead"
+client: "Maersk Line"
+role: "Strategy, UX, Design"
 employer: "FFW Agency"
+link: "www.example.com"
 year: 2016
 hero: "/assets/img/maersk-hero.jpg"
 bodyclass: 'body--project'

@@ -6,38 +6,58 @@
  }
 
 html {
-    font-size: $base-font-size;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: "kern" 1;
-    font-kerning: normal;
-    overflow-x: hidden;
+  font-size: $base-font-size;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  overflow-x: hidden;
 
-    @include media($xxlarge) {
-      font-size: 20px;
-    }
+  @include media($xxlarge) {
+    font-size: 20px;
+  }
 }
+
 body {
-    font: $base-font-weight 1rem/#{$base-line-height} $base-font-family;
-    color: $text-color;
-    background-color: $background-color;
-    margin: 0 auto;
-    overflow-x: hidden;
+  font: $base-font-weight 1rem/#{$base-line-height} $base-font-family;
+  color: $text-color;
+  background-color: $background-color;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
+@mixin container {
+  @include outer-container;
+  width: calc(100% - #{$base-line-height});
+
+  @include media($medium) {
+    width: calc(100% - #{$base-line-height*4});
+  }
+}
+
+/**
+ * Basic typography
+ */
 h1, h2, h3, h4, h5, h6 {
-    font-family: $headings-font-family;
-    color: darken($text-color, 10%);
-    line-height: $base-line-height;
+  font-family: $headings-font-family;
+  color: darken($text-color, 10%);
+  line-height: $base-line-height;
+}
+
+@mixin small-label {
+  text-transform: uppercase;
+  letter-spacing: .4em;
+  font-size: ms(-4);
+  font-weight: 500;
 }
 
 /**
  * Images
  */
 img {
-    max-width: 100%;
-    vertical-align: middle;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 
@@ -56,13 +76,4 @@ a {
         color: $text-color;
         text-decoration: underline;
     }
-}
-
-@mixin container {
-  @include outer-container;
-  width: calc(100% - #{$base-line-height});
-
-  @include media($medium) {
-    width: calc(100% - #{$base-line-height*4});
-  }
 }
