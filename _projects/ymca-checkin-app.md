@@ -7,6 +7,7 @@ role: "Strategy, UX, Design"
 employer: "FFW Agency"
 year: 2016
 hero: "/assets/img/ymca-hero.jpg"
+color: "#52527b"
 ---
 
 The YMCA of Greater Twin Cities needed a way to speed up the check-in process for their members during peak hours in their gyms and branches. To solve this problem we designed and built an iOS app for the organization’s employees to expedite the process. As the only creative on the project, I was responsible for all research, UX and UI design.

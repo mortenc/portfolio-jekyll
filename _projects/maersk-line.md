@@ -8,6 +8,7 @@ employer: "FFW Agency"
 link: "www.example.com"
 year: 2016
 hero: "/assets/img/maersk-hero.jpg"
+color: "#2c6b8a"
 bodyclass: 'body--project'
 ---
 
