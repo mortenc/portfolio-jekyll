@@ -65,15 +65,16 @@ img {
  * Links
  */
 a {
-    color: $grey-dark;
+    color: $grey-light;
     text-decoration: none;
+    border-bottom: 1px solid;
+    transition: color .2s ease-in-out;
 
     &:visited {
-        color: $grey-dark;
+        color: $grey-light;
     }
 
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        color: $grey-dark;
     }
 }

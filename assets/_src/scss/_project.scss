@@ -15,6 +15,7 @@
 		transform: rotate(-90deg) translate3d(-100%,100%,0);
 		transition: background-color ease-in-out 0.3s, color ease-in-out 0.3s;
 		//margin-top: -$base-line-height*2;
+		border-bottom: 0;
 
 		@include media($xlarge) {
 			position: fixed;
@@ -162,7 +163,7 @@
 	//-------------
 	&__info {
 		padding: $base-line-height;
-		background: $purple;
+		background-color: $purple;
 
 		@include media($medium) {
 			padding: $base-line-height*1.5 $base-line-height*1.5 $base-line-height*1.5;
