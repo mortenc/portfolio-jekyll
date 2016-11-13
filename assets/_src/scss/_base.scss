@@ -78,3 +78,22 @@ a {
         color: $grey-dark;
     }
 }
+
+.btn {
+  display: inline-block;
+  margin-left: 400px;
+  @include small-label;
+  border: 0;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: .1rem;
+  color: white;
+  background-color: $purple;
+  padding: 0 $base-line-height*0.5;
+  border-radius: $base-line-height;
+
+  &:hover {
+    color: white;
+    //hover styles here
+  }
+}

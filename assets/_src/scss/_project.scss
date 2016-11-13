@@ -17,7 +17,7 @@
 		//margin-top: -$base-line-height*2;
 		border-bottom: 0;
 
-		@include media($xlarge) {
+		@include media($large) {
 			position: fixed;
 			top: 0;
 			left: 0;
@@ -103,11 +103,12 @@
 		overflow: hidden;
 		//background-size: cover;
 		//background-position: center;
-		min-height: 90vh;
+		//min-height: 90vh;
 		max-width: 100%;
 		//padding: 0 $base-line-height $base-line-height;
+		@include clearfix;
 
-		@include media($large) {
+		@include media($medium) {
 			display: flex;
 			align-items: stretch;
 			min-height: 100vh;
@@ -145,13 +146,17 @@
 		//--------------
 		&__intro {
 
-			@include media($large) {
+			@include media($medium) {
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-end;
-				flex: 1 40%;
+				flex: 1 50%;
 				order: 1;
 				box-shadow: 0 0 rem(150px) rgba(black,.4);
+			}
+
+			@include media($xlarge) {
+				flex: 1 40%;
 			}
 			//
 			// @include media($xlarge) {
@@ -165,12 +170,23 @@
 			position: relative;
 			background-size: cover;
 			background-position: center;
-			max-height: 85vh;
+			height: 65vh;
+
+			@include media($medium) {
+				flex: 1 50%;
+				order: 2;
+				height: auto;
+				//background-position: center right;
+			}
 
 			@include media($large) {
-				flex: 3 60%;
+				//background-position: center right;
+			}
+
+			@include media($xlarge) {
+				flex: 2 60%;
 				order: 2;
-				max-height: none;
+				height: auto;
 				//background-position: center right;
 			}
 
@@ -193,11 +209,11 @@
 		padding: $base-line-height;
 
 		@include media($medium) {
-			padding: $base-line-height*2 $base-line-height*2 $base-line-height*1.5;
+			padding: $base-line-height;
 		}
 
 		@include media($large) {
-			//padding: $base-line-height*2 $base-line-height*1.5 $base-line-height*1.5;
+			padding: $base-line-height*2 $base-line-height*2 $base-line-height*1.5;
 		}
 
 		&__client {
@@ -250,11 +266,12 @@
 		@include clearfix;
 		//display: none;
 
-		// @include media($medium) {
-		// 	display: flex;
-		// 	justify-content: space-between;
-		// 	padding: $base-line-height $base-line-height $base-line-height $base-line-height*1.5;
-		// }
+		@include media($medium) {
+			// display: flex;
+			// justify-content: space-between;
+			// padding: $base-line-height $base-line-height $base-line-height $base-line-height*1.5;
+			padding: $base-line-height;
+		}
 
 		@include media($large) {
 			padding: $base-line-height*1.5 $base-line-height*2;
@@ -370,22 +387,27 @@
 		}
 
 		h2 {
-		  font-size: ms(3);
+		  font-size: ms(0);
+			text-transform: uppercase;
+			letter-spacing: 0.05rem;
 		  line-height: $base-line-height * 1.25;
 			position: relative;
 			//text-transform: uppercase;
 			background-color: white;
+			color: $purple;
 
 			&::before {
-				display: block;
+				display: inline-block;
 				content:" ";
-				width: $base-line-height*0.5;
-				height: $base-line-height*0.25;
+				width: $base-line-height*3;
+				height: $base-line-height*0.5;
 				background-color: $purple;
 				opacity: 0.1;
 				//padding-bottom: $base-line-height*0.5;
-				margin-bottom: $base-line-height*0.5;
+				margin-bottom: 0.2rem;
 				vertical-align: middle;
+				margin-left: -$base-line-height*1.5;
+				margin-right: $base-line-height;
 			}
 		}
 
@@ -436,7 +458,7 @@
 					font-size: ms(10);
 					line-height: $base-line-height*2;
 					padding-right: 0.5rem;
-					color: darken($text-color, 10%);
+					color: $purple;
 					font-weight: 600;
 
 					@include media($large) {
