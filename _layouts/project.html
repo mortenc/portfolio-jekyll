@@ -12,15 +12,18 @@ bodyclass: 'body--project'
 				<h1 class="project__info__title">{{ page.title }}</h1>
 				<p class="project__info__desc">{{ page.desc }}</p>
 			</div>
-			<ul class="project__details">
-				<li class="project__details__client"><span>Client</span>{{ page.client }}</li>
-				<li class="project__details__role"><span>Role</span>{{ page.role }}</li>
-				<li class="project__details__employer"><span>For</span>{{ page.employer }}</li>
-				<li class="project__details__year"><span>Year</span>{{ page.year }}</li>
-			</ul>
 		</div>
 	</header>
-	<a href="#" class="btn">Visit Now</a>
+
+	<ul class="project__details">
+		<li class="project__details__client"><span>Client</span>{{ page.client }}</li>
+		<li class="project__details__role"><span>Role</span>{{ page.role }}</li>
+		<li class="project__details__employer"><span>For</span>{{ page.employer }}</li>
+		<li class="project__details__year"><span>Year</span>{{ page.year }}</li>
+		<li class="project__details__year"><span>Type</span>{{ page.type }}</li>
+		<li class="project__details__year"><a href="{{ page.link }}" class="btn">{{ page.link-desc }}</a></li>
+	</ul>
+
 	<div class="project__content">
 		<!-- <ul class="project__info project__info--alt">
 			<li class="project__client"><span>Client</span>{{ page.client }}</li>

@@ -6,7 +6,9 @@ client: "Maersk Line"
 role: "Strategy, UX, Design"
 employer: "FFW Agency"
 link: "www.example.com"
+link-desc: "Visit Website"
 year: 2016
+type: "Website"
 hero: "/assets/img/maersk-hero.jpg"
 color: "#01202e"
 bodyclass: 'body--project'
