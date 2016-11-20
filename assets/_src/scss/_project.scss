@@ -156,7 +156,8 @@
 			}
 
 			@include media($xlarge) {
-				flex: 1 40%;
+				flex: 1 30%;
+				//padding-left: $base-line-height*2;
 			}
 			//
 			// @include media($xlarge) {
@@ -184,7 +185,7 @@
 			}
 
 			@include media($xlarge) {
-				flex: 2 60%;
+				flex: 2 70%;
 				order: 2;
 				height: auto;
 				//background-position: center right;
@@ -228,56 +229,59 @@
 			position: relative;
 			color: white;
 			font-size: ms(5);
-			font-weight: 800;
+			font-weight: 600;
 			line-height: $base-line-height*1.5;
-			letter-spacing: -0.04em;
+			//letter-spacing: -0.04em;
 			z-index: 300;
 
-			@include media($small) {
-				font-size: ms(7);
-				line-height: $base-line-height * 2;
-			}
+			// &::before {
+			// 	content:"";
+			// 	display: block;
+			// 	position: absolute;
+			// 	bottom: $base-line-height - 0.2rem;
+			// 	width: 0.5rem;
+			// 	height: 0.5rem;
+			// 	border-radius: 0.25rem;
+			// 	border: 1px solid white;
+			// 	opacity: 1;
+			// 	right: -$base-line-height*4 - 0.5rem;
+			// }
 
-			@include media($large) {
-				font-size: ms(9);
-				line-height: $base-line-height * 2;
-			}
-
-			&::before {
-				content:"";
-				display: block;
-				position: absolute;
-				bottom: $base-line-height - 0.2rem;
-				width: 0.5rem;
-				height: 0.5rem;
-				border-radius: 0.25rem;
-				border: 1px solid white;
-				opacity: 1;
-				right: -$base-line-height*4 - 0.5rem;
-			}
-
-			&::after {
-				content:"";
-				display: block;
-				height: 1px;
-				background: linear-gradient(to left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-				opacity: 1;
-				width: calc(100% + #{$base-line-height*6});
-				margin: $base-line-height 0;
-				margin-left: -$base-line-height*2;
-			}
+			// &::after {
+			// 	content:"";
+			// 	display: block;
+			// 	height: 1px;
+			// 	background: linear-gradient(to left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+			// 	opacity: 1;
+			// 	width: calc(100% + #{$base-line-height*6});
+			// 	margin: $base-line-height 0;
+			// 	margin-left: -$base-line-height*2;
+			// }
 		}
 
 		&__desc {
-			//margin-top: $base-line-height*0.5;
+			margin-top: $base-line-height*0.5;
 			font-size: ms(1);
 			line-height: $base-line-height;
 			color: white;
 			opacity: .7;
 
+			&::after {
+				content:"";
+				display: block;
+				height: 1px;
+				background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+				opacity: 1;
+				//width: calc(100% + #{$base-line-height*6});
+				transform: translate3d(0,$base-line-height*1.5,0);
+				// margin: $base-line-height 0;
+				// margin-left: -$base-line-height*2;
+				opacity: .3;
+			}
+
 			@include media($large) {
-				font-size: ms(2);
-				line-height: $base-line-height*1.25;
+				font-size: ms(1);
+				//line-height: $base-line-height*1.25;
 			}
 		}
 	}
@@ -290,7 +294,7 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 		padding: $base-line-height;
-		background: lighten($grey-lighter,5);
+		//background: lighten($grey-lighter,5);
 		//display: none;
 
 		@include media($medium) {
@@ -302,27 +306,27 @@
 		}
 
 		li {
-			color: $grey-dark;
+			color: white;
 			display: inline-block;
 			flex-basis: 50%;
-			font-weight: 600;
+			font-weight: 400;
 			font-size: ms(-1);
 			padding-bottom: $base-line-height;
-			opacity: .85;
+			//opacity: .85;
 
 			@include media($medium) {
-				flex-basis: 33%;
+				//flex-basis: 33%;
 				//padding-bottom: 0;
 			}
 
 			@include media($large) {
-				flex-basis: auto;
+				//flex-basis: auto;
 				//padding-bottom: 0;
 			}
 
-			&:last-child {
-				line-height: $base-line-height*2;
-			}
+			// &:last-child {
+			// 	line-height: $base-line-height*2;
+			// }
 
 			.btn {
 				vertical-align: bottom;
@@ -357,7 +361,7 @@
 			span {
 				display: block;
 				@include small-label;
-				color: $grey-dark;
+				color: white;
 				opacity: .5;
 
 				@include media($large) {
@@ -451,6 +455,31 @@
 				margin-left: -$base-line-height*1.5;
 				margin-right: $base-line-height;
 			}
+
+			// &::before {
+			// 	position: relative;
+			// 	display: inline-block;
+			// 	content:"";
+			// 	width: 0.5rem;
+			// 	height: 0.5rem;
+			// 	border-radius: 0.25rem;
+			// 	border: 1px solid $purple;
+			// 	opacity: 1;
+			// 	vertical-align: baseline;
+			// 	top: -0.1rem;
+			// 	margin-right: $base-line-height;
+			// }
+			//
+			// &::after {
+			// 	display: block;
+			// 	content:" ";
+			// 	width: $base-line-height*6;
+			// 	height: 1px;
+			// 	position: absolute;
+			// 	left: -$base-line-height*6;
+			// 	top: $base-line-height*0.5 + 0.1575rem;
+			// 	background: linear-gradient(to left, rgba($purple,1) 0%,rgba($purple,0) 100%);
+			// }
 		}
 
 		* + h2 {

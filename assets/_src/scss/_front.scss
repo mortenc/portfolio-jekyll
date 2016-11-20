@@ -2,7 +2,51 @@
  * Front page
  */
 .body--front {
-   background-color: lighten($grey,1);
+   background-color: darken($blue-grey-dark,3);
+   //background: linear-gradient(to bottom, $blue-grey-dark 0%, $blue-grey-light 100%);
+}
+
+.sidebar {
+  position: fixed;
+  min-width: 100vh;
+  //height: $base-line-height*3;
+  //line-height: $base-line-height*3;
+  padding: 0 $base-line-height;
+  background: linear-gradient(to left, $blue-grey-light 0%, rgba($blue-grey-dark, 0) 100%);
+  text-align: right;
+  transform-origin: left top;
+  transform:rotate(-90deg) translateX(-100%);
+  z-index: 900;
+
+  li {
+    display: inline-block;
+
+    &:first-child {
+      &::before {
+        content:"";
+        display: inline-block;
+        width: $base-line-height*12;
+        margin-right: $base-line-height;
+        height: 1px;
+        vertical-align: middle;
+        background: linear-gradient(to left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+        opacity: 0.2;
+      }
+    }
+
+    a {
+      display: inline-block;
+      padding: $base-line-height $base-line-height*0.5;
+      @include small-label;
+      color: white;
+      opacity: .5;
+      border: none;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .front {
@@ -14,19 +58,18 @@
   // }
 
   &__content {
-      @include span-columns(12);
-      @include omega();
+      @include outer-container;
   }
 }
 
 .intro {
-  @include span-columns(9);
-  @include shift(1);
+  @include span-columns(12);
   @include omega();
+  padding-top: $base-line-height*6;
+
   &__name {
     h1 {
       @include small-label;
-      padding-top: $base-line-height*2;
       color: white;
       opacity: .5;
     }
@@ -34,49 +77,55 @@
 
   &__blurb {
     @include row();
-    h2 {
+    p {
       margin-top: $base-line-height*0.5;
       font-size: ms(2);
       line-height: $base-line-height * 1.5;
       color: white;
 
       @include media($medium) {
-        @include span-columns(5 of 9);
+        @include span-columns(5);
         @include omega();
       }
+
       @include media($large) {
         //margin-top: $base-line-height*2;
-        font-size: ms(3);
+        font-size: ms(4);
         line-height: $base-line-height * 1.5;
       }
       @include media($xlarge) {
-        @include span-columns(4 of 9);
-        @include omega();
-      }
-      @include media($xxlarge) {
-        @include span-columns(5 of 9);
+        @include span-columns(5);
         @include omega();
         font-weight: 400;
         font-size: ms(5);
-        line-height: $base-line-height * 3;
+        line-height: $base-line-height * 1.5;
+        padding-top: $base-line-height * 0.5;
+        //max-width: 30rem;
+      }
+      @include media($xxlarge) {
+        @include span-columns(5);
+        @include omega();
+        font-weight: 400;
+        font-size: ms(5);
       }
     }
   }
   &__desc {
     @include row();
-    margin-top: $base-line-height*1.5;
+    margin-top: $base-line-height*2;
     color: white;
-    opacity: .75;
+    opacity: .5;
     column-count: 2;
-    column-gap: $base-line-height;
+    column-gap: $base-line-height*2;
     @include media($medium) {
       @include span-columns(7);
       //@include shift(5);
       @include omega();
     }
     @include media($xlarge) {
-      @include span-columns(6 of 9);
-      @include shift(2 of 9);
+      @include span-columns(10);
+      @include shift(2);
+      //display: none;
     }
     p {
 
@@ -84,14 +133,50 @@
   }
 }
 
-.project-list {
-  @include span-columns(10);
-  @include shift(1);
+// .front__divider {
+//   @include span-columns(12);
+//   //@include shift(0);
+//   opacity: .25;
+//
+//   span {
+//     display: block;
+//     width: 100%;
+//     position: relative;
+//     height: 1px;
+//     background: linear-gradient(to left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+//     margin: $base-line-height*3 auto;
+//     margin-right: 0.5rem;
+//
+//     &::before {
+//       content:"";
+//       display: block;
+//       position: absolute;
+//       right: 0;
+//       bottom: 0;
+//       height: $base-line-height*10;
+//       width: 1px;
+//       background: linear-gradient(to top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+//     }
+//   }
+// }
+
+
+.front__work {
+  @include span-columns(12);
   @include omega();
-  margin-top: $base-line-height*4;
+  @include small-label;
+  color: white;
+  opacity: .5;
+  margin: $base-line-height*4 0 $base-line-height;
+}
+
+.project-list {
+  @include span-columns(12);
+  //@include shift(1);
+  @include omega()
 
   &__project {
-    @include span-columns(5 of 10);
+    @include span-columns(6 of 12);
     @include omega();
     margin-bottom: $base-line-height*4;
 
@@ -111,20 +196,17 @@
       @include clearfix;
     }
 
-    &__info {
-      @include span-columns(3 of 5);
-      padding: $base-line-height*1.5 $base-line-height;
-      margin: 0 $base-line-height;
-      transform: translate3d(0,$base-line-height*2,0);
-      position: absolute;
-      left: 0;
-      bottom: 0;
-    }
-
     &__img {
       img {
         //height:350px;
       }
+    }
+
+    &__info {
+      //@include span-columns(3 of 5);
+      padding: $base-line-height*1.5;
+      //margin: 0 $base-line-height;
+      //transform: translate3d(0,$base-line-height*2,0);
     }
 
     &__client {
