@@ -121,6 +121,6 @@ gulp.task('jekyll', function (done) {
 gulp.task('serve', ['sass', 'scripts', 'jekyll', 'browser-sync'], function () {
     gulp.watch(src.scss, ['sass']);
     gulp.watch(src.js, ['scripts']);
-    gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '*.md', '_posts/*', '_projects/*'], ['jekyll']);
+    gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '*.md', '_posts/*', '_projects/*'], ['jekyll']);
     gulp.watch(['_site/**/*.html']).on('change', browserSync.reload);
 });
