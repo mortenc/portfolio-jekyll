@@ -1,5 +1,6 @@
 ---
 layout: project
+order: 3
 title:  "Golden Gate Bridge"
 desc:  "New website for the world's most iconic bridge."
 client: "GGBHTD"

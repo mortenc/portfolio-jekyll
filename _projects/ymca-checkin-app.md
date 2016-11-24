@@ -1,12 +1,13 @@
 ---
 layout: project
+order: 1
 title:  "Mobile Check-In App"
 desc:  "Speeding up the check in process at YMCA branches with a new iOS app."
 client: "YMCA Twin Cities"
 role: "Strategy, UX, Design"
 employer: "FFW Agency"
 year: 2016
-hero: "/assets/img/ymca-hero.jpg"
+hero: "/assets/img/ymca-iphone-mockup.png"
 color: "#52527b"
 ---
 

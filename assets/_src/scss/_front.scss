@@ -1,184 +1,57 @@
 /**
  * Front page
  */
-.body--front {
-   background-color: darken($blue-grey-dark,3);
-   //background: linear-gradient(to bottom, $blue-grey-dark 0%, $blue-grey-light 100%);
-}
-
-.sidebar {
-  position: fixed;
-  min-width: 100vh;
-  //height: $base-line-height*3;
-  //line-height: $base-line-height*3;
-  padding: 0 $base-line-height;
-  background: linear-gradient(to left, $blue-grey-light 0%, rgba($blue-grey-dark, 0) 100%);
-  text-align: right;
-  transform-origin: left top;
-  transform:rotate(-90deg) translateX(-100%);
-  z-index: 900;
-
-  li {
-    display: inline-block;
-
-    &:first-child {
-      &::before {
-        content:"";
-        display: inline-block;
-        width: $base-line-height*12;
-        margin-right: $base-line-height;
-        height: 1px;
-        vertical-align: middle;
-        background: linear-gradient(to left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-        opacity: 0.2;
-      }
-    }
-
-    a {
-      display: inline-block;
-      padding: $base-line-height $base-line-height*0.5;
-      @include small-label;
-      color: white;
-      opacity: .5;
-      border: none;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-  }
-}
-
 .front {
-  // &__sidebar {
-  //     @include span-columns(2);
-  //     min-height: 100vh;
-  //     height:100%;
-  //     background: white;
-  // }
+  
+  &__container {
+    padding-left: $base-line-height*3.5;
+  }
 
   &__content {
       @include outer-container;
+      //opacity: 0;
+      //transform: translate3d(0,$base-line-height,0);
+      //transition: opacity ease-out .7s, transform ease-out .7s;
+      //transition-delay: 1.5s;
+
+      .loaded & {
+        //opacity: 1;
+        //transform: translate3d(0,0,0);
+      }
   }
-}
 
-.intro {
-  @include span-columns(12);
-  @include omega();
-  padding-top: $base-line-height*6;
+  //
+  &__intro {
+    @include span-columns(6);
+    @include omega();
+    padding-top: $base-line-height*4;
+    font-size: ms(2);
+    line-height: $base-line-height*1.125;
+    color: $white-transparent;
 
-  &__name {
-    h1 {
+    span {
+      display: block;
+      font-weight: 600;
+      color: white;
+    }
+  }
+
+  &__work {
+    @include span-columns(12);
+    @include omega();
+    padding-top: $base-line-height*4;
+
+    h2 {
       @include small-label;
-      color: white;
-      opacity: .5;
+      color: $white-transparent;
     }
   }
-
-  &__blurb {
-    @include row();
-    p {
-      margin-top: $base-line-height*0.5;
-      font-size: ms(2);
-      line-height: $base-line-height * 1.5;
-      color: white;
-
-      @include media($medium) {
-        @include span-columns(5);
-        @include omega();
-      }
-
-      @include media($large) {
-        //margin-top: $base-line-height*2;
-        font-size: ms(4);
-        line-height: $base-line-height * 1.5;
-      }
-      @include media($xlarge) {
-        @include span-columns(5);
-        @include omega();
-        font-weight: 400;
-        font-size: ms(5);
-        line-height: $base-line-height * 1.5;
-        padding-top: $base-line-height * 0.5;
-        //max-width: 30rem;
-      }
-      @include media($xxlarge) {
-        @include span-columns(5);
-        @include omega();
-        font-weight: 400;
-        font-size: ms(5);
-      }
-    }
-  }
-  &__desc {
-    @include row();
-    margin-top: $base-line-height*2;
-    color: white;
-    opacity: .5;
-    column-count: 2;
-    column-gap: $base-line-height*2;
-    @include media($medium) {
-      @include span-columns(7);
-      //@include shift(5);
-      @include omega();
-    }
-    @include media($xlarge) {
-      @include span-columns(10);
-      @include shift(2);
-      //display: none;
-    }
-    p {
-
-    }
-  }
-}
-
-// .front__divider {
-//   @include span-columns(12);
-//   //@include shift(0);
-//   opacity: .25;
-//
-//   span {
-//     display: block;
-//     width: 100%;
-//     position: relative;
-//     height: 1px;
-//     background: linear-gradient(to left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-//     margin: $base-line-height*3 auto;
-//     margin-right: 0.5rem;
-//
-//     &::before {
-//       content:"";
-//       display: block;
-//       position: absolute;
-//       right: 0;
-//       bottom: 0;
-//       height: $base-line-height*10;
-//       width: 1px;
-//       background: linear-gradient(to top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-//     }
-//   }
-// }
-
-
-.front__work {
-  @include span-columns(12);
-  @include omega();
-  @include small-label;
-  color: white;
-  opacity: .5;
-  margin: $base-line-height*4 0 $base-line-height;
 }
 
 .project-list {
-  @include span-columns(12);
-  //@include shift(1);
-  @include omega()
-
   &__project {
-    @include span-columns(6 of 12);
-    @include omega();
-    margin-bottom: $base-line-height*4;
+    $root: &;
+    padding-bottom: $base-line-height*4;
 
     &:nth-child(even) {
       padding-left: $base-line-height*0.5;
@@ -188,45 +61,65 @@
       padding-right: $base-line-height*0.5;
     }
 
-     a {
-      display: block;
-      position: relative;
-      border: 0;
-      height: 100%;
-      @include clearfix;
+    &:nth-child(1),
+    &:nth-child(4) {
+      @include span-columns(5);
+
+      #{$root}__img {
+        padding-top: 125%;
+      }
     }
 
+    &:nth-child(2),
+    &:nth-child(3) {
+      @include span-columns(7);
+
+      #{$root}__img {
+        padding-top: 88.55%;
+      }
+    }
+
+
     &__img {
+      position: relative;
+      height: 0;
+      //padding-top: 150%;
+      overflow: hidden;
+      background: linear-gradient(to bottom, transparent 0%, rgba(white,.4) 100%);
+      background-blend-mode: overlay;
+
       img {
-        //height:350px;
+        display: block;
+        position: absolute;
+        top: $base-line-height*2.5;
+        left: $base-line-height*2;
+        right: $base-line-height*2;
+        width: auto;
+        max-width: 150%;
+        min-height: 100%;
+        max-height: 118%;
+        transition: transform 0.535s ease-in-out;
+      }
+
+      &:hover {
+        img {
+          transform: translate3d(-$base-line-height*0.5, -$base-line-height*0.5,0);
+        }
       }
     }
 
     &__info {
-      //@include span-columns(3 of 5);
-      padding: $base-line-height*1.5;
-      //margin: 0 $base-line-height;
-      //transform: translate3d(0,$base-line-height*2,0);
+      padding: $base-line-height;
+      background-color: rgba(255,255,255,.05);
     }
 
     &__client {
-      display: block;
-      @include small-label;
-      color: white;
-      opacity: .5;
-    }
-
-    &__title {
-      display: block;
-      font-size: ms(2);
       font-weight: 600;
       color: white;
     }
 
-    &__desc {
-      margin-top: $base-line-height*0.5;
-      color: white;
-      opacity: .7;
+    &__title {
+      color: $white-transparent;
     }
   }
 }

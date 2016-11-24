@@ -9,10 +9,11 @@
  * Site footer
  */
 .footer {
-  @include outer-container;
+  position: relative;
+  z-index: 1000;
   @include clearfix;
   padding: $base-line-height*2;
-  border-top: $grid-line-style--dark;
+  color: $white-transparent;
 
   &__legal {
     float: left;
@@ -23,6 +24,12 @@
     li {
       display: block;
       margin-left: $base-line-height;
+
+      a {
+        @include small-label;
+        border: none;
+        color: white;
+      }
     }
   }
 }

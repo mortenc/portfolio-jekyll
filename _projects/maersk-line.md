@@ -1,5 +1,6 @@
 ---
 layout: project
+order: 2
 title:  "Maersk Line"
 desc:  "Redesigned website for the world's largest container shipping company."
 client: "Maersk Line"
@@ -9,8 +10,8 @@ link: "www.example.com"
 link-desc: "Visit Website"
 year: 2016
 type: "Website"
-hero: "/assets/img/maersk-hero.jpg"
-color: "#01202e"
+hero: "/assets/img/maersk-macbook-big.png"
+color: "#0D3F61"
 bodyclass: 'body--project'
 ---
 

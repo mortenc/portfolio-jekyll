@@ -1,55 +1,37 @@
 ---
 layout: default
-bodyclass: 'body--front'
+title: 'Work'
+navigation_weight: 1
+bodyclass: 'front'
 ---
-<!-- {% include visual-grid.html lines="2,7,12" %} -->
 
-<ul class="sidebar">
-  <li><a href="#">About</a></li>
-  <li><a href="#">Work</a></li>
-</ul>
-<div class="front__content">
-  <div class="intro">
-    <div class="intro__name">
-      <h1>Morten Christoffersen</h1>
+{% include sidebar.html %}
+
+<div class="front__container">
+
+  <div class="front__content">
+    <!-- {% include visual-grid.html lines="1,7,13" %} -->
+    <h1 class="front__intro"><span>Morten Christoffersen is a multi-disciplinary designer</span> working in the intersection of UX strategy, UI design and front-end development.</h1>
+
+    <div class="front__work">
+      <!-- <h2>Featured Work</h2> -->
+      <ul class="project-list">
+        {% assign ordered_projects = site.projects | sort: "order" %}
+        {% for project in ordered_projects %}
+          <li class="project-list__project">
+            <a href="{{ project.url | prepend: site.baseurl }}">
+              <div class="project-list__project__img" style="background-color:{{ project.color }}";>
+                <img src="{{ project.hero }}" alt="Image for the {{ project.client }} project" />
+              </div>
+              <div class="project-list__project__info">
+                <span class="project-list__project__client">{{ project.client }}</span>
+                <h3 class="project-list__project__title">{{ project.title }}</h3>
+                <!-- <p class="project-list__project__desc">{{ project.desc }}</p> -->
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
     </div>
-    <div class="intro__blurb">
-      <p>UX & Product Designer with a passion for problem-solving and digital technologies.</p>
-    </div>
-    <div class="intro__desc">
-      <p>Currently living in San Francisco, California, where I lead a team of designers as US Creative Director for <a href="www.ffwagency.com">FFW Agency</a>. Born in Copenhagen, Denmark, and raised on a diet of Nordic minimalism and functional aesthetics.</p>
-      <p>When I'm not running discovery workshops with clients, interviewing users or tackling complex information architecture, you'll find me heads down pushing pixels, tweaking typography or coding complex animations.</p>
-    </div>
-  </div>
-  <!-- <div class="front__divider"><span></span></div> -->
-  <h2 class="front__work">Featured Work</h2>
-  <ul class="project-list">
-    {% for project in site.projects %}
-      <li class="project-list__project">
-        <a href="{{ project.url | prepend: site.baseurl }}">
-          <div class="project-list__project__img">
-            <img src="{{ project.hero }}" alt="Image for the {{ project.client }} project" />
-          </div>
-          <div class="project-list__project__info" style="background-color:{{ project.color }};">
-            <span class="project-list__project__client">{{ project.client }}</span>
-            <h3 class="project-list__project__title">{{ project.title }}</h3>
-            <!-- <p class="project-list__project__desc">{{ project.desc }}</p> -->
-          </div>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
-
-
-<!--   <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul> -->
+  </div> <!-- End .front__content -->
+</div> <!-- End .front__container -->

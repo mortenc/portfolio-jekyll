@@ -22,9 +22,10 @@ html {
 body {
   font: $base-font-weight 1rem/#{$base-line-height} $base-font-family;
   color: $text-color;
-  background-color: $background-color;
   margin: 0 auto;
   overflow-x: hidden;
+  //background-color: darken($blue-grey-dark,1);
+  background: linear-gradient(to bottom, $blue-grey-dark 0%, $blue-grey-mid 100%);
 }
 
 @mixin container {
