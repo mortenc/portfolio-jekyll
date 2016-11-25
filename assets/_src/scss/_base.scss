@@ -13,6 +13,7 @@ html {
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   overflow-x: hidden;
+  background-color: $blue-grey-dark;
 
   @include media($xxlarge) {
     font-size: 20px;
@@ -24,7 +25,7 @@ body {
   color: $text-color;
   margin: 0 auto;
   overflow-x: hidden;
-  //background-color: darken($blue-grey-dark,1);
+  background-color: darken($blue-grey-dark,1);
   background: linear-gradient(to bottom, $blue-grey-dark 0%, $blue-grey-mid 100%);
 }
 

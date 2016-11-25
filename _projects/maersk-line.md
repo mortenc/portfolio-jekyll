@@ -1,6 +1,7 @@
 ---
 layout: project
 order: 2
+list-type: "desktop" 
 title:  "Maersk Line"
 desc:  "Redesigned website for the world's largest container shipping company."
 client: "Maersk Line"
