@@ -4,115 +4,52 @@
 .project {
 	background: white;
 
-	// Side navigation
-	//----------------
-	&__sidenav {
-		position: absolute;
-		z-index: 1000;
-		padding: $base-line-height*0.5 $base-line-height $base-line-height*0.5 $base-line-height*1.5;
-		color: $grey-dark;
-		background: white;
-		transform-origin: 0 100%;
-		transform: rotate(-90deg) translate3d(-100%,100%,0);
-		transition: background-color ease-in-out 0.3s, color ease-in-out 0.3s;
-		//margin-top: -$base-line-height*2;
-		border-bottom: 0;
-
-		@include media($large) {
-			position: fixed;
-			top: 0;
-			left: 0;
-		}
-
-		span {
-			position: relative;
-			display: block;
-			text-align: right;
-			@include small-label;
-
-			i {
-				display: inline-block;
-				width: 0;
-				height: 1px;
-				background-color: $grey-light;
-				vertical-align: middle;
-				margin-left: $base-line-height*0.5;
-				transition: width 0.2s ease-in 0.2s;
-				transform-origin: 100% 100%;
-
-				&::before {
-					display: block;
-					content:" ";
-					width: 0;
-					height: 0;
-					position: absolute;
-					right: 0;
-					top: 0;
-					border-top: 3px solid transparent;
-					border-bottom: 3px solid transparent;
-					border-left: 3px solid $grey-light;
-					transform: rotate(-90deg) translate3d(-5px,1px,0);
-					opacity: 0;
-					transition: opacity 0.1s ease-in;
-				}
-
-				&::after {
-					display: block;
-					content: " ";
-					width: 1px;
-					position: absolute;
-					right: 0;
-					top: 15px;
-					bottom: 13px;
-					background-color: $grey-light;
-					transition: top 0.1s linear 0.1s;
-				}
-			}
-		}
-
-		&:hover {
-			background-color: white;
-			text-decoration: none;
-			color: $grey-light;
-			transition: background-color ease-in-out 0.3s, color ease-in-out 0.3s;
-
-			i {
-				width: $base-line-height;
-				transition: width 0.2s ease-out;
-
-				&::before {
-					opacity: 1;
-					transition: opacity 0.1s ease-in 0.3s;
-				}
-
-				&::after {
-					top: 9px;
-					//height: 5px;
-					//transform: rotate(180deg) translateY(0);
-					transition: top 0.1s linear 0.2s;
-					//margin-top: -5px;
-				}
-			}
-		}
-	}
-
-
 	// Hero
-	//-----
 	&__hero {
 		position: relative;
 		overflow: hidden;
-		//background-size: cover;
-		//background-position: center;
-		//min-height: 90vh;
 		max-width: 100%;
-		//padding: 0 $base-line-height $base-line-height;
+		height: 100vh;
 		@include clearfix;
 
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(to bottom, transparent 0%, rgba(white,1) 100%);
+			//mix-blend-mode: overlay;
+		}
+
+		// Hero img element
+		//--------------
+		&__img {
+			display: block;
+			width: 50%;
+			height: 100%;
+			padding: $base-line-height*4;
+			margin: 0px auto;
+			float: left;
+			position: relative;
+
+			img {
+				display: block;
+				position: relative;
+				margin: 0px auto;
+				z-index: 300;
+				height: 100%;
+				width: auto;
+				max-width: none;
+			}
+		}
+
 		@include media($medium) {
-			display: flex;
-			align-items: stretch;
-			min-height: 100vh;
+			//display: flex;
+			//align-items: stretch;
+			//min-height: 100vh;
 			//padding: 0 $base-line-height*2 $base-line-height*2;
 		}
 
@@ -142,155 +79,108 @@
 		&>.grid {
 			@include container;
 		}
+	}
 
-		// Hero intro element
-		//--------------
-		&__intro {
+	&__info {
+		width: 50%;
+		height: 100%;
+		padding: $base-line-height*2;
+		padding-top: $base-line-height*7;
+		float: left;
+		background: linear-gradient(to left, rgba(white,0) 0%, rgba(white,.4) 35%, rgba(white,1) 100%);
 
-			@include media($medium) {
-				display: flex;
-				flex-direction: column;
-				justify-content: flex-end;
-				flex: 1 50%;
-				order: 1;
-				box-shadow: 0 0 rem(150px) rgba(black,.4);
-			}
-
-			@include media($xlarge) {
-				flex: 1 30%;
-				//padding-left: $base-line-height*2;
-			}
-			//
-			// @include media($xlarge) {
-			// 	@include span-columns(7);
-			// }
-		}
-
-		// Hero img element
-		//--------------
-		&__img {
-			position: relative;
-			background-size: cover;
-			background-position: center;
-			height: 65vh;
-
-			@include media($medium) {
-				flex: 1 50%;
-				order: 2;
-				height: auto;
-				//background-position: center right;
-			}
-
-			@include media($large) {
-				//background-position: center right;
-			}
-
-			@include media($xlarge) {
-				flex: 2 70%;
-				order: 2;
-				height: auto;
-				//background-position: center right;
-			}
-
-			// @include media($large) {
-			// 	@include span-columns(10);
-			// }
-			//
-			// @include media($xlarge) {
-			// 	@include span-columns(7);
-			// }
-		}
 	}
 
 	// Intro - info
 	//-------------
-	&__info {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		padding: $base-line-height;
+	&__intro {
+		// display: flex;
+		// flex-direction: column;
+		// justify-content: flex-end;
+		// padding: $base-line-height;
+
 
 		@include media($medium) {
-			padding: $base-line-height;
+			//padding: $base-line-height;
 		}
 
 		@include media($large) {
 			padding: $base-line-height*2 $base-line-height*2 $base-line-height*1.5;
 		}
+	}
 
-		&__client {
-			@include small-label;
-			color: white;
-			margin-bottom: $base-line-height*0.5;
-			padding-left: 0.25rem;
-			opacity: .5;
-		}
+	// &__client {
+	// 	@include small-label;
+	// 	//color: white;
+	// 	margin-bottom: $base-line-height*0.5;
+	// 	padding-left: 0.25rem;
+	// 	opacity: .5;
+	// }
 
-		&__title {
-			position: relative;
-			color: white;
-			font-size: ms(5);
-			font-weight: 600;
-			line-height: $base-line-height*1.5;
-			//letter-spacing: -0.04em;
-			z-index: 300;
+	&__title {
+		position: relative;
+		//color: white;
+		font-size: ms(3);
+		font-weight: 600;
+		line-height: $base-line-height*1.5;
+		//letter-spacing: -0.04em;
+		z-index: 300;
 
-			// &::before {
-			// 	content:"";
-			// 	display: block;
-			// 	position: absolute;
-			// 	bottom: $base-line-height - 0.2rem;
-			// 	width: 0.5rem;
-			// 	height: 0.5rem;
-			// 	border-radius: 0.25rem;
-			// 	border: 1px solid white;
-			// 	opacity: 1;
-			// 	right: -$base-line-height*4 - 0.5rem;
-			// }
+		// &::before {
+		// 	content:"";
+		// 	display: block;
+		// 	position: absolute;
+		// 	bottom: $base-line-height - 0.2rem;
+		// 	width: 0.5rem;
+		// 	height: 0.5rem;
+		// 	border-radius: 0.25rem;
+		// 	border: 1px solid white;
+		// 	opacity: 1;
+		// 	right: -$base-line-height*4 - 0.5rem;
+		// }
 
-			// &::after {
-			// 	content:"";
-			// 	display: block;
-			// 	height: 1px;
-			// 	background: linear-gradient(to left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-			// 	opacity: 1;
-			// 	width: calc(100% + #{$base-line-height*6});
-			// 	margin: $base-line-height 0;
-			// 	margin-left: -$base-line-height*2;
-			// }
-		}
+		// &::after {
+		// 	content:"";
+		// 	display: block;
+		// 	height: 1px;
+		// 	background: linear-gradient(to left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+		// 	opacity: 1;
+		// 	width: calc(100% + #{$base-line-height*6});
+		// 	margin: $base-line-height 0;
+		// 	margin-left: -$base-line-height*2;
+		// }
+	}
 
-		&__desc {
-			margin-top: $base-line-height*0.5;
+	&__desc {
+		//margin-top: $base-line-height*0.5;
+		font-size: ms(1);
+		line-height: $base-line-height;
+		opacity: .7;
+
+		// &::after {
+		// 	content:"";
+		// 	display: block;
+		// 	height: 1px;
+		// 	background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+		// 	opacity: 1;
+		// 	//width: calc(100% + #{$base-line-height*6});
+		// 	transform: translate3d(0,$base-line-height*1.5,0);
+		// 	// margin: $base-line-height 0;
+		// 	// margin-left: -$base-line-height*2;
+		// 	opacity: .3;
+		// }
+
+		@include media($large) {
 			font-size: ms(1);
-			line-height: $base-line-height;
-			color: white;
-			opacity: .7;
-
-			// &::after {
-			// 	content:"";
-			// 	display: block;
-			// 	height: 1px;
-			// 	background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-			// 	opacity: 1;
-			// 	//width: calc(100% + #{$base-line-height*6});
-			// 	transform: translate3d(0,$base-line-height*1.5,0);
-			// 	// margin: $base-line-height 0;
-			// 	// margin-left: -$base-line-height*2;
-			// 	opacity: .3;
-			// }
-
-			@include media($large) {
-				font-size: ms(1);
-				//line-height: $base-line-height*1.25;
-			}
+			//line-height: $base-line-height*1.25;
 		}
 	}
 
 	// Intro - details
 	//----------------
 	&__details {
-		width: 100%;
+		@include span-columns(12);
+		@include omega();
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
@@ -307,16 +197,15 @@
 		}
 
 		li {
-			color: white;
 			display: inline-block;
 			flex-basis: 50%;
 			font-weight: 400;
 			font-size: ms(-1);
 			padding-bottom: $base-line-height;
-			//opacity: .85;
+			opacity: .85;
 
 			@include media($medium) {
-				//flex-basis: 33%;
+				//flex-basis: 25%;
 				//padding-bottom: 0;
 			}
 
@@ -362,7 +251,6 @@
 			span {
 				display: block;
 				@include small-label;
-				color: white;
 				opacity: .5;
 
 				@include media($large) {
@@ -393,10 +281,10 @@
 	// Content area
 	//-------------
 	&__content {
-		@include container;
+		@include outer-container;
+		@include clearfix;
 		position: relative;
 		padding: $base-line-height*1.5 0;
-		background-color: white;
 
 		@include media($xlarge) {
 			padding: $base-line-height*2 0;
