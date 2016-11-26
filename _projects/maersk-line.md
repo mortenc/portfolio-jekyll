@@ -1,7 +1,8 @@
 ---
 layout: project
 order: 2
-list-type: "desktop" 
+bodyclass: "project"
+list-type: "desktop"
 title:  "Maersk Line"
 desc:  "Redesigned website for the world's largest container shipping company."
 client: "Maersk Line"
@@ -13,7 +14,6 @@ year: 2016
 type: "Website"
 hero: "/assets/img/maersk-macbook-big.png"
 color: "#0D3F61"
-bodyclass: 'body--project'
 ---
 
 Maersk Line is the world’s largest container shipping company with more than 350 offices in more than 110 countries. As a leader in the shipping industry, the company prides itself on excellence in customer service and innovation – and wished to redesign their digital presence up to better reflect this. FFW were contacted to help Maersk Line achieve this goal.

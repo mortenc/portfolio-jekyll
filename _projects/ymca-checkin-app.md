@@ -1,7 +1,8 @@
 ---
 layout: project
 order: 1
-list-type: "mobile" 
+bodyclass: "project"
+list-type: "mobile"
 title:  "Mobile Check-In App"
 desc:  "Speeding up the check in process at YMCA branches with a new iOS app."
 client: "YMCA Twin Cities"

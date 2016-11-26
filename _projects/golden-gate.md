@@ -1,6 +1,7 @@
 ---
 layout: project
 order: 3
+bodyclass: "project"
 title:  "Golden Gate Bridge"
 desc:  "New website for the world's most iconic bridge."
 client: "GGBHTD"
@@ -12,7 +13,6 @@ year: 2016
 type: "Website"
 hero: "/assets/img/ggb-hero.jpg"
 color: "#252c3e"
-bodyclass: 'body--project'
 ---
 
 The Golden Gate Bridge, Highway & Transportation District knew that they needed a new website, but weren’t sure where to begin. FFW helped them understand their needs and how best to deliver outstanding digital experiences to locals and tourists alike.
