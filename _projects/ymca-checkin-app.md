@@ -9,7 +9,7 @@ client: "YMCA Twin Cities"
 role: "Strategy, UX, Design"
 employer: "FFW Agency"
 year: 2016
-hero: "/assets/img/ymca-iphone-mockup.png"
+hero: "/assets/img/ymca-profile-iphone.png"
 color: "#52527b"
 ---
 

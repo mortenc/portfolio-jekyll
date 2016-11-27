@@ -11,7 +11,7 @@ link: "www.example.com"
 link-desc: "Visit Website"
 year: 2016
 type: "Website"
-hero: "/assets/img/ggb-hero.jpg"
+hero: "/assets/img/ggb-responsive-mockups.jpg"
 color: "#252c3e"
 ---
 

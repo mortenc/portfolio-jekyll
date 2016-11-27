@@ -22,6 +22,8 @@ My role
 ---------
 I worked as Creative Lead on the project, and was responsible for the overall creative vision and execution. This included all discovery and conceptualization work and client contact, as well as hands on work with UX and UI design. Aside from me, the core project team counted an additional UX/UI designer, a project manager and a technical solutions architect.
 
+{% include project-image.html type="full" file="maersk-macbook-big.png" caption="We designed several prototypes to ensure that the interactions felt smooth and natural." %}
+
 Discovery
 ---------
 The first important step in any successful redesign process is establishing a strong common understanding of the context and goals. To achieve this, we initiated the project with a number of internal discovery workshops at Maersk Line. The ultimate goal of these workshops was to uncover valuable insights about the organization, their goals and strategic priorities – and to learn about the purpose, challenges and opportunities with redesigning the website.
