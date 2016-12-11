@@ -25,15 +25,27 @@
   &__intro {
     @include span-columns(6);
     @include omega();
-    padding-top: $base-line-height*4;
+    padding-top: $base-line-height*5;
     font-size: ms(2);
-    line-height: $base-line-height*1.125;
+    line-height: $base-line-height*1.25;
     color: $white-transparent;
 
     span {
       display: block;
+      position: relative;
       font-weight: 600;
       color: white;
+
+      &::before {
+        content:"Work";
+        color: black;
+        position: absolute;
+        top:6.5rem;
+        left: -.5rem;
+        font-size: ms(25);
+        mix-blend-mode: multiply;
+        opacity: .05;
+      }
     }
   }
 

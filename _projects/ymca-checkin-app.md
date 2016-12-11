@@ -4,7 +4,7 @@ order: 1
 bodyclass: "project"
 list-type: "mobile"
 title:  "Mobile Check-In App"
-desc:  "Speeding up the check in process at YMCA branches with a new iOS app."
+desc:  "Helping the YMCA speed up the check in process at their gym branches with a new iOS app."
 client: "YMCA Twin Cities"
 role: "Strategy, UX, Design"
 employer: "FFW Agency"

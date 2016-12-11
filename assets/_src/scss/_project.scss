@@ -12,28 +12,18 @@
 		height: 100vh;
 		@include clearfix;
 
-		&::before {
-			content: "";
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background: linear-gradient(to bottom, transparent 0%, rgba(white,.4) 100%);
-			mix-blend-mode: overlay;
-		}
 
 		// Hero img element
 		//--------------
 		&__img {
 			display: block;
-			width: 60%;
+			width: 50%;
 			height: 100%;
-			padding: $base-line-height*2;
+			position: absolute;
+			top: 0;
+			right: 0;
+			//padding: $base-line-height*2;
 			margin: 0px auto;
-			float: right;
-			position: relative;
 
 			img {
 				display: block;
@@ -85,13 +75,21 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		width: 40%;
-		height: 100%;
-		padding: $base-line-height*3;
-		float: left;
-		//background: linear-gradient(to left, rgba(white,0) 0%, rgba(white,.4) 35%, rgba(white,1) 100%);
-		background: rgba(255,255,255,.95);
+		min-height: 60vh;
+		//padding: $base-line-height*3;
+		//float: left;
 
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(to bottom, transparent 0%, rgba(white,.4) 100%);
+			mix-blend-mode: overlay;
+		}
 	}
 
 	// Intro - info
@@ -100,7 +98,8 @@
 		// display: flex;
 		// flex-direction: column;
 		// justify-content: flex-end;
-		padding-bottom: $base-line-height*2;
+		width: 50%;
+		padding: $base-line-height*2 $base-line-height*3;
 
 
 		@include media($medium) {
@@ -122,9 +121,9 @@
 
 	&__title {
 		position: relative;
-		//color: white;
-		font-size: ms(3);
-		font-weight: 600;
+		color: white;
+		font-size: ms(4);
+		font-weight: 800;
 		line-height: $base-line-height*1.5;
 		padding-bottom: $base-line-height*0.5;
 		//letter-spacing: -0.04em;
@@ -159,7 +158,7 @@
 		//margin-top: $base-line-height*0.5;
 		font-size: ms(1);
 		line-height: $base-line-height;
-		opacity: .7;
+		color: $white-transparent;
 
 		// &::after {
 		// 	content:"";
@@ -175,22 +174,20 @@
 		// }
 
 		@include media($large) {
-			font-size: ms(1);
-			//line-height: $base-line-height*1.25;
+			font-size: ms(2);
+			line-height: $base-line-height*1.25;
 		}
 	}
 
 	// Intro - details
 	//----------------
 	&__details {
-		@include span-columns(12);
-		@include omega();
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		//padding: $base-line-height;
-		//background: lighten($grey-lighter,5);
-		//display: none;
+		width: 50%;
+		background: white;
+		padding: $base-line-height*2 0 $base-line-height*2 $base-line-height*3;
 
 		@include media($medium) {
 			//padding: $base-line-height;
@@ -203,10 +200,10 @@
 		li {
 			display: inline-block;
 			flex-basis: 50%;
-			font-weight: 400;
+			font-weight: 700;
 			font-size: ms(-1);
 			padding-bottom: $base-line-height;
-			opacity: .85;
+			//opacity: .85;
 
 			@include media($medium) {
 				//flex-basis: 25%;
