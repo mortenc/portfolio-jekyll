@@ -1,10 +1,10 @@
 ---
 layout: project
-order: 2
+order: 3
 bodyclass: "project"
 list-type: "desktop"
 title:  "Maersk Line"
-desc:  "Redesigned website for the world's largest container shipping company."
+desc:  "<span>Maersk Line</span> is the world's largest container shipping company, and wanted to redesign their website to match the excellence in customer service, that they pride themselves on."
 client: "Maersk Line"
 role: "Strategy, UX, Design"
 employer: "FFW Agency"
@@ -12,7 +12,7 @@ link: "www.example.com"
 link-desc: "Visit Website"
 year: 2016
 type: "Website"
-hero: "/assets/img/maersk-macbook-big.png"
+hero: "/assets/img/maersk-hero.jpg"
 color: "#0D3F61"
 ---
 

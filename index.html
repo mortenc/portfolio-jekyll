@@ -24,8 +24,7 @@ bodyclass: 'front'
         {% for project in ordered_projects %}
           <li class="project-list__project {% if project.list-type %} project-list__project--{{ project.list-type }} {% endif %}">
             <a href="{{ project.url | prepend: site.baseurl }}">
-              <div class="project-list__project__img" style="background-color:{{ project.color }}";>
-                <img src="{{ project.hero }}" alt="Image for the {{ project.client }} project" />
+              <div class="project-list__project__img" style="background-image:url('{{ project.hero }}')";>
               </div>
               <div class="project-list__project__info">
                 <span class="project-list__project__client">{{ project.client }}</span>

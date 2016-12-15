@@ -4,102 +4,67 @@
 .project {
 	background: white;
 
-	// Hero
-	&__hero {
-		position: relative;
-		overflow: hidden;
-		max-width: 100%;
-		height: 100vh;
-		@include clearfix;
-
-
-		// Hero img element
-		//--------------
-		&__img {
-			display: block;
-			width: 50%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			right: 0;
-			//padding: $base-line-height*2;
-			margin: 0px auto;
-
-			img {
-				display: block;
-				position: relative;
-				margin: 0px auto;
-				z-index: 300;
-				height: 100%;
-				width: auto;
-				max-width: none;
-			}
-		}
-
-		@include media($medium) {
-			//display: flex;
-			//align-items: stretch;
-			//min-height: 100vh;
-			//padding: 0 $base-line-height*2 $base-line-height*2;
-		}
-
-		// &::before {
-		// 	content: " ";
-		// 	position: absolute;
-		// 	top: $base-line-height*2;
-		// 	left: 0;
-		// 	width: 100%;
-		// 	height: 1px;
-		// 	background: white;
-		// 	opacity: .05;
-		// }
-		//
-		// &::after {
-		// 	content: "";
-		// 	position: absolute;
-		// 	top: 0;
-		// 	left: 0;
-		// 	right: 0;
-		// 	bottom: 0;
-		// 	background-color: black;
-		// 	z-index: 100;
-		// 	opacity: .2;
-		// }
-
-		&>.grid {
-			@include container;
-		}
-	}
-
-	&__info {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		min-height: 60vh;
-		//padding: $base-line-height*3;
-		//float: left;
+	//Back button
+	&__back {
+		position: absolute;
+		width: 100%;
+		z-index: 300;
 
 		&::before {
-			content: "";
+			content:"";
 			display: block;
 			position: absolute;
 			top: 0;
 			left: 0;
 			right: 0;
 			bottom: 0;
-			background: linear-gradient(to bottom, transparent 0%, rgba(white,.4) 100%);
-			mix-blend-mode: overlay;
+			height: 100%;
+			width: 100%;
+			background: linear-gradient(to left, rgba($blue-grey-dark, 0) 0%, rgba(255,255,255,.05) 100%);
+			transition: transform ease-out 1.3s;
+			pointer-events: none;
+		}
+
+		a {
+			display: inline-block;
+			@include small-label;
+			border: 0;
+			padding: $base-line-height;
+
 		}
 	}
 
-	// Intro - info
-	//-------------
+	// Hero
+	&__hero {
+		position: relative;
+		display: flex;
+		align-items: center;
+		max-width: 100%;
+		padding-top: $base-line-height*3;
+		background-color: $blue-grey-darker;
+		@include clearfix;
+
+		@include media($medium) {
+			min-height: 75vh;
+		}
+
+		//Hero info container
+		&__info {
+			@include outer-container;
+			padding: $base-line-height*2 $base-line-height*1.5 $base-line-height*2;
+
+			@include media($large) {
+				padding: $base-line-height*5 $base-line-height*2 $base-line-height*3;
+			}
+		}
+	}
+
+	// Project intro
 	&__intro {
 		// display: flex;
 		// flex-direction: column;
 		// justify-content: flex-end;
-		width: 50%;
-		padding: $base-line-height*2 $base-line-height*3;
+		@include span-columns(12);
 
 
 		@include media($medium) {
@@ -107,107 +72,76 @@
 		}
 
 		@include media($large) {
-			//padding: $base-line-height*2 $base-line-height*2 $base-line-height*1.5;
+			@include span-columns(5);
+			@include shift(3);
+
+			&::before {
+				content:"";
+				display: block;
+				width: 60%;
+				height: 1px;
+				background: linear-gradient(to left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+				opacity: 1;
+				transform: translate3d(0,$base-line-height*1.5,0);
+				opacity: .3;
+				position: relative;
+				top: -$base-line-height;
+				left: -70%;
+			}
+		}
+
+		&__title {
+			@include small-label;
+			color: $white-transparent;
+			margin-bottom: $base-line-height*0.5;
+		}
+
+		&__desc {
+
+			color: white;
+
+			span {
+				font-weight: 600;
+			}
+
+
+			@include media($large) {
+				font-size: ms(1);
+				line-height: $base-line-height*1.25;
+			}
 		}
 	}
 
-	// &__client {
-	// 	@include small-label;
-	// 	//color: white;
-	// 	margin-bottom: $base-line-height*0.5;
-	// 	padding-left: 0.25rem;
-	// 	opacity: .5;
-	// }
 
-	&__title {
-		position: relative;
-		color: white;
-		font-size: ms(4);
-		font-weight: 800;
-		line-height: $base-line-height*1.5;
-		padding-bottom: $base-line-height*0.5;
-		//letter-spacing: -0.04em;
-		z-index: 300;
-
-		// &::before {
-		// 	content:"";
-		// 	display: block;
-		// 	position: absolute;
-		// 	bottom: $base-line-height - 0.2rem;
-		// 	width: 0.5rem;
-		// 	height: 0.5rem;
-		// 	border-radius: 0.25rem;
-		// 	border: 1px solid white;
-		// 	opacity: 1;
-		// 	right: -$base-line-height*4 - 0.5rem;
-		// }
-
-		// &::after {
-		// 	content:"";
-		// 	display: block;
-		// 	height: 1px;
-		// 	background: linear-gradient(to left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-		// 	opacity: 1;
-		// 	width: calc(100% + #{$base-line-height*6});
-		// 	margin: $base-line-height 0;
-		// 	margin-left: -$base-line-height*2;
-		// }
-	}
-
-	&__desc {
-		//margin-top: $base-line-height*0.5;
-		font-size: ms(1);
-		line-height: $base-line-height;
-		color: $white-transparent;
-
-		// &::after {
-		// 	content:"";
-		// 	display: block;
-		// 	height: 1px;
-		// 	background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-		// 	opacity: 1;
-		// 	//width: calc(100% + #{$base-line-height*6});
-		// 	transform: translate3d(0,$base-line-height*1.5,0);
-		// 	// margin: $base-line-height 0;
-		// 	// margin-left: -$base-line-height*2;
-		// 	opacity: .3;
-		// }
-
-		@include media($large) {
-			font-size: ms(2);
-			line-height: $base-line-height*1.25;
-		}
-	}
-
-	// Intro - details
-	//----------------
+	// Project details
 	&__details {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		width: 50%;
-		background: white;
-		padding: $base-line-height*2 0 $base-line-height*2 $base-line-height*3;
+		@include span-columns(12);
+		padding-top: $base-line-height*2;
 
 		@include media($medium) {
 			//padding: $base-line-height;
 		}
 
 		@include media($large) {
+			@include span-columns(2);
+			@include shift(1);
+			@include omega();
+			padding-top: 0;
 			//padding: $base-line-height*1.5 $base-line-height*2.5 $base-line-height*0.75 $base-line-height*2;
 		}
 
 		li {
-			display: inline-block;
-			flex-basis: 50%;
-			font-weight: 700;
+			display: block;
+			font-weight: 600;
 			font-size: ms(-1);
 			padding-bottom: $base-line-height;
-			//opacity: .85;
+			color: white;
+			width: 50%;
+			float: left;
 
 			@include media($medium) {
-				//flex-basis: 25%;
-				//padding-bottom: 0;
+				clear: both;
+				width: 100%;
 			}
 
 			@include media($large) {
@@ -215,66 +149,54 @@
 				//padding-bottom: 0;
 			}
 
-			// &:last-child {
-			// 	line-height: $base-line-height*2;
-			// }
-
-			.btn {
-				vertical-align: bottom;
+			&:last-child {
+					padding-bottom: 0;
 			}
-
-
-			// @include media($medium) {
-			// 	float: none;
-			// 	width: auto;
-			// 	//padding: $base-line-height 0 $base-line-height $base-line-height*1.5;
-			// }
-			//
-			// @include media($large) {
-			// 	//font-size: ms(0);
-			// 	//padding: $base-line-height 0 $base-line-height $base-line-height*1.5;
-			// }
-
-			// &:nth-child(odd) {
-			// 	@include media(max-width $medium) {
-			// 		padding-left: $base-line-height;
-			// 		padding-right: $base-line-height*0.5;
-			// 	}
-			// }
-			//
-			// &:nth-child(even) {
-			// 	@include media(max-width $medium) {
-			// 		padding-left: $base-line-height*0.5;
-			// 		padding-right: $base-line-height;
-			// 	}
-			// }
 
 			span {
 				display: block;
 				@include small-label;
-				opacity: .5;
+				color: $white-transparent;
 
 				@include media($large) {
 					//font-size: ms(-3);
 				}
 			}
 		}
+	}
 
-		&--alt {
-			@include span-columns(4);
-			@include omega();
+	// Project hero img
+	&__img {
+		//@include outer-container;
+		display: block;
+		position: relative;
+		margin: 0px auto;
+		background: linear-gradient(to bottom, $blue-grey-darker 0%, $blue-grey-darker 50%, transparent 50%);
+
+		@include media($large) {
+			padding: 0 $base-line-height*4;
+		}
+
+		img {
+			display: block;
+			position: relative;
+			margin: 0px auto;
+			width: 100%;
+			max-width: none;
+		}
+
+		&::after {
 			position: absolute;
-			right: 0;
-			top: 0;
-			padding: $base-line-height*2 0;
-			border-left: 1px solid rgba(black,.05);
-			border-bottom: 1px solid rgba(black,.05);
-			border-right: 1px solid rgba(black,.05);
+			left: 50%;
+			bottom: 0;
+			display: inline-block;
+			content:"";
+			width: 1px;
+			height: $base-line-height*2;
+			background: linear-gradient(to bottom, transparent 0%, rgba(255,255,255,1) 100%);
 
-			li {
-				width: 100%;
-				padding: $base-line-height*0.5 $base-line-height*2;
-				margin: 0;
+			@include media($large) {
+				height: $base-line-height*6;
 			}
 		}
 	}
@@ -285,15 +207,27 @@
 		@include outer-container;
 		@include clearfix;
 		position: relative;
-		padding: $base-line-height*1.5 0;
+		padding: $base-line-height*3 $base-line-height*1.5;
+
+		&::before {
+			position: absolute;
+			left: 50%;
+			top: 0;
+			display: inline-block;
+			content:"";
+			width: 1px;
+			height: $base-line-height*1.5;
+			background: $blue-grey-light;
+			opacity: 1;
+		}
 
 		@include media($xlarge) {
-			padding: $base-line-height*2 0;
+			padding: $base-line-height*4 0;
 		}
 
 		h1, h2, h3, h4, h5, h6 {
 		  font-weight: 700;
-		  letter-spacing: -0.05em;
+		  // letter-spacing: -0.05em;
 		}
 
 		p, h1, h2 {
@@ -323,57 +257,30 @@
 		}
 
 		h2 {
-		  font-size: ms(0);
-			text-transform: uppercase;
-			letter-spacing: 0.05rem;
+			@include small-label;
+			//font-size: ms(-2);
 		  line-height: $base-line-height * 1.25;
 			position: relative;
 			//text-transform: uppercase;
 			background-color: white;
-			color: $purple;
+			color: $blue-grey-dark;
+			text-align: center;
+			//font-size: ms(0);
 
-			&::before {
-				display: inline-block;
-				content:" ";
-				width: $base-line-height*3;
-				height: $base-line-height*0.5;
-				background-color: $purple;
-				opacity: 0.1;
-				//padding-bottom: $base-line-height*0.5;
-				margin-bottom: 0.2rem;
-				vertical-align: middle;
-				margin-left: -$base-line-height*1.5;
-				margin-right: $base-line-height;
-			}
-
-			// &::before {
-			// 	position: relative;
-			// 	display: inline-block;
-			// 	content:"";
-			// 	width: 0.5rem;
-			// 	height: 0.5rem;
-			// 	border-radius: 0.25rem;
-			// 	border: 1px solid $purple;
-			// 	opacity: 1;
-			// 	vertical-align: baseline;
-			// 	top: -0.1rem;
-			// 	margin-right: $base-line-height;
-			// }
-			//
 			// &::after {
 			// 	display: block;
 			// 	content:" ";
 			// 	width: $base-line-height*6;
 			// 	height: 1px;
 			// 	position: absolute;
-			// 	left: -$base-line-height*6;
+			// 	left: -$base-line-height*7;
 			// 	top: $base-line-height*0.5 + 0.1575rem;
-			// 	background: linear-gradient(to left, rgba($purple,1) 0%,rgba($purple,0) 100%);
+			// 	background: linear-gradient(to left, rgba($blue-grey-light,1) 0%,rgba($blue-grey-light,0) 100%);
 			// }
 		}
 
 		* + h2 {
-		  margin-top: $base-line-height * 1.5;
+		  margin-top: $base-line-height * 3;
 		}
 
 		h3 {
@@ -412,21 +319,6 @@
 			// 	font-size: ms(0);
 			// }
 
-			&:first-of-type {
-
-				&:first-letter {
-					float: left;
-					font-size: ms(10);
-					line-height: $base-line-height*2;
-					padding-right: 0.5rem;
-					color: $purple;
-					font-weight: 600;
-
-					@include media($large) {
-
-					}
-				}
-			}
 		}
 
 		//Images
@@ -435,15 +327,17 @@
 			@include shift(3);
 			@include clearfix;
 
+			* + & {
+				margin-top: $base-line-height * 3;
+			}
+
 			img {
 				width: 100%;
-				margin-top: $base-line-height * 1.5;
 			}
 
 			figcaption {
-				font-size: .85rem;
-				font-style: italic;
-				color: $grey-light;
+				font-size: ms(-2);
+				color: $blue-grey-mid;
 			  line-height: $base-line-height*0.85;
 				text-align: center;
 				margin-top: $base-line-height * 1;

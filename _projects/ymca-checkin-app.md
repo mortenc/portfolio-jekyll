@@ -4,15 +4,17 @@ order: 1
 bodyclass: "project"
 list-type: "mobile"
 title:  "Mobile Check-In App"
-desc:  "Helping the YMCA speed up the check in process at their gym branches with a new iOS app."
+desc:  "<span>The YMCA of Greater Twin Cities</span> needed a new iOS app to help employees speed up the check-in process for members at their gyms and branches during peak hours."
 client: "YMCA Twin Cities"
-role: "Strategy, UX, Design"
+role: "Research, UX, UI"
 employer: "FFW Agency"
 year: 2016
-hero: "/assets/img/ymca-profile-iphone.png"
+hero: "/assets/img/ymca-hero.jpg"
 color: "#52527b"
 ---
 
+The first headline
+-------------------
 The YMCA of Greater Twin Cities needed a way to speed up the check-in process for their members during peak hours in their gyms and branches. To solve this problem we designed and built an iOS app for the organization’s employees to expedite the process. As the only creative on the project, I was responsible for all research, UX and UI design.
 
 Checking in at the YMCA
@@ -29,7 +31,7 @@ It was clear from conversations with YMCA staff that a feasible (and very reques
 
 In order to uncover potential technological solutions I dug into researching the portable barcode scanner space, together with one of our developers. We found several potential solutions that could largely be divided into two groups: software or hardware scanners.
 
-{% include project-image.html type="wide" file="ymca-prototype-video-thumb.jpg" caption="We designed several prototypes to ensure that the interactions felt smooth and natural." %}
+{% include project-image.html type="grid" file="ymca-prototype-video-thumb.jpg" caption="We designed several prototypes to ensure that the interactions felt smooth and natural." %}
 
 A deciding factor for choosing a solution was speed – if the scanning process was not fast, it would not help YMCA solve their issues during peak hours. So while our developer began to set up to performance tests for both software and hardware scanning, I began mapping out user flows and sketching initial designs for both scenarios.
 

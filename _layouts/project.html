@@ -2,25 +2,33 @@
 layout: default
 bodyclass: 'project'
 ---
-<header class="project__hero">
-	<div class="project__info" style="background-color:{{ page.color }};">
+<div class="project__back">
+	<a href="/">Back</a>
+</div>
+
+<div class="project__hero">
+
+	<div class="project__hero__info">
+
 		<div class="project__intro">
-			<h1 class="project__title">{{ page.client }}</h1>
-			<p class="project__desc">{{ page.desc }}</p>
+			<h1 class="project__intro__title">{{ page.title }}</h1>
+			<p class="project__intro__desc">{{ page.desc }}</p>
 		</div>
+
+		<ul class="project__details">
+			<li class="project__details__role"><span>Role</span>{{ page.role }}</li>
+			<li class="project__details__employer"><span>Employer</span>{{ page.employer }}</li>
+			<li class="project__details__year"><span>Year</span>{{ page.year }}</li>
+		</ul>
+
 	</div>
 
-	<ul class="project__details">
-		<li class="project__client"><span>Client</span>{{ page.client }}</li>
-		<li class="project__role"><span>Role</span>{{ page.role }}</li>
-		<li class="project__employer"><span>Employer</span>{{ page.employer }}</li>
-		<li class="project__year"><span>Year</span>{{ page.year }}</li>
-	</ul>
+</div>
 
-	<div class="project__hero__img">
-		<img src="{{ page.hero | prepend: site.baseurl }}"></div>
-	</div>
-</header>
+<div class="project__img">
+	<img src="{{ page.hero | prepend: site.baseurl }}" />
+</div>
+
 <div class="project__content">
 	{{ content }}
 	<!-- {% include visual-grid.html lines="1" dark="true" %} -->

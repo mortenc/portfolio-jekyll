@@ -10,6 +10,11 @@ $base-font-size:   16px;
     @return ($px / $base) * 1rem;
 }
 
+// PX to EM - Usage: font-size: em(37px);
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+
 $base-font-weight: 400;
 $base-line-height: rem(28px);
 $blh: $base-line-height;
@@ -45,10 +50,16 @@ $white-transparent: rgba(255,255,255,.5);
 
 $purple: #52527b;
 
+// $blue-grey-light: #2B3740;
+// $blue-grey-mid: #29353E;
+// $blue-grey-dark: #212D36; //#181922
+// $blue-grey-darker: darken($blue-grey-dark,4);
 
-$blue-grey-dark: darken(#212D36,3);
-$blue-grey-mid: #29353E;
-$blue-grey-light: #2B3740;
+$blue-grey-dark: #212D36;
+
+$blue-grey-light: lighten($blue-grey-dark,70);
+$blue-grey-mid: lighten($blue-grey-dark,40);
+$blue-grey-darker: darken($blue-grey-dark,4);
 
 
 $text-color:       #404448;
