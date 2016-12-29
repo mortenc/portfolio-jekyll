@@ -10,10 +10,10 @@
       transition: opacity ease-out .7s, transform ease-out .7s;
       transition-delay: 1.5s;
 
-      .loaded & {
+      //.loaded & {
         opacity: 1;
         transform: translate3d(0,0,0);
-      }
+      //}
 
       h2 {
         @include span-columns(2);

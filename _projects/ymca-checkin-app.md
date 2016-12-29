@@ -1,15 +1,17 @@
 ---
 layout: project
-order: 1
+order: 2
 bodyclass: "project"
 list-type: "mobile"
 title:  "Mobile Check-In App"
-desc:  "<span>The YMCA of Greater Twin Cities</span> needed a new iOS app to help employees speed up the check-in process for members at their gyms and branches during peak hours."
 client: "YMCA Twin Cities"
+desc-long:  "<span>The YMCA of Greater Twin Cities</span> needed a new iOS app to help employees speed up the check-in process for members at their gyms and branches during peak hours."
+desc-short:  "Checking in at the YMCA with a new mobile app"
 role: "Research, UX, UI"
 employer: "FFW Agency"
 year: 2016
 hero: "/assets/img/ymca-hero.jpg"
+thumb: "/assets/img/ymca-thumb.jpg"
 color: "#52527b"
 ---
 

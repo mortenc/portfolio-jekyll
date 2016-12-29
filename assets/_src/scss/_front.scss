@@ -10,6 +10,11 @@
   &__content {
       @include outer-container;
       position: relative;
+      padding: 0 $base-line-height;
+
+      @include media($medium) {
+        padding: 0 $base-line-height*2;
+      }
       //opacity: 0;
       //transform: translate3d(0,$base-line-height,0);
       //transition: opacity ease-out .7s, transform ease-out .7s;
@@ -23,15 +28,22 @@
 
   //
   &__intro {
-    @include span-columns(6);
+    @include span-columns(12);
     @include omega();
     padding-top: $base-line-height*5;
     font-size: ms(2);
     line-height: $base-line-height*1.25;
     color: $white-transparent;
 
+    @include media($medium) {
+      @include span-columns(9);
+    }
+
+    @include media($large) {
+      @include span-columns(6);
+    }
+
     span {
-      display: block;
       position: relative;
       font-weight: 600;
       color: white;
@@ -53,24 +65,24 @@
 .project-list {
   li {
     padding-bottom: $base-line-height;
+    @include span-columns(12);
+
+    @include media($medium) {
+      @include span-columns(6);
+
+      &:nth-child(even) {
+        padding-left: $base-line-height*0.5;
+      }
+
+      &:nth-child(odd) {
+        padding-right: $base-line-height*0.5;
+      }
+    }
   }
 
   &__project {
-    @include span-columns(6);
-    padding-bottom: $base-line-height;
-
-    &:nth-child(even) {
-      padding-left: $base-line-height*0.5;
-    }
-
-    &:nth-child(odd) {
-      padding-right: $base-line-height*0.5;
-    }
-
-    a {
-      display: block;
-      border: none;
-    }
+    display: block;
+    border: none;
 
     &__img {
       position: relative;
@@ -78,15 +90,19 @@
       padding-top: 100%;
       overflow: hidden;
       background-size: cover;
-      //background: linear-gradient(to bottom, transparent 0%, rgba(white,.4) 100%);
-      //background-blend-mode: overlay;
 
       img {
         display: block;
         position: absolute;
         top: 0;
         left: 0;
-        transition: transform 0.435s ease-in-out;
+        transition: transform 0.335s ease-in-out;
+      }
+    }
+
+    &:hover &__img {
+      img {
+        transform: scale(1.1);
       }
     }
 
@@ -100,7 +116,7 @@
       color: white;
     }
 
-    &__title {
+    &__desc {
       color: $white-transparent;
     }
   }

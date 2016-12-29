@@ -22,13 +22,14 @@ bodyclass: 'front'
       <ul class="project-list">
         {% assign ordered_projects = site.projects | sort: "order" %}
         {% for project in ordered_projects %}
-          <li class="project-list__project {% if project.list-type %} project-list__project--{{ project.list-type }} {% endif %}">
-            <a href="{{ project.url | prepend: site.baseurl }}">
-              <div class="project-list__project__img" style="background-image:url('{{ project.hero }}')";>
+          <li>
+            <a class="project-list__project {% if project.list-type %} project-list__project--{{ project.list-type }} {% endif %}" href="{{ project.url | prepend: site.baseurl }}">
+              <div class="project-list__project__img">
+                <img src="{{ project.thumb }}" alt="Image thumbnail for {{ project.client }} project.">
               </div>
               <div class="project-list__project__info">
                 <span class="project-list__project__client">{{ project.client }}</span>
-                <h3 class="project-list__project__title">{{ project.title }}</h3>
+                <h3 class="project-list__project__desc">{{ project.desc-short }}</h3>
                 <!-- <p class="project-list__project__desc">{{ project.desc }}</p> -->
               </div>
             </a>

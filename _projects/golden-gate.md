@@ -1,17 +1,18 @@
 ---
 layout: project
-order: 2
+order: 1
 bodyclass: "project"
-title:  "Golden Gate Bridge"
-desc: "<span>The Golden Gate Bridge, Highway & Transportation District</span> knew that they needed a new website, but weren’t sure where to begin. FFW helped them understand their needs."
-client: "GGBHTD"
+client: "Golden Gate Bridge"
+desc-long: "<span>The Golden Gate Bridge, Highway & Transportation District</span> knew that they needed a new website, but weren’t sure where to begin. FFW helped them understand their needs."
+desc-short: "Redesigning a website for a world famous bridge"
 role: "Strategy, UX, Design"
 employer: "FFW Agency"
 link: "www.example.com"
 link-desc: "Visit Website"
 year: 2016
 type: "Website"
-hero: "/assets/img/ggb-front-in-iphone.png"
+hero: "/assets/img/ggb-hero.jpg"
+thumb: "/assets/img/ggb-thumb.jpg"
 color: "#252c3e"
 ---
 
