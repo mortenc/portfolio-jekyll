@@ -3,6 +3,7 @@ layout: project
 order: 1
 bodyclass: "project"
 client: "Golden Gate Bridge"
+title:  "Golden Gate Bridge"
 desc-long: "<span>The Golden Gate Bridge, Highway & Transportation District</span> knew that they needed a new website, but weren’t sure where to begin. FFW helped them understand their needs."
 desc-short: "Redesigning a website for a world famous bridge"
 role: "Strategy, UX, Design"

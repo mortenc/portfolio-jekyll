@@ -1,5 +1,6 @@
 @charset "utf-8";
-@import url("http://overpass-30e2.kxcdn.com/overpass.css");
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700|Overpass:100,200,300,400,600,700,800,900');
+// @import url('https://fonts.googleapis.com/css?family=Overpass|Overpass+Mono');
 
 // Our variables + functions
 $base-font-family: 'Overpass' Helvetica, Arial, sans-serif;
@@ -48,7 +49,8 @@ $grey-dark:  darken($grey, 10%);
 
 $white-transparent: rgba(255,255,255,.5);
 
-$purple: #52527b;
+$purple: #7e7ecc;
+$light-blue: #8d9dce;
 
 // $blue-grey-light: #2B3740;
 // $blue-grey-mid: #29353E;
@@ -86,7 +88,8 @@ $gutter: 0em !global;
   "visual-grid",
   "sidebar",
 	"layout",
+  "page",
+  "project",
 	"front",
-  "about",
-	"project"
+  "about"
 ;

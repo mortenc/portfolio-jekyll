@@ -1,41 +1,34 @@
 ---
-layout: default
+layout: page
 title: 'Work'
 navigation_weight: 1
 bodyclass: 'front'
 ---
 
-{% include sidebar.html %}
+<!-- {% include visual-grid.html lines="1,7,13" %} -->
+<h1 class="front__intro">
+  <span>Morten Christoffersen <br/>is a multi-disciplinary designer</span>
+  <br/>working in the intersection of UX strategy, UI design and front-end development.
+  <!-- <a href="/about/">More.</a> -->
+</h1>
 
-<div class="front__container">
-
-  <div class="front__content">
-    <!-- {% include visual-grid.html lines="1,7,13" %} -->
-    <h1 class="front__intro">
-      <span>Morten Christoffersen is a multi-disciplinary designer</span>
-      working in the intersection of UX strategy, UI design and front-end development.
-      <!-- <a href="/about/">Learn more</a> -->
-    </h1>
-
-    <div class="front__work">
-      <!-- <h2>Featured Work</h2> -->
-      <ul class="project-list">
-        {% assign ordered_projects = site.projects | sort: "order" %}
-        {% for project in ordered_projects %}
-          <li>
-            <a class="project-list__project {% if project.list-type %} project-list__project--{{ project.list-type }} {% endif %}" href="{{ project.url | prepend: site.baseurl }}">
-              <div class="project-list__project__img">
-                <img src="{{ project.thumb }}" alt="Image thumbnail for {{ project.client }} project.">
-              </div>
-              <div class="project-list__project__info">
-                <span class="project-list__project__client">{{ project.client }}</span>
-                <h3 class="project-list__project__desc">{{ project.desc-short }}</h3>
-                <!-- <p class="project-list__project__desc">{{ project.desc }}</p> -->
-              </div>
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div> <!-- End .front__content -->
-</div> <!-- End .front__container -->
+<div class="front__work">
+  <!-- <h2>Featured Work</h2> -->
+  <ul class="project-list">
+    {% assign ordered_projects = site.projects | sort: "order" %}
+    {% for project in ordered_projects %}
+      <li>
+        <a class="project-card {% if project.list-type %} project-list__project--{{ project.list-type }} {% endif %}" href="{{ project.url | prepend: site.baseurl }}">
+          <div class="project-card__img">
+            <img src="{{ project.thumb }}" alt="Image thumbnail for {{ project.client }} project.">
+          </div>
+          <div class="project-card__info">
+            <span class="project-card__info__client">{{ project.client }}</span>
+            <h3 class="project-card__info__desc">{{ project.desc-short }}</h3>
+            <!-- <p class="project-list__project__desc">{{ project.desc }}</p> -->
+          </div>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

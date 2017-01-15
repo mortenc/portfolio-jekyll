@@ -3,39 +3,36 @@
  */
 .about {
 
-  &__content {
-      @include outer-container;
-      opacity: 0;
-      transform: translate3d(0,$base-line-height,0);
-      transition: opacity ease-out .7s, transform ease-out .7s;
-      transition-delay: 1.5s;
-
-      //.loaded & {
-        opacity: 1;
-        transform: translate3d(0,0,0);
-      //}
-
-      h2 {
-        @include span-columns(2);
-        @include small-label;
-        color: rgba(255,255,255,0.5);
-      }
+  .page__content {
+    h2 {
+      @include span-columns(2);
+      @include small-label;
+      color: $white-transparent;
+    }
   }
 
+  &__img {
+    @include span-columns(12);
+    @include omega();
+
+    @include media($medium) {
+      @include span-columns(8);
+      @include shift(2)
+    }
+  }
   &__desc,
   &__writing,
   &__clients {
-    padding-top: $base-line-height*6;
+    //padding-top: $base-line-height*2;
   }
 
   &__desc {
     @include span-columns(12);
     @include omega();
+    padding-top: $base-line-height*2;
 
     &__lead {
-      @include span-columns(2);
-      font-size: ms(2);
-      line-height: $base-line-height * 1.25;
+      font-size: ms(1);
       color: white;
 
       span {
@@ -44,34 +41,43 @@
       }
 
       @include media($medium) {
-        @include span-columns(5);
-        @include omega();
+        @include span-columns(10);
+        font-size: ms(2);
+        line-height: $base-line-height * 1.25;
       }
 
-      @include media($xlarge) {
+      @include media($large) {
         @include span-columns(8);
       }
 
-      @include media($xxlarge) {
-        @include span-columns(5);
-        @include omega();
+      @include media($xlarge) {
+        @include span-columns(6);
       }
     }
 
     &__details {
       @include row();
-      margin-top: $base-line-height*1.5;
-      color: rgba(255,255,255,0.5);
-      column-count: 2;
-      column-gap: $base-line-height*2;
+      margin-top: $base-line-height;
+      color: $white-transparent;
 
       @include media($medium) {
-        @include span-columns(7);
+        @include span-columns(12);
         @include omega();
+        column-count: 2;
+        column-gap: $base-line-height*2;
       }
-      @include media($xlarge) {
-        @include span-columns(10);
+
+      @include media($large) {
+        @include span-columns(8);
         @include shift(2);
+      }
+
+      p {
+        margin-top: $base-line-height;
+
+        @include media($large) {
+          margin-top: 0;
+        }
       }
     }
   }
@@ -87,7 +93,7 @@
 
       li {
         margin-bottom: $base-line-height;
-        color: rgba(255,255,255,.5);
+        color: $white-transparent;
         h3 {
           a {
             color: white;
@@ -105,15 +111,29 @@
   &__clients {
     @include outer-container;
     clear: both;
+    padding-top: $base-line-height*4;
     margin-bottom: $base-line-height*6;
 
     p {
-      @include span-columns(10);
+      @include span-columns(8);
+      @include shift(2);
       @include omega();
-      color: rgba(255,255,255,0.5);
+      color: $white-transparent;
       span {
         color: white;
       }
     }
+  }
+}
+
+.logowall {
+  @include span-columns(8);
+  @include omega();
+
+  li {
+    width: 25%;
+    padding: 1rem;
+    margin-top: -3rem;
+    float: left;
   }
 }
