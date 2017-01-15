@@ -4,11 +4,12 @@ order: 1
 bodyclass: "project"
 client: "Golden Gate Bridge"
 title:  "Golden Gate Bridge"
-desc-long: "<span>The Golden Gate Bridge, Highway & Transportation District</span> knew that they needed a new website, but weren’t sure where to begin. FFW helped them understand their needs."
+heading:  "Redesigning a website for a world-famous bridge"
+desc-long: "The Golden Gate Bridge, Highway & Transportation District knew that they needed a new website, but weren’t sure where to begin. FFW helped them understand their needs."
 desc-short: "Redesigning a website for a world famous bridge"
-role: "Strategy, UX, Design"
+role: "Strategy · UX · UI"
 employer: "FFW Agency"
-link: "www.example.com"
+link: "In Development"
 link-desc: "Visit Website"
 year: 2016
 type: "Website"
@@ -17,7 +18,7 @@ thumb: "/assets/img/ggb-thumb.jpg"
 color: "#252c3e"
 ---
 
-The first headline
+The Challenge
 -------------------
 The Golden Gate Bridge, Highway & Transportation District knew that they needed a new website, but weren’t sure where to begin. FFW helped them understand their needs and how best to deliver outstanding digital experiences to locals and tourists alike.
 
@@ -25,7 +26,9 @@ The Golden Gate Bridge, Highway & Transportation District knew that they needed 
 
 Majestic online, clunky offline
 -------------------------------
-The Golden Gate Bridge, Highway & Transportation District operates the Golden Gate Bridge and provides safe and reliable public transportation on Golden Gate Transit buses and Golden Gate Ferry. Last year, 38 million vehicles crossed the Golden Gate Bridge and over 9 million customers rode the transit systems. Millions more visitors came to or crossed the bridge each year, and those who try to find information online before arriving were frustrated by an antiquated, clunky website.
+The Golden Gate Bridge, Highway & Transportation District operates the Golden Gate Bridge and provides safe and reliable public transportation on Golden Gate Transit buses and Golden Gate Ferry. Last year, 38 million vehicles crossed the Golden Gate Bridge and over 9 million customers rode the transit systems.
+
+Millions more visitors came to or crossed the bridge each year, and those who try to find information online before arriving were frustrated by an antiquated, clunky website.
 
 Understanding content chaos
 ---------------------------
