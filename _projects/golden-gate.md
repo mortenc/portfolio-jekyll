@@ -11,7 +11,7 @@ role: "Strategy · UX · UI"
 employer: "FFW Agency"
 link: "[Work-in-progress]"
 link-desc: "Visit Website"
-year: 2016
+year: "2016-17"
 type: "Website"
 hero: "/assets/img/ggb-hero.jpg"
 thumb: "/assets/img/ggb-thumb.jpg"

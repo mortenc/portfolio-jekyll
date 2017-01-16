@@ -7,16 +7,21 @@
 	//Back button
 	&__back {
 		position: absolute;
-		top: $base-line-height*2.5;
-		left: $base-line-height*2.5;
+		top: $base-line-height*1.5;
+		left: $base-line-height*1.5;
 		z-index: 300;
+
+		@include media($medium) {
+			top: $base-line-height*2.5;
+			left: $base-line-height*2.5;
+		}
 
 		a {
 			position: relative;
 			display: block;
 			text-indent: -9999rem;
-			width: 4rem;
-			height: 4rem;
+			width: 2.5rem;
+			height: 2.5rem;
 			overflow: hidden;
 			z-index: 300;
       @include small-label;
@@ -31,9 +36,9 @@
 				display: block;
 				position: absolute;
 				top: 50%;
-				left: 20%;
+				left: 0;
 				height: 1px;
-				width: 60%;
+				width: 100%;
 				background: white;
 				// background: linear-gradient(to right, rgba($blue-grey-dark, 0) 0%, white 100%);
 				// transition: transform ease-out 1.3s;
@@ -45,9 +50,9 @@
 				content:" ";
 				display: block;
 				position: absolute;
-				top: 20%;
+				top: 0;
 				left: 50%;
-				height: 60%;
+				height: 100%;
 				width: 1px;
 				background: white;
 				// background: linear-gradient(to right, rgba($blue-grey-dark, 0) 0%, white 100%);
@@ -92,148 +97,154 @@
 			}
 		}
 
-		//Hero info container
-		&__info {
+		//Hero inner container
+		&__inner {
 			@include outer-container;
-			padding: $base-line-height*2 $base-line-height*1.5 $base-line-height*2;
+			padding: $base-line-height*4 $base-line-height*1.5 $base-line-height*3;
 
-			@include media($large) {
+			@include media($medium) {
 				padding: $base-line-height*6 $base-line-height*4 $base-line-height*5;
 			}
 
 			@include media($large) {
-				padding: $base-line-height*6 $base-line-height*3 $base-line-height*5;
+				padding: $base-line-height*6 $base-line-height*3 $base-line-height*4;
 			}
-		}
-	}
-
-	// Project intro
-	&__intro {
-		position: relative;
-		@include span-columns(12);
-
-		@include media($small) {
-			@include span-columns(10);
-			@include shift(1);
-		}
-
-		@include media($medium) {
-			@include span-columns(8);
-			@include shift(0);
-		}
-
-		@include media($large) {
-			@include span-columns(12);
-			//@include shift(1);
 		}
 
 		&__client {
+			@include span-columns(12);
 			@include small-label;
 			color: $white-transparent;
 			margin-bottom: $base-line-height*0.5;
+
+			@include media($medium) {
+				@include span-columns(10);
+				@include shift (1);
+			}
+
+			@include media($large) {
+				@include span-columns(12);
+				@include shift (0);
+			}
 		}
 
 		&__heading {
+			@include span-columns(12);
 			margin-bottom: $base-line-height*1.5;
 			font-family: $base-font-family;
 			color: white;
 			font-size: ms(5);
-			line-height: $base-line-height*1.75;
+			line-height: $base-line-height*1.5;
 			font-weight: 200;
 
+			@include media($medium) {
+				@include span-columns(10);
+				@include shift(1);
+			}
+
 			@include media($large) {
+				@include span-columns(12);
+				@include shift(0);
 				font-size: ms(7);
 				line-height: $base-line-height*2;
 			}
 		}
 
 		&__desc {
+			@include span-columns(12);
 			font-weight: 300;
 			color: $white-transparent;
-			margin-bottom: $base-line-height*2;
+			margin-bottom: $base-line-height*1.5;
+
+			@include media($small) {
+				@include span-columns(6);
+			}
 
 			@include media($medium) {
 				@include span-columns(6);
-				//@include shift (1);
+				@include shift(1);
+				margin-bottom: $base-line-height*2;
 			}
 
 			@include media($large) {
+				@include shift(0);
+				margin-bottom: $base-line-height;
 				font-size: rem(17px);
 				line-height: rem(32px);
 			}
 		}
-	}
 
+		&__details {
+			@include span-columns(12);
+			display: flex;
+			flex-wrap: wrap;
 
-	// Project details
-	&__details {
-		@include span-columns(12);
-		display: flex;
-		flex-wrap: wrap;
+			@include media($small) {
+				@include span-columns(5);
+				@include shift(1);
+			}
 
-		// @include media($small) {
-		// 	@include span-columns(10);
-		// 	@include shift(1);
-		// 	display: flex;
-		// 	flex-wrap: wrap;
-		// }
-		//
-		// @include media($medium) {
-		// 	@include span-columns(3);
-		// 	@include shift(1);
-		// 	display: flex;
-		// 	flex-wrap: wrap;
-		// }
-		//
-		// @include media($large) {
-		// 	@include span-columns(5);
-		// 	@include shift(7);
-		// 	@include omega();
-		// 	display: flex;
-		// 	flex-wrap: wrap;
-		// }
+			@include media($medium) {
+				@include span-columns(10);
+				@include shift(1);
+				display: flex;
+				flex-wrap: wrap;
+			}
 
-		li {
-			display: block;
-			font-weight: 400;
-			font-size: ms(-2);
-			//padding-bottom: $base-line-height*0.5;
-			padding-right: $base-line-height;
-			color: white;
-			font-family: $mono-font-family;
-			flex-grow: 1;
-			flex-basis: 1;
+			@include media($large) {
+				@include span-columns(5);
+				@include shift(7);
+				@include omega();
+			}
 
-			// @include media($medium) {
-			// 	width: 50%;
-			// }
-			// &:nth-child(even) {
-			// 	padding-left: $base-line-height*0.5;
-			// }
-			// &:nth-child(odd) {
-			// 	padding-right: $base-line-height*0.5;
-			// }
-			// &:nth-child(3), &:nth-child(4) {
-			// 	margin-top: $base-line-height*2;
-			// }
-			// &:last-child {
-			// 		padding-bottom: 0;
-			// }
-
-			span {
+			li {
 				display: block;
-				//padding-right: $base-line-height;
-				//width: 7rem;
-				@include small-label;
-				font-family: $base-font-family;
-				color: $white-transparent;
+				font-weight: 400;
+				font-size: ms(-2);
+				padding-bottom: $base-line-height*0.5;
+				padding-right: $base-line-height;
+				color: white;
+				font-family: $mono-font-family;
+				flex-grow: 1;
+				flex-basis: 1;
 
-				@include media($large) {
-					//font-size: ms(-3);
+				span {
+					display: block;
+					@include small-label;
+					font-family: $base-font-family;
+					color: $white-transparent;
+
+					@include media($large) {
+						display: inline-block;
+						width: 7rem;
+					}
 				}
 			}
 		}
+
 	}
+
+	// Project intro
+	// &__intro {
+	// 	position: relative;
+	// 	@include span-columns(12);
+	//
+	// 	@include media($small) {
+	// 		@include span-columns(10);
+	// 		@include shift(1);
+	// 	}
+	//
+	// 	@include media($medium) {
+	// 		@include span-columns(8);
+	// 		@include shift(0);
+	// 	}
+	//
+	// 	@include media($large) {
+	// 		@include span-columns(12);
+	// 		//@include shift(1);
+	// 	}
+
+	// Project details
 
 	// Project hero img
 	&__img {

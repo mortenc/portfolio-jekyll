@@ -8,19 +8,19 @@ bodyclass: 'project'
 
 <div class="project__hero">
 
-	<div class="project__hero__info">
+	<!-- {% include visual-grid.html lines="2,6,12" %} -->
 
-		<div class="project__intro">
-			<p class="project__intro__client">{{ page.client }}</p>
-			<h1 class="project__intro__heading">{{ page.heading }}</h1>
-			<p class="project__intro__desc">{{ page.desc-long }}</p>
-		</div>
+	<div class="project__hero__inner">
 
-		<ul class="project__details">
-			<li class="project__details__role"><span>Role</span>{{ page.role }}</li>
-			<li class="project__details__employer"><span>Employer</span>{{ page.employer }}</li>
-			<li class="project__details__year"><span>Year</span>{{ page.year }}</li>
-			<li class="project__details__link"><span>View</span>{{ page.link }}</li>
+		<p class="project__hero__client">{{ page.client }}</p>
+		<h1 class="project__hero__heading">{{ page.heading }}</h1>
+		<p class="project__hero__desc">{{ page.desc-long }}</p>
+
+		<ul class="project__hero__details">
+			{% if page.role %}<li class="project__hero__details__role"><span>Role</span>{{ page.role }}</li>{% endif %}
+			{% if page.year %}<li class="project__hero__details__year"><span>Year</span>{{ page.year }}</li>{% endif %}
+			{% if page.employer %}<li class="project__hero__details__employer"><span>Employer</span>{{ page.employer }}</li>{% endif %}
+			{% if page.link %}<li class="project__hero__details__link"><span>View</span>{{ page.link }}</li>{% endif %}
 		</ul>
 
 	</div>
@@ -33,5 +33,4 @@ bodyclass: 'project'
 
 <div class="project__content">
 	{{ content }}
-	<!-- {% include visual-grid.html lines="1" dark="true" %} -->
 </div>
