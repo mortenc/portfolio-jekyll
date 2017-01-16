@@ -5,11 +5,11 @@ bodyclass: "project"
 client: "Golden Gate Bridge"
 title:  "Golden Gate Bridge"
 heading:  "Redesigning a website for a world-famous bridge"
-desc-long: "The Golden Gate Bridge, Highway & Transportation District knew that they needed a new website, but weren’t sure where to begin. FFW helped them understand their needs."
+desc-long: "The Golden Gate Bridge, Highway & Transportation District needed a new website to better service the many visitors and travellers using their transportation services daily."
 desc-short: "Redesigning a website for a world famous bridge"
 role: "Strategy · UX · UI"
 employer: "FFW Agency"
-link: "In Development"
+link: "[Work-in-progress]"
 link-desc: "Visit Website"
 year: 2016
 type: "Website"
@@ -20,7 +20,7 @@ color: "#252c3e"
 
 The Challenge
 -------------------
-The Golden Gate Bridge, Highway & Transportation District knew that they needed a new website, but weren’t sure where to begin. FFW helped them understand their needs and how best to deliver outstanding digital experiences to locals and tourists alike.
+The Golden Gate Bridge, Highway & Transportation District needed a new and modern website to better service their diverse customers – from tourists looking for best selfie spots with the bridge to commuters on their bus and ferry services.
 
 {% include project-image.html type="full" file="ggb-frontpage-in-macbook.jpg" caption="We designed several prototypes to ensure that the interactions felt smooth and natural." %}
 
