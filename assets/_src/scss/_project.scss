@@ -7,16 +7,16 @@
 	//Back button
 	&__back {
 		position: absolute;
-		top: $base-line-height*2;
-		left: $base-line-height*2;
+		top: $base-line-height*3;
+		left: $base-line-height*3;
 		z-index: 300;
 
 		a {
 			position: relative;
 			display: block;
 			text-indent: -9999rem;
-			width: 2rem;
-			height: 2rem;
+			width: 4rem;
+			height: 4rem;
 			overflow: hidden;
 			z-index: 300;
       @include small-label;
@@ -24,8 +24,6 @@
       border: 0;
 			transform: rotate(45deg);
 			//border-radius: 1rem;
-			border: 1px solid;
-			border-image: linear-gradient(to right, rgba($blue-grey-dark, 0) 0%, white 100%);
 			transition: transform ease-in-out .3s;
 
 			&::before {
@@ -76,7 +74,7 @@
 		@include clearfix;
 
 		@include media($medium) {
-			min-height: 75vh;
+			min-height: 95vh;
 			padding-bottom: $base-line-height*2;
 		}
 
@@ -103,7 +101,7 @@
 			padding: $base-line-height*2 $base-line-height*1.5 $base-line-height*2;
 
 			@include media($large) {
-				padding: $base-line-height*5 $base-line-height*2 $base-line-height*3;
+				padding: $base-line-height*5 $base-line-height*3 $base-line-height*3;
 			}
 		}
 	}
@@ -124,18 +122,19 @@
 		}
 
 		@include media($large) {
-			@include span-columns(7);
-			@include shift(1);
+			@include span-columns(12);
+			//@include shift(1);
 		}
 
 		&__client {
 			@include small-label;
 			color: $white-transparent;
-			margin-bottom: $base-line-height*0.5;
+			margin-bottom: $base-line-height*0.25;
 		}
 
 		&__heading {
 			margin-bottom: $base-line-height*2;
+			font-family: $base-font-family;
 			color: white;
 			font-size: ms(5);
 			line-height: $base-line-height*1.75;
@@ -150,10 +149,11 @@
 		&__desc {
 			font-weight: 300;
 			color: $white-transparent;
-			margin-bottom: $base-line-height*2;
+			margin-bottom: $base-line-height;
 
 			@include media($medium) {
-				@include shift (1);
+				@include span-columns(5 of 10);
+				//@include shift (1);
 			}
 
 			@include media($large) {
@@ -180,35 +180,48 @@
 		@include media($medium) {
 			@include span-columns(3);
 			@include shift(1);
+			display: flex;
+			flex-wrap: wrap;
 		}
 
 		@include media($large) {
-			@include span-columns(2);
-			@include shift(2);
+			@include span-columns(5);
+			@include shift(7);
 			@include omega();
+			display: flex;
+			flex-wrap: wrap;
 		}
 
 		li {
 			display: block;
 			font-weight: 400;
 			font-size: ms(-1);
-			padding-bottom: $base-line-height;
+			//padding-bottom: $base-line-height*0.5;
 			padding-right: $base-line-height;
 			color: white;
 			flex-grow: 1;
 			flex-basis: 1;
 
 			@include media($medium) {
-				width: 100%;
-				clear: both;
-			}
+				width: 50%;
 
+			}
+			&:nth-child(even) {
+				padding-left: $base-line-height*0.5;
+			}
+			&:nth-child(odd) {
+				padding-right: $base-line-height*0.5;
+			}
+			&:nth-child(3), &:nth-child(4) {
+				margin-top: $base-line-height*2;
+			}
 			&:last-child {
 					padding-bottom: 0;
 			}
 
 			span {
 				display: block;
+				//width: 7rem;
 				@include small-label;
 				color: $white-transparent;
 
