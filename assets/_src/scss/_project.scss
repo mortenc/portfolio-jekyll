@@ -234,7 +234,7 @@
 		background: linear-gradient(to bottom, $blue-grey-darker 0%, $blue-grey-darker 50%, transparent 50%);
 
 		@include media($large) {
-			padding: 0 $base-line-height*4;
+			padding: 0 $base-line-height*5;
 		}
 
 		img {
@@ -293,7 +293,7 @@
 		  font-weight: 600;
 		}
 
-		p, h1, h2 {
+		p, h1, h2, ul {
 			@include span-columns(12);
 
 			@include media($small) {
@@ -426,7 +426,7 @@
 				color: $grey-text;
 			  line-height: $base-line-height*0.85;
 				text-align: center;
-				margin-top: $base-line-height * 1;
+				margin-top: $base-line-height;
 			}
 
 			& + p {
@@ -441,6 +441,7 @@
 			&--grid {
 				@include span-columns(12);
 				@include shift(0);
+				width: 100%;
 			}
 
 			&--full {
@@ -457,7 +458,7 @@
 				}
 
 				figcaption {
-					padding: $base-line-height $base-line-height*1.5;
+					padding: 0 $base-line-height*1.5;
 				}
 			}
 
