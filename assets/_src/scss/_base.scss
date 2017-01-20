@@ -48,6 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @mixin small-label {
+  font-family: $base-font-family;
   text-transform: uppercase;
   letter-spacing: .4em;
   font-size: ms(-4);

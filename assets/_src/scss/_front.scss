@@ -4,26 +4,18 @@
 .front {
 
   &__intro {
-    max-width: 20rem;
-    margin: 0 auto;
-    padding-top: $base-line-height*3;
-    font-size: ms(1);
-    font-weight: 300;
-    line-height: $base-line-height;
-    color: $white-transparent;
-    text-align: center;
-
-    @include media($small) {
-      max-width: 30rem;
-    }
+    @include outer-container();
+    margin: $base-line-height*2.5 auto $base-line-height*2.5;
 
     @include media($medium) {
-      max-width: 32rem;
-      margin: 0;
-      padding-top: $base-line-height*3;
-      font-size: ms(2);
-      line-height: $base-line-height*1.25;
-      text-align: left;
+      margin: $base-line-height*5 0 $base-line-height*7;
+    }
+
+    span {
+      @include small-label;
+      display: block;
+      color: $white-transparent;
+      margin-bottom: $base-line-height*0.5;
     }
 
     &:after {
@@ -34,7 +26,7 @@
       width: 1px;
       height: $base-line-height*4;
       max-width: $base-line-height*12;
-      margin: $base-line-height auto -#{$base-line-height*5};
+      margin: $base-line-height*2 auto -#{$base-line-height*5};
       vertical-align: middle;
       background: linear-gradient(to bottom, rgba(255,255,255,.7) 0%,rgba(255,255,255,0) 100%);
 
@@ -43,15 +35,44 @@
       }
     }
 
-    span {
-      position: relative;
-      font-weight: 500;
-      color: white;
-    }
+    &__heading {
+      //max-width: 20rem;
+      font-family: $base-font-family;
+      font-size: ms(2);
+      font-weight: 300;
+      line-height: $base-line-height*1.15;
+      color: $white-transparent;
 
-    br {
       @include media($small) {
-        display: none;
+        font-size: ms(3);
+        line-height: $base-line-height*1.5;
+        font-weight: 300;
+      }
+
+      @include media($medium) {
+        max-width: 48rem;
+        font-size: ms(6);
+        font-weight: 200;
+        line-height: $base-line-height*2;
+      }
+
+      em {
+        position: relative;
+        //font-weight: 300;
+        color: white;
+      }
+
+      a {
+        display: block;
+        font-size: ms(0);
+        line-height: $base-line-height*2;
+        font-family: $mono-font-family;
+        font-weight: 100;
+        border: 0;
+
+        @include media($medium) {
+          font-size: ms(2);
+        }
       }
     }
   }
@@ -59,15 +80,16 @@
   &__work {
     @include span-columns(12);
     @include omega();
-    padding-top: $base-line-height*3;
-
-    @include media($medium) {
-      padding-top: $base-line-height*4;
-    }
 
     h2 {
       @include small-label;
+      display: none;
       color: $white-transparent;
+      margin-bottom: $base-line-height;
+
+      @include media($large) {
+        display: block;
+      }
     }
   }
 }
@@ -122,11 +144,13 @@
     background-color: rgba(255,255,255,.05);
 
     &__client {
-      font-weight: 600;
+      font-weight: 400;
       color: white;
     }
 
     &__desc {
+      font-family: $mono-font-family;
+      font-size: ms(-1);
       color: $white-transparent;
     }
   }

@@ -29,7 +29,7 @@
 
 .contact-bar {
   display: none;
-  padding: $base-line-height*1.25 $base-line-height*1.5;
+  padding: $base-line-height*1.5 0;
   text-align: right;
 
   @include media($medium) {

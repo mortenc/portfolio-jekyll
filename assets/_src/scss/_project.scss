@@ -107,7 +107,7 @@
 			}
 
 			@include media($large) {
-				padding: $base-line-height*6 $base-line-height*3 $base-line-height*4;
+				padding: $base-line-height*7 $base-line-height*3 $base-line-height*3.5;
 			}
 		}
 
@@ -130,7 +130,7 @@
 
 		&__heading {
 			@include span-columns(12);
-			margin-bottom: $base-line-height*1.5;
+			margin-bottom: $base-line-height;
 			font-family: $base-font-family;
 			color: white;
 			font-size: ms(5);
@@ -145,13 +145,15 @@
 			@include media($large) {
 				@include span-columns(12);
 				@include shift(0);
-				font-size: ms(7);
+				font-size: ms(8);
 				line-height: $base-line-height*2;
 			}
 		}
 
 		&__desc {
 			@include span-columns(12);
+			font-size: ms(-2);
+      font-family: $mono-font-family;
 			font-weight: 300;
 			color: $white-transparent;
 			margin-bottom: $base-line-height*1.5;
@@ -171,6 +173,7 @@
 				margin-bottom: $base-line-height;
 				font-size: rem(17px);
 				line-height: rem(32px);
+				font-size: ms(-2);
 			}
 		}
 
@@ -221,32 +224,9 @@
 				}
 			}
 		}
-
 	}
 
-	// Project intro
-	// &__intro {
-	// 	position: relative;
-	// 	@include span-columns(12);
-	//
-	// 	@include media($small) {
-	// 		@include span-columns(10);
-	// 		@include shift(1);
-	// 	}
-	//
-	// 	@include media($medium) {
-	// 		@include span-columns(8);
-	// 		@include shift(0);
-	// 	}
-	//
-	// 	@include media($large) {
-	// 		@include span-columns(12);
-	// 		//@include shift(1);
-	// 	}
-
-	// Project details
-
-	// Project hero img
+	// Project main img
 	&__img {
 		display: block;
 		position: relative;
@@ -303,6 +283,10 @@
 
 		@include media($xlarge) {
 			padding: $base-line-height*4 0;
+		}
+
+		a {
+			font-family: $mono-font-family;
 		}
 
 		h1, h2, h3, h4, h5, h6 {
