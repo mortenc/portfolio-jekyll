@@ -4,11 +4,10 @@
 .front {
 
   &__intro {
-    @include outer-container();
-    margin: $base-line-height*2.5 auto $base-line-height*2.5;
+    padding: $base-line-height*2.5 0 $base-line-height*2.5;
 
     @include media($medium) {
-      margin: $base-line-height*5 0 $base-line-height*7;
+      padding: $base-line-height*5 0 $base-line-height*7;
     }
 
     span {

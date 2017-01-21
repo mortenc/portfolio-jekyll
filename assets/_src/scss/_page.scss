@@ -1,20 +1,14 @@
 .page {
 
   &__container {
-    //padding-left: $base-line-height*2;
-
     @include media($medium) {
       padding-left: $base-line-height*3.5;
     }
   }
 
   &__content {
-    @include outer-container;
-    padding: 0 $base-line-height;
+    @include margin-container;
 
-    @include media($medium) {
-      padding: 0 $base-line-height*2;
-    }
     //opacity: 0;
     //transform: translate3d(0,$base-line-height,0);
     //transition: opacity ease-out .7s, transform ease-out .7s;

@@ -38,6 +38,19 @@ body {
   // }
 }
 
+@mixin margin-container {
+  width: auto;
+  margin: 0 $base-line-height*1.5;
+
+  @include media($medium) {
+    margin: 0 $base-line-height*2;
+  }
+
+  @include media($large) {
+    margin: 0 $base-line-height*4;
+  }
+}
+
 /**
  * Basic typography
  */
