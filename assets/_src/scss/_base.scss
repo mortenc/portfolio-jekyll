@@ -13,7 +13,7 @@ html {
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   overflow-x: hidden;
-  background-color: $blue-grey-dark;
+  background-color: $blue-grey-darker;
 
   @include media($xxlarge) {
     font-size: 20px;
@@ -48,6 +48,40 @@ body {
 
   @include media($large) {
     margin: 0 $base-line-height*4;
+  }
+
+  @include media($xlarge) {
+    //margin: 0 $base-line-height*5;
+  }
+
+  @include media($xxlarge) {
+    margin: 0 $base-line-height*6;
+  }
+}
+
+@mixin padding-container {
+  width: auto;
+  margin: 0 auto;
+  padding-left: $base-line-height*1.5;
+  padding-right: $base-line-height*1.5;
+
+  @include media($medium) {
+    padding-left: $base-line-height*2;
+    padding-right: $base-line-height*2;
+  }
+
+  @include media($large) {
+    padding-left: $base-line-height*4;
+    padding-right: $base-line-height*4;
+  }
+
+  @include media($xlarge) {
+    //margin: 0 $base-line-height*5;
+  }
+
+  @include media($xxlarge) {
+    padding-left: $base-line-height*6;
+    padding-right: $base-line-height*6;
   }
 }
 

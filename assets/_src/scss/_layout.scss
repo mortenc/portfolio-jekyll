@@ -9,20 +9,39 @@
  * Site footer
  */
 .footer {
+  @include padding-container;
   position: relative;
-  clear: both;
-  padding: $base-line-height*2;
+  padding: $base-line-height*2 0;
+  background-color: $blue-grey-darker;
   color: $white-transparent;
+  @include clearfix;
 
   &__legal {
-    float: left;
+    margin: 0 auto;
+    text-align: center;
+
+    @include media($xlarge) {
+      width: 50%;
+      float: left;
+      text-align: left;
+    }
   }
   .social-links{
-    float: right;
-    display: flex;
+    margin: 0 auto;
+    margin-top: $base-line-height/2;
+    text-align: center;
+    line-height: $base-line-height;
+
+    @include media($xlarge) {
+      width: 50%;
+      float: left;
+      text-align: right;
+      margin-top: 0;
+    }
+
     li {
-      display: block;
-      margin-left: $base-line-height;
+      display: inline-block;
+      margin: 0 $base-line-height/2;
 
       a {
         @include small-label;

@@ -1,14 +1,17 @@
 .page {
 
   &__container {
+    position: relative;
+    @include clearfix;
+
     @include media($medium) {
-      padding-left: $base-line-height*3.5;
+      margin-left: $base-line-height*3.5;
     }
   }
 
   &__content {
     @include margin-container;
-
+    position: relative;
     //opacity: 0;
     //transform: translate3d(0,$base-line-height,0);
     //transition: opacity ease-out .7s, transform ease-out .7s;
