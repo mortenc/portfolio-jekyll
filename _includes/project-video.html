@@ -1,0 +1,9 @@
+<figure class="project__content__video">
+  <video class="js-video" {% if include.poster %}poster="/assets/img/{{ include.poster }}"{% endif %} controls muted>
+    <source src="/assets/video/{{ include.mp4 }}" type="video/mp4">
+    <source src="/assets/video/{{ include.webm }}" type="video/webm">
+  </video>
+  {% if include.caption %}
+  <figcaption>{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>
