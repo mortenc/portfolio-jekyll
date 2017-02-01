@@ -3,14 +3,13 @@
   &__container {
     position: relative;
     @include clearfix;
-
     @include media($medium) {
       margin-left: $base-line-height*3.5;
     }
   }
 
   &__content {
-    @include margin-container;
+    @include container;
     position: relative;
     //opacity: 0;
     //transform: translate3d(0,$base-line-height,0);

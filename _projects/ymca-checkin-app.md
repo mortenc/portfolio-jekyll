@@ -24,7 +24,8 @@ One such challenge is handling the large number of members checking into gym dur
 > ### Problem Statement
 > How might we design a mobile solution that allows YMCA employees to speed up the check-in process at their gyms during peak hours? The solution must be be fast, simple and cost-effective.
 
-As the sole designer on the project, I was responsible for all things design-related; from research and ideation through UX and UI design to prototyping and testing. Also on the team was a Project Manager and iOS Developer.
+### The Team
+As the sole designer on the project, I was responsible for all things design-related; from research and ideation through UX and UI design to prototyping and testing. I worked closely with a Project Manager and iOS Developer, who made up the rest of the team.
 
 {% include project-image.html type="grid" file="ymca-3-screens.jpg" caption="Screens from the final app design." %}
 
@@ -57,7 +58,7 @@ With a clear understanding of the problem, I now dove into the designing out the
 
 I took rapid and iterative approach to designing this primary flow, testing several designs in order to zero in on a final user experience that would feel both inviting and fast. The UI had to immediately make it clear whether or not a member check-in was successful, and quickly allow the employee using the app to move on to the next check-in.
 
-After several ideas and sketches, in the I opted for a card-based design pattern that pops up a virtual card, whenever an employee scans a membership card. The UI uses bright colors and text to quickly communicate whether a check-in is succesful or not, and a simple downward swipe dismisses the card again.
+After several ideas and sketches, I opted for a card-based design pattern that pops up a virtual card, whenever an employee scans a membership card. The UI uses bright colors and text to quickly communicate whether a check-in is succesful or not, and a simple downward swipe dismisses the card again.
 
 {% include project-image.html type="grid" file="ymca-flow-and-mockup.jpg" caption="Mapping out the main screen flow – scanning a membership card." %}
 
@@ -69,7 +70,7 @@ As I designed the app, I also continually prototyped the interactions in [Princi
 
 
 ## The Result
-The final result is an iOS app that is both simple and highly focused in its utility; it allows YMCA staff members to either scan a membership card, or to enter the card number manually, in case the scan should fail. When a card is successfully scanned, the app loads a digital member card that shows whether or not the check-in was accepted, and displays the basic information that the staff needs – most importantly, a large image and preferred nickname for the member, so staff quickly and easily can verify his or her identity.
+The final result is an iOS app that is both simple and highly focused in its utility; it allows YMCA staff members to either scan a membership card or to enter the card number manually, in case the scan should fail. When a card is successfully scanned, the app loads a digital member card that shows whether or not the check-in was accepted, and displays the basic information that the staff needs. Some of the key design choices include:
 
 + In order to make sure employees can tell at a glance if a check-in was succesfful the app uses a light blue (a YMCA brand color) to denote a succesful check-in, and a bright red to denote a failed check-in.
 + The app prominently shows both member photo and nickname to allow employees to easily verify a member's identity and greet them appropriately.

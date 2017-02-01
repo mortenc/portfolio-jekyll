@@ -5,7 +5,7 @@
 // Our variables + functions
 $base-font-family: 'Overpass' Helvetica, Arial, sans-serif;
 $mono-font-family: 'Overpass Mono', 'Lucida Console', Monaco, monospace;
-$base-font-size:   16px;
+$base-font-size:   17px;
 
 // PX to REM - Usage: font-size: rem(37px);
 @function rem($px, $base: $base-font-size) {
@@ -18,7 +18,7 @@ $base-font-size:   16px;
 }
 
 $base-font-weight: 400;
-$base-line-height: rem(30px);
+$base-line-height: rem(32px);
 $blh: $base-line-height;
 
 //Modular scale
@@ -43,14 +43,15 @@ $ms-ratio: 1.125;
 }
 
 $grey:       #191F22;
-$grey-text:  lighten($grey, 30%);
+$grey-text:  lighten($grey, 20%);
 $grey-light: lighten($grey, 40%);
 $grey-lighter: lighten($grey-light, 40%);
 $grey-dark:  darken($grey, 10%);
 
 $white-transparent: rgba(255,255,255,.5);
 
-$purple: #7e7ecc;
+$purple: #938bf5; //#7e7ecc;
+$orange: #f1a239;
 $light-blue: #8d9dce;
 
 // $blue-grey-light: #2B3740;
@@ -78,8 +79,8 @@ $xlarge: 1224px;
 $xxlarge: 1824px;
 
 //Neat grid variables
-$max-width: rem(960px);
-$gutter: 0em !global;
+$max-width: rem(1200px);
+$gutter: em(30px) !global;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

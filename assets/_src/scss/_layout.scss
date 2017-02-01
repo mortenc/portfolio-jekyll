@@ -9,12 +9,15 @@
  * Site footer
  */
 .footer {
-  @include padding-container;
   position: relative;
   padding: $base-line-height*2 0;
   background-color: $blue-grey-darker;
   color: $white-transparent;
   @include clearfix;
+
+  &__inner {
+    @include container;
+  }
 
   &__legal {
     margin: 0 auto;

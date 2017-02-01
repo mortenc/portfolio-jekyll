@@ -1,5 +1,6 @@
 ---
 layout: project
+output: false
 order: 3
 bodyclass: "project"
 list-type: "desktop"

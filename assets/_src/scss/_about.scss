@@ -4,11 +4,7 @@
 .about {
 
   .page__content {
-    h2 {
-      @include span-columns(2);
-      @include small-label;
-      color: $white-transparent;
-    }
+
   }
 
   &__intro {
@@ -20,8 +16,9 @@
       position: relative;
 
       @include media($medium) {
-        @include span-columns(2);
+        @include span-columns(3);
         @include shift(1)
+        padding: 0 2.5rem;
       }
 
       img {
@@ -49,8 +46,9 @@
 
     &__blurb {
       @include span-columns(6);
+      @include shift(0)
       @include omega();
-      padding-left: $base-line-height*2;
+      //padding-left: $base-line-height*2;
 
       span {
         @include small-label;
@@ -69,7 +67,7 @@
         margin-top: $base-line-height*1.5;
         font-size: rem(15px);
         font-family: $mono-font-family;
-        color: $white-transparent;
+        color: white;
       }
     }
   }
@@ -82,26 +80,24 @@
 
   &__details {
     @include row();
-    margin-top: $base-line-height*3;
+    //margin-top: $base-line-height*3;
     color: $white-transparent;
 
     @include media($medium) {
       @include span-columns(12);
       @include omega();
-      column-count: 2;
-      column-gap: $base-line-height*2;
     }
 
     @include media($large) {
-      @include span-columns(9);
-      @include shift(2);
+      @include span-columns(6);
+      @include shift(4);
     }
 
     p {
       margin-top: $base-line-height;
 
       @include media($large) {
-        margin-top: 0;
+        //margin-top: 0;
       }
     }
   }
@@ -133,22 +129,37 @@
   }
 
   &__clients {
-    @include span-columns(8);
-    @include shift(2);
+    @include row();
     clear: both;
     padding-top: $base-line-height*4;
     margin-bottom: $base-line-height*6;
 
+    h2 {
+      @include span-columns(2);
+      @include shift(2);
+      @include small-label;
+      color: $white-transparent;
+    }
+
     ul {
-      @include span-columns(6 of 8);
+      @include span-columns(6);
       @include omega();
       color: white;
       font-family: $mono-font-family;
       column-count: 2;
       column-gap: $base-line-height*3;
 
+      li {
+        margin-bottom: $base-line-height*0.5;
+      }
       span {
         color: white;
+      }
+
+      p {
+        display: none;
+        font-family: $base-font-family;
+        color: $white-transparent;
       }
     }
   }
