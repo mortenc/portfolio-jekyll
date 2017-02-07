@@ -129,7 +129,7 @@ a {
         color: $purple;
     }
 
-    &:hover {
+    &:hover, &:focus, &:active {
         color: darken($purple,15);
     }
 }

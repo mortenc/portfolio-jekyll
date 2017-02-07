@@ -35,38 +35,31 @@ bodyclass: 'project'
 	{{ content }}
 </div>
 
-{% comment %}Capture the collection for use in Prev / Next buttons {% endcomment %}
 {% capture the_collection %}{{page.collection}}{% endcapture %}
   {% if page.collection %}
     {% assign  document = (site[the_collection] | sort: 'order') %}
   {% endif %}
 {% for links in document  %}
   {% if links.title == page.title %}
-    {% unless forloop.first %}
-      {% assign prevproject = prev %}
-    {% endunless %}
-    {% unless forloop.last %}
+    {% if forloop.last %}
+      {% assign nextproject = document[0] %}
+    {% else %}
       {% assign nextproject = document[forloop.index] %}
-    {% endunless %}
+		{% endif %}
   {% endif %}
-  {% assign prev = links %}
 {% endfor %}
 
-<div class="project__end-nav">
-	{% if prevproject %}
-		<a href="{{ prevproject.url }}" class="project__end-nav__prev">
-			<span>Previous</span>
-			<h3>{{ prevproject.title }}</h3>
-			<p>{{ prevproject.desc-short }}</p>
+<div class="project__up-next">
+	<div class="project__up-next__inner">
+		<span>Up Next</span>
+		<a href="{{ nextproject.url }}">
+			<img class="project__up-next__img" src="{{ nextproject.thumb }}" alt="Image thumbnail for {{ nextproject.client }} project." />
+			<div class="project__up-next__info">
+				<h3>{{ nextproject.title }}</h3>
+				<p>{{ nextproject.desc-short }}</p>
+			</div>
 		</a>
-	{% endif %}
-	{% if nextproject %}
-		<a href="{{ nextproject.url }}" class="project__end-nav__next">
-			<span>Up Next</span>
-			<h3>{{ nextproject.title }}</h3>
-			<p>{{ nextproject.desc-short }}</p>
-		</a>
-	{% endif %}
+	</div>
 </div>
 
 {% include footer.html %}
