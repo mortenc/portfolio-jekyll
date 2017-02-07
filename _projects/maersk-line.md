@@ -1,11 +1,11 @@
 ---
 layout: project
-output: false
 order: 3
 bodyclass: "project"
 list-type: "desktop"
 title:  "Maersk Line"
-desc:  "<span>Maersk Line</span> is the world's largest container shipping company, and wanted to redesign their website to match the excellence in customer service, that they pride themselves on."
+desc-long:  "<span>Maersk Line</span> is the world's largest container shipping company, and wanted to redesign their website to match the excellence in customer service, that they pride themselves on."
+desc-short:  "A website for the world's largest shipping company."
 client: "Maersk Line"
 role: "Strategy, UX, Design"
 employer: "FFW Agency"

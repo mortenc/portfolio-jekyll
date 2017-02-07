@@ -119,17 +119,18 @@ img {
  * Links
  */
 a {
-    color: $orange;
+    color: $purple;
     text-decoration: none;
     border-bottom: 1px solid;
+    padding-bottom: 0.15rem;
     transition: color .2s ease-in-out;
 
     &:visited {
-        color: $orange;
+        color: $purple;
     }
 
     &:hover {
-        color: darken($orange,5);
+        color: darken($purple,15);
     }
 }
 

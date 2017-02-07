@@ -2,20 +2,30 @@
  * About page
  */
 .about {
-
-  .page__content {
-
-  }
-
   &__intro {
+    margin-top: $base-line-height;
     padding-top: $base-line-height*3;
 
-    &__img {
-      @include span-columns(12);
-      @include omega();
-      position: relative;
+    @include media($medium) {
+      margin-top: $base-line-height*3;
+    }
 
-      @include media($medium) {
+    &__img {
+      width: rem(160px);
+      position: relative;
+      margin: 0 auto;
+
+      @include media($small) {
+        @include span-columns(5);
+        padding: 0 2.5rem;
+      }
+
+      @include media($large) {
+        @include span-columns(4);
+        padding: 0 2.5rem;
+      }
+
+      @include media($xlarge) {
         @include span-columns(3);
         @include shift(1)
         padding: 0 2.5rem;
@@ -34,21 +44,30 @@
         z-index: 100;
         content:" ";
         width: 1px;
-        height: $base-line-height*4;
+        height: 75%;
         background: linear-gradient(to bottom, transparent 0%, white 100%);
         z-index: 200;
-
-        @include media($medium) {
-          height: $base-line-height*6;
-        }
       }
     }
 
     &__blurb {
-      @include span-columns(6);
-      @include shift(0)
+      @include span-columns(12);
       @include omega();
-      //padding-left: $base-line-height*2;
+      margin-top: $base-line-height;
+
+      @include media($small) {
+        @include span-columns(7);
+        @include omega();
+      }
+
+      @include media($large) {
+        margin-top: 0;
+      }
+
+      @include media($xlarge) {
+        @include span-columns(6);
+        @include omega();
+      }
 
       span {
         @include small-label;
@@ -60,119 +79,176 @@
         font-size: ms(7);
         font-weight: 200;
         color: white;
-        margin-top: $base-line-height;
+        margin-top: $base-line-height*0.75;
       }
 
       p {
-        margin-top: $base-line-height*1.5;
-        font-size: rem(15px);
-        font-family: $mono-font-family;
-        color: white;
-      }
-    }
-  }
-
-  &__desc,
-  &__writing,
-  &__clients {
-    //padding-top: $base-line-height*2;
-  }
-
-  &__details {
-    @include row();
-    //margin-top: $base-line-height*3;
-    color: $white-transparent;
-
-    @include media($medium) {
-      @include span-columns(12);
-      @include omega();
-    }
-
-    @include media($large) {
-      @include span-columns(6);
-      @include shift(4);
-    }
-
-    p {
-      margin-top: $base-line-height;
-
-      @include media($large) {
-        //margin-top: 0;
-      }
-    }
-  }
-
-
-  &__writing {
-    @include outer-container;
-    clear: both;
-
-    .writing-list {
-      @include span-columns(10);
-      @include omega();
-
-      li {
-        margin-bottom: $base-line-height;
+        margin-top: $base-line-height*0.75;
         color: $white-transparent;
-        h3 {
-          a {
-            color: white;
-            border: none;
+        font-weight: 300;
+
+        &:first-of-type {
+          margin-top: $base-line-height*1.25;
+          font-size: rem(15px);
+          font-weight: 400;
+          font-family: $mono-font-family;
+          color: $white-transparent-lighter;
+
+          @include media($large) {
+            margin-bottom: $base-line-height*3;
           }
         }
-        span {
-          display: block;
-          font-size: ms(-3);
-        }
       }
     }
   }
 
-  &__clients {
+  &__section {
     @include row();
     clear: both;
-    padding-top: $base-line-height*4;
-    margin-bottom: $base-line-height*6;
+    padding-top: $base-line-height*2;
+
+    @include media($medium) {
+      padding-top: $base-line-height*3;
+    }
 
     h2 {
-      @include span-columns(2);
-      @include shift(2);
+      @include span-columns(12);
       @include small-label;
       color: $white-transparent;
+
+      @include media($small) {
+        @include span-columns(4);
+        @include shift(1);
+      }
+
+      @include media($large) {
+        @include span-columns(3);
+        @include shift(1);
+      }
+
+      @include media($xlarge) {
+        @include span-columns(2);
+        @include shift(2);
+      }
     }
 
-    ul {
-      @include span-columns(6);
+    &__content {
+      font-weight: 300;
+      @include span-columns(12);
       @include omega();
+      color: $white-transparent-lighter;
+
+      @include media($small) {
+        @include span-columns(7);
+        @include omega();
+      }
+
+      @include media($large) {
+        margin-top: 0;
+      }
+
+      @include media($xlarge) {
+        @include span-columns(6);
+        @include omega();
+      }
+
+      * + p {
+        margin-top: $base-line-height*0.5;
+      }
+    }
+  }
+
+  &__contact {
+    margin-bottom: $base-line-height*4;
+
+    li {
       color: white;
       font-family: $mono-font-family;
-      column-count: 2;
-      column-gap: $base-line-height*3;
 
-      li {
-        margin-bottom: $base-line-height*0.5;
-      }
       span {
-        color: white;
+        display: block;
       }
 
-      p {
-        display: none;
+      a {
         font-family: $base-font-family;
         color: $white-transparent;
+        border: none;
       }
     }
   }
+
+  //
+  // &__writing {
+  //   @include outer-container;
+  //   clear: both;
+  //
+  //   .writing-list {
+  //     @include span-columns(10);
+  //     @include omega();
+  //
+  //     li {
+  //       margin-bottom: $base-line-height;
+  //       color: $white-transparent;
+  //       h3 {
+  //         a {
+  //           color: white;
+  //           border: none;
+  //         }
+  //       }
+  //       span {
+  //         display: block;
+  //         font-size: ms(-3);
+  //       }
+  //     }
+  //   }
+  // }
+
+  // &__clients {
+  //   @include row();
+  //   clear: both;
+  //   padding-top: $base-line-height*4;
+  //   margin-bottom: $base-line-height*6;
+  //
+  //   h2 {
+  //     @include span-columns(2);
+  //     @include shift(2);
+  //     @include small-label;
+  //     color: $white-transparent;
+  //   }
+  //
+  //   ul {
+  //     @include span-columns(12);
+  //     @include omega();
+  //     color: white;
+  //     font-family: $mono-font-family;
+  //     column-count: 2;
+  //     column-gap: $base-line-height*3;
+  //
+  //     li {
+  //       margin-bottom: $base-line-height*0.5;
+  //     }
+  //     span {
+  //       color: white;
+  //     }
+  //
+  //     p {
+  //       display: none;
+  //       font-family: $base-font-family;
+  //       color: $white-transparent;
+  //     }
+  //   }
+  // }
+
 }
 
-.logowall {
-  @include span-columns(8);
-  @include omega();
-
-  li {
-    width: 25%;
-    padding: 1rem;
-    margin-top: -3rem;
-    float: left;
-  }
-}
+// .logowall {
+//   @include span-columns(8);
+//   @include omega();
+//
+//   li {
+//     width: 25%;
+//     padding: 1rem;
+//     margin-top: -3rem;
+//     float: left;
+//   }
+// }

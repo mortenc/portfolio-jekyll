@@ -5,7 +5,7 @@
 // Our variables + functions
 $base-font-family: 'Overpass' Helvetica, Arial, sans-serif;
 $mono-font-family: 'Overpass Mono', 'Lucida Console', Monaco, monospace;
-$base-font-size:   17px;
+$base-font-size:   16px;
 
 // PX to REM - Usage: font-size: rem(37px);
 @function rem($px, $base: $base-font-size) {
@@ -18,7 +18,7 @@ $base-font-size:   17px;
 }
 
 $base-font-weight: 400;
-$base-line-height: rem(32px);
+$base-line-height: rem(30px);
 $blh: $base-line-height;
 
 //Modular scale
@@ -49,8 +49,9 @@ $grey-lighter: lighten($grey-light, 40%);
 $grey-dark:  darken($grey, 10%);
 
 $white-transparent: rgba(255,255,255,.5);
+$white-transparent-lighter: rgba(255,255,255,.6);
 
-$purple: #938bf5; //#7e7ecc;
+$purple: #afa9f5; //#7e7ecc;
 $orange: #f1a239;
 $light-blue: #8d9dce;
 

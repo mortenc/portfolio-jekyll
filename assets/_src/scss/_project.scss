@@ -258,6 +258,10 @@
 		position: relative;
 		padding: $base-line-height*2 0;
 
+		@include media($large) {
+			padding: $base-line-height*3 0;
+		}
+
 		@include media($xlarge) {
 			padding: $base-line-height*4 0;
 		}
@@ -267,7 +271,6 @@
 			font-size: rem(15px);
 			font-weight: 600;
 			margin: 0 0.15rem;
-			padding-bottom: 0.15rem;
 			//letter-spacing: -1px;
 		}
 
@@ -277,7 +280,7 @@
 		}
 
 		p, h1, h2, h3, ul, blockquote, &__image, figcaption {
-			max-width: rem(580px);
+			max-width: rem(560px);
 			margin: 0px auto;
 			// @include span-columns(12);
 			//
@@ -331,7 +334,7 @@
 			position: relative;
 
 			@include media($medium) {
-				font-size: ms(4);
+				font-size: ms(3);
 			  line-height: $base-line-height * 1.25;
 			}
 		}
@@ -340,7 +343,7 @@
 		  margin-top: $base-line-height * 2;
 
 			@include media($medium) {
-				margin-top: $base-line-height * 4;
+				margin-top: $base-line-height * 3;
 			}
 		}
 
@@ -367,6 +370,7 @@
 
 		em {
 			font-style: italic;
+			font-weight: 400;
 		}
 
 		strong {
@@ -379,19 +383,38 @@
 			margin-top: $base-line-height * 2;
 
 			&--grid {
-				margin-top: $base-line-height * 4;
+				margin-top: $base-line-height * 3;
 			}
 		}
 
 		&__image {
-			margin-left: auto;
-			margin-right: auto;
+			float: none;
+			width: 100vw;
+			max-width: none;
+			position: relative;
+			left: 50%;
+			right: 50%;
+			margin-left: -50vw;
+			margin-right: -50vw;
+
+			@include media($medium) {
+				width: 100%;
+				max-width: rem(560px);
+				position: static;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
 			img {
 				width: 100%;
 			}
 
-			& + p, 	& + h3 {
+			& + p {
 				margin-top: $base-line-height * 2;
+			}
+
+			& + h3 {
+				margin-top: $base-line-height * 3;
 			}
 
 			&--wide {
@@ -400,30 +423,27 @@
 			}
 
 			&--grid {
-				max-width: none;
-				width: 100%;
+				@include media($medium) {
+					max-width: none;
+					width: 100%;
+				}
 
 				& + p, 	& + h3 {
-					margin-top: $base-line-height * 4;
+					margin-top: $base-line-height * 3;
 				}
 			}
 
 			&--full {
-				float: none;
-				width: 100vw;
-				max-width: none;
-				position: relative;
-				left: 50%;
-				right: 50%;
-				margin-left: -50vw;
-				margin-right: -50vw;
-
 				img {
 					margin-top: $base-line-height * 1.5;
 				}
 
 				figcaption {
-					padding: 0 $base-line-height*1.5;
+					padding: 0 $base-line-height*0.5;
+
+					@include media($large) {
+						padding: 0 $base-line-height*1.5;
+					}
 				}
 			}
 		}
@@ -437,6 +457,7 @@
 			color: $grey-text;
 			line-height: $base-line-height*0.75;
 			text-align: center;
+			padding: 0 $base-line-height*0.5;
 		}
 
 		//Videos
@@ -445,9 +466,25 @@
 		}
 
 		&__video {
-			max-width: 100%;
-			margin-left: auto;
-			margin-right: auto;
+			float: none;
+			width: 100vw;
+			max-width: none;
+			position: relative;
+			left: 50%;
+			right: 50%;
+			margin-left: -50vw;
+			margin-right: -50vw;
+
+			@include media($medium) {
+				width: 100%;
+				position: static;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			video {
+				width: 100%;
+			}
 		}
 
 		//Lists
@@ -510,6 +547,44 @@
 
 		* + blockquote {
 			margin-top: $base-line-height*1.5;
+		}
+	}
+
+	&__end-nav {
+		@include container;
+		border-top: 1px solid $grey-lighter;
+		padding: $base-line-height*2 0;
+
+		a {
+			display: inline-block;
+			width: rem(400px);
+			max-width: 50%;
+			color: $grey-text;
+			border: 0;
+		}
+
+		&__next {
+			//float: left;
+		}
+
+		&__next {
+			float: right;
+		}
+
+		span {
+			@include small-label;
+		}
+
+		h3 {
+			font-family: $base-font-family;
+			margin-top: $base-line-height*0.5;
+		}
+
+		p {
+			margin-top: $base-line-height*0.25;
+			font-family: $mono-font-family;
+			font-size: ms(-2);
+			line-height: $base-line-height*0.75;
 		}
 
 	}

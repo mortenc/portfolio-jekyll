@@ -27,24 +27,22 @@ As Creative Director and Lead Designer on the project I led all discovery, strat
 
 {% comment %}{% include project-image.html type="grid" file="ggb-responsive-mockups-2.png" caption="A snapshot of the final front page design for the new website." %}{% endcomment %}
 
-{% include project-image.html type="grid" file="ggb-front-laptop.png" %}
+{% include project-image.html type="grid" file="ggb-front-laptop.jpg" %}
 
 ## Understanding through Discovery
 The foundation of any successful website redesign project is a thorough understanding of the context it exists in – the digital ecosystem, the users, the challenges and opportunities.
 
 In order to etablish this foundation, we initialized the project with a discovery phase. Over the course of two weeks we conducted four workshops and interviewed more than 25 stakeholders from the District; from the executive management, to personnel from the bridge, bus and ferry departments, to customer service and marketing representatives.
 
-Our stakeholder interviews and workshops served several purposes. Firstly, they allow us guide the District and to align the many internal stakeholders around a set of clear objectives for the project. Secondly, they enabled us to uncover key insights about the current pain points and challenges, target audiences and the content and structure of the website.
-
 ### Website Objectives
-The discovery workshops led to a set a strategic objectives for the website:
+Our stakeholder interviews and workshops served several purposes. Firstly, they enabled us to uncover key insights about the current pain points and challenges, target audiences and the content and structure of the website. Secondly, they allowed us to guide and align the many internal stakeholders at the District around a set of clear objectives for the project:
 
 + Provide the public with information on the District’s services as efficiently as possible.
 + Educate the public about the purpose of the District, and the interconnection of the ferry, bridge and bus services.
 + Support visitors looking for information about the Golden Gate Bridge, and explain the history of both the bridge and the District to those interested.
 + Accommodate inquiries from the general public, vendors and job seekers looking to engage with the District.
 
-The objectives were summarized in a project brief and presentation – alongside research themes and recommendations, target audiences, performance metrics and visual style and branding.
+{% include project-image.html type="grid" file="ggb-front-phones.jpg" %}
 
 {% comment %}{% include project-image.html type="grid" file="ggb-discovery-reports.jpg" caption="The key findings and insights from the discovery process were summarized in a project brief and presentation." %}{% endcomment %}
 
@@ -65,16 +63,14 @@ A key challenge for redesigning the website was that it needs to service a very 
 
 To ensure a clear prioritization among these audiences, we worked with the stakeholders to rank and divide them into primary and secondary groups. Among the *primary audiences* were customers for the bridge, busses and ferries, as well as tourists and visitors to the bridge. Among the *secondary audiences* were researchers, the general public, staff, and potential vendors and employees.
 
-{% include project-image.html file="ggb-workshop.png" caption="Photo from one of the stakeholder workshops." %}
+{% include project-image.html file="ggb-workshop.jpg" caption="Photo from one of the stakeholder workshops." %}
 
 ### User Journeys
-In order to think deliberately about the the key use cases for the website, we asked stakeholders to help map out and prioritize some of the most common scenarios or user journeys on the website. A good technique for quickly mapping out this information is relying on "the Five Ws" – **Who, What, When, Where, Why** – a well-known research formula borrowed from journalism.
-
-{% comment %}{% include project-image.html file="ggb-workshop-journeys.jpg" caption="As part of our discovery workshops we discussed and prioritized target audiences, and mapped out key user journeys for each." %}{% endcomment %}
+In order to think deliberately about the the key use cases for the website, we asked stakeholders to help map out and prioritize some of the most common scenarios or user journeys on the website. A good technique for quickly mapping out this information is relying on "the Five Ws" – *Who, What, When, Where, Why* – a well-known research formula borrowed from journalism.
 
 Mapping out these simple user journeys allowed us to start forming a clear picture of both the content needs and the prioritization for the website. The results were collated into a clear overview for us to reference throughout the design process.
 
-{% comment %}{% include project-image.html type="grid" file="ggb-user-journey.png" caption="Example user journey for the Bridge Customers." %}{% endcomment %}
+{% include project-image.html type="grid" file="ggb-user-journey.png" caption="Example user journey for the Bridge Customers." %}
 
 ## Visual Exploration
 An important part of the project was also helping the District to update and modernize the branding and visual style of their website. While the District already had several core brand elements in place, including logo and colors, they did not have a detailed styleguide built out, which gave us a lot of flexibility in defining the new direction.
@@ -84,33 +80,28 @@ To get discussions going I ran a [20 Second "Gut" Test](http://goodkickoffmeetin
 ### Design concepts
 Based on our research and discussions, I spent a week together with the our UI designer on the project, exploring various combinations of fonts and colors, and trying out several different direction for the overall UI system in Sketch.
 
-{% comment %}{% include project-image.html type="grid" file="ggb-design-concepts.png" caption="Together with the other UI designer on the project, I explored a number of different directions for the overall visual style of the website." %}{% endcomment %}
-
 The Golden Gate Bridge is known for its distinct orange color and art deco style; at once traditional and classical, as well as modern and playful. We tried to capture these distinctive characterics throughout the visual style.
 
+{% include project-image.html type="grid" file="ggb-design-concepts.png" caption="We explored several different design directions for the proejct." %}
+
+### Typography
 One example of that was the basic font pairing for the site. In the end we settled on a combination of Chronicle Display – a Transitional style serif font – for headlines and display text, and Gotham for body copy; a combination that in my sense does a good job of mirroring the traditional, yet modern style:
 
 
-{% comment %}{% include project-image.html file="ggb-typesetting.gif" caption="Typesetting a pairing of Chronicle Display and Gotham on an 8pt baseline grid." %}{% endcomment %}
-
-{% include project-image.html type="grid" file="ggb-front-phones.png" %}
+{% include project-image.html file="ggb-typesetting.gif" caption="Typesetting a pairing of Chronicle Display and Gotham on an 8pt baseline grid." %}
 
 ## In-Browser Prototyping
 As soon as we settled on the general design direction for the project, we switched over to designing directly in the browser. We built out the rest of the design as a prototype using HTML, SCSS and Javascript.
 
 Designing directly in-browser allows you to not only _see_ your design, but also rapidly _test_ your assumptions and design patterns across screen sizes and devices. This gave us an opportunity to refine the interaction design, as we started to build out some of the key pages.
 
-{% include project-image.html type="full" file="ggb-route-in-iphone-3.jpg" %}
-
 One such example is the Route Page - a page for showing the schedule for a specific bus route. A key use case for the website is to allow bus customers to easily view and browse bus these schedules, and the experience has to be just as seamless on-the-go from a smartphone, as it is at home in front of a laptop. Designing and displaying complex table data is always a challenge, and we researched several potential design patterns.
 
-{% comment %}{% include project-video.html mp4="ggb-route-interaction.mp4" caption="The prototype for the Route page on desktop and mobile." %}{% endcomment %}
+{% include project-video.html mp4="ggb-route-interaction.mp4" caption="The prototype for the Route page on desktop and mobile." %}
 
 ## The Result
 The end result of the process was a prototype that fully outlines the new concept for the website, including key pages and design patterns. The website not only modernizes and matures the District's online presence, but seeks to create an experience that is much more accessible and engaging for the plethora of different audiences using the site every day.
 
 The website is currently being developed by the District and is set to go live in the second half of 2017.
 
-{% comment %}{% include project-image.html type="grid" file="ggb-frontpage-mockup.jpg" caption="The final front page for the website." %}{% endcomment %}
-
-{% comment %}{% include project-image.html type="grid" file="ggb-mockups-mobile.jpg" caption="Designs for front page and route page in mobile breakpoint." %}{% endcomment %}
+{% include project-image.html type="grid" file="ggb-route-in-phone.jpg" %}
