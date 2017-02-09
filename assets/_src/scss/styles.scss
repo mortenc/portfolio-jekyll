@@ -2,11 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700|Overpass:100,200,300,400,600,700,800,900');
 // @import url('https://fonts.googleapis.com/css?family=Overpass|Overpass+Mono');
 
-// Our variables + functions
+// Font family and font-size
 $base-font-family: 'Overpass' Helvetica, Arial, sans-serif;
 $mono-font-family: 'Overpass Mono', 'Lucida Console', Monaco, monospace;
 $base-font-size:   16px;
 
+
+// Functions
 // PX to REM - Usage: font-size: rem(37px);
 @function rem($px, $base: $base-font-size) {
     @return ($px / $base) * 1rem;
@@ -16,10 +18,6 @@ $base-font-size:   16px;
 @function em($px, $base: $base-font-size) {
     @return ($px / $base) * 1em;
 }
-
-$base-font-weight: 400;
-$base-line-height: rem(30px);
-$blh: $base-line-height;
 
 //Modular scale
 $ms-ratio: 1.125;
@@ -42,6 +40,10 @@ $ms-ratio: 1.125;
   @return rem(round($result));
 }
 
+// Variables
+$base-font-weight: 400;
+$base-line-height: rem(30px);
+
 $grey:       #191F22;
 $grey-text:  lighten($grey, 20%);
 $grey-light: lighten($grey, 40%);
@@ -55,21 +57,11 @@ $purple: #afa9f5; //#7e7ecc;
 $orange: #f1a239;
 $light-blue: #8d9dce;
 
-// $blue-grey-light: #2B3740;
-// $blue-grey-mid: #29353E;
-// $blue-grey-dark: #212D36; //#181922
-// $blue-grey-darker: darken($blue-grey-dark,4);
-
 $blue-grey-dark: #212D36;
-
 $blue-grey-light: lighten($blue-grey-dark,70);
 $blue-grey-mid: lighten($blue-grey-dark,40);
 $blue-grey-darker: darken($blue-grey-dark,3);
 
-
-$text-color:       #404448;
-$background-color: white;
-$brand-color:      #2a7ae2;
 
 //Breakpoints
 $xsmall: 480px;
@@ -88,7 +80,6 @@ $gutter: em(30px) !global;
 	"neat",
 	"vendor/reset",
 	"base",
-  "visual-grid",
   "sidebar",
 	"layout",
   "page",

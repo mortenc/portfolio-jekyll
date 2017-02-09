@@ -177,7 +177,6 @@
     }
   }
 
-  //
   // &__writing {
   //   @include outer-container;
   //   clear: both;
@@ -203,52 +202,4 @@
   //   }
   // }
 
-  // &__clients {
-  //   @include row();
-  //   clear: both;
-  //   padding-top: $base-line-height*4;
-  //   margin-bottom: $base-line-height*6;
-  //
-  //   h2 {
-  //     @include span-columns(2);
-  //     @include shift(2);
-  //     @include small-label;
-  //     color: $white-transparent;
-  //   }
-  //
-  //   ul {
-  //     @include span-columns(12);
-  //     @include omega();
-  //     color: white;
-  //     font-family: $mono-font-family;
-  //     column-count: 2;
-  //     column-gap: $base-line-height*3;
-  //
-  //     li {
-  //       margin-bottom: $base-line-height*0.5;
-  //     }
-  //     span {
-  //       color: white;
-  //     }
-  //
-  //     p {
-  //       display: none;
-  //       font-family: $base-font-family;
-  //       color: $white-transparent;
-  //     }
-  //   }
-  // }
-
 }
-
-// .logowall {
-//   @include span-columns(8);
-//   @include omega();
-//
-//   li {
-//     width: 25%;
-//     padding: 1rem;
-//     margin-top: -3rem;
-//     float: left;
-//   }
-// }

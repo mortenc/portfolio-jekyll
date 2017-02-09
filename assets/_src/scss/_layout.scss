@@ -1,12 +1,5 @@
 /**
- * Site header
- */
-.header {
-
-}
-
-/**
- * Site footer
+ * Footer
  */
 .footer {
   position: relative;
@@ -51,6 +44,10 @@
         @include small-label;
         border: none;
         color: white;
+
+        &:hover, &:active, &:focus {
+          color: $purple;
+        }
       }
     }
   }

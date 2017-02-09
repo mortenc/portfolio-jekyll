@@ -252,7 +252,6 @@
 	}
 
 	// Content area
-	//-------------
 	&__content {
 		@include container;
 		position: relative;
@@ -271,7 +270,6 @@
 			font-size: rem(15px);
 			font-weight: 600;
 			margin: 0 0.15rem;
-			//letter-spacing: -1px;
 		}
 
 		h1, h2, h3, h4, h5, h6 {
@@ -282,41 +280,11 @@
 		p, h1, h2, h3, ul, blockquote, &__image, figcaption {
 			max-width: rem(560px);
 			margin: 0px auto;
-			// @include span-columns(12);
-			//
-			// @include media($small) {
-			// 	@include span-columns(10);
-			// 	@include shift(1);
-			// 	@include omega();
-			// 	@include clearfix;
-			// }
-			//
-			// @include media($medium) {
-			// 	@include span-columns(7);
-			// 	@include shift(2);
-			// 	@include omega();
-			// 	@include clearfix;
-			// }
-			//
-			// @include media($large) {
-			// 	@include span-columns(6);
-			// 	@include shift(3);
-			// 	@include omega();
-			// 	@include clearfix;
-			// }
-			//
-			// @include media($xlarge) {
-			// 	@include span-columns(5);
-			// 	@include shift(3);
-			// 	@include omega();
-			// 	@include clearfix;
-			// }
 		}
 
 		h1 {
 		  font-size: ms(4);
 		  line-height: $base-line-height * 2.5;
-		  border-bottom: 1px solid lighten($text-color, 65%);
 		  padding-bottom: $base-line-height;
 		}
 
