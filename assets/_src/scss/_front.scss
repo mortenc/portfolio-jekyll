@@ -9,7 +9,7 @@
     padding: $base-line-height*2.5 0 $base-line-height*2.5;
 
     @include media($medium) {
-      padding: $base-line-height*7.5 0 $base-line-height*7.5;
+      padding: $base-line-height*7.5 0 $base-line-height*4.5;
     }
 
     span {
@@ -45,7 +45,7 @@
     }
 
     &__heading {
-      //max-width: 20rem;
+      position: relative;
       font-family: $base-font-family;
       font-size: ms(2);
       font-weight: 300;
@@ -53,21 +53,43 @@
       color: $white-transparent;
 
       @include media($small) {
-        font-size: ms(3);
-        line-height: $base-line-height*1.5;
+        @include shift(1);
+        max-width: 32rem;
+        line-height: $base-line-height*1.25;
         font-weight: 300;
       }
 
       @include media($medium) {
-        max-width: 48rem;
-        font-size: ms(5);
-        font-weight: 200;
-        line-height: $base-line-height*1.5;
+        @include shift(2);
+      }
+
+      &:after {
+        display: none;
+        position: absolute;
+        z-index: 300;
+        content:" ";
+        width: 1px;
+        height: auto;
+        background: linear-gradient(to top, rgba(255,255,255,.7) 0%,rgba(255,255,255,0) 100%);
+        opacity: .5;
+
+        @include media($small) {
+          display: block;
+          top: -$base-line-height*2;
+          left: -$base-line-height;
+          bottom: -$base-line-height*4;
+        }
+
+        @include media($medium) {
+          top: -$base-line-height*4;
+          left: -$base-line-height*2;
+          bottom: -$base-line-height*7;
+        }
       }
 
       em {
         position: relative;
-        font-weight: 300;
+        font-weight: 400;
         color: white;
       }
 
@@ -113,12 +135,6 @@
 
       &:nth-child(even) {
         @include omega();
-        //padding-left: $base-line-height*0.5;
-      }
-
-      &:nth-child(odd) {
-
-        //padding-right: $base-line-height*0.5;
       }
     }
   }
@@ -165,4 +181,17 @@
       color: $white-transparent;
     }
   }
+}
+
+.more-coming-soon {
+  @include span-columns(12);
+
+  p {
+    font-family: $mono-font-family;
+    font-size: ms(-1);
+    color: $white-transparent;
+    text-align: center;
+    padding: $base-line-height*4 $base-line-height;
+  }
+
 }

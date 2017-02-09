@@ -5,18 +5,14 @@ navigation_weight: 1
 bodyclass: 'front'
 ---
 
-<!-- {% include visual-grid.html lines="1,7,13" %} -->
 <div class="front__intro">
-  <!-- <span>TL;DR</span> -->
   <h1 class="front__intro__heading">
+    <span>Welcome</span>
     <em>Morten Christoffersen is a multi-disciplinary designer</em> working in the intersection of user experience strategy, interface design and front-end development.
-     <!-- <a href="/about"> ⟶ Read on.</a> -->
   </h1>
-  <!-- <p>Currently working as US Creative Director for FFW Agency in San Francisco, California.</p> -->
 </div>
 
 <div class="front__work">
-  <h2>Featured Work</h2>
   <ul class="project-list">
     {% assign ordered_projects = site.projects | sort: "order" %}
     {% for project in ordered_projects %}
@@ -28,10 +24,12 @@ bodyclass: 'front'
           <div class="project-card__info">
             <span class="project-card__info__client">{{ project.client }}</span>
             <p class="project-card__info__desc">{{ project.desc-short }}</p>
-            <!-- <p class="project-list__project__desc">{{ project.desc }}</p> -->
           </div>
         </a>
       </li>
     {% endfor %}
   </ul>
+  <div class="more-coming-soon">
+    <p>More projects coming soon. Stay tuned! <br> (Or you know, <a href="/about/#contact">get in touch</a>)</p>
+  </div>
 </div>
