@@ -79,6 +79,7 @@ $gutter: em(30px) !global;
 @import
 	"neat",
 	"vendor/reset",
+  "mixins",
 	"base",
   "sidebar",
 	"layout",

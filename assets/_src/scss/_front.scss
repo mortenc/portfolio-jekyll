@@ -141,8 +141,16 @@
 }
 
 .project-card {
+  position: relative;
   display: block;
   border: none;
+
+  &::before {
+    @include backlight(0, -2rem, 5vw, 0.8, #0fffc1, #7e0fff, 5s);
+    animation-play-state: paused;
+    opacity: 0;
+    transition: opacity 0.335s ease-in-out;
+  }
 
   &__img {
     position: relative;
@@ -160,15 +168,11 @@
     }
   }
 
-  &:hover &__img {
-    img {
-      transform: scale(1.1);
-    }
-  }
-
   &__info {
+    position: relative;
     padding: $base-line-height;
-    background-color: rgba(255,255,255,.05);
+    background: rgba(255,255,255,.05);
+    transition: background 0.335s ease-in-out 0.1s;
 
     &__client {
       font-weight: 400;
@@ -180,6 +184,23 @@
       font-size: ms(-1);
       color: $white-transparent;
     }
+  }
+
+  &:hover {
+    &::before {
+      animation-play-state: running;
+      opacity: 1;
+    }
+  }
+
+  &:hover &__img {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  &:hover &__info {
+    //background: rgba(255,255,255,.1);
   }
 }
 
