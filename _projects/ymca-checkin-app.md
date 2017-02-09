@@ -78,4 +78,4 @@ The final result is an iOS app that is both simple and highly focused in its uti
 
 This initial version of the app serves as an MVP and is currently being tested in several of the YMCA Twin Cities branches. It is the intention to iterate and improve further on the app, and add new features as the need arises.
 
-{% include project-image.html type="grid" file="ymca-flow-and-mockup.jpg" caption="Mapping out the main screen flow – scanning a membership card." %}
+{% include project-image.html type="grid" file="ymca-3-iphones.jpg" caption="The app scans membership cards using the phone camera." %}
