@@ -5,9 +5,11 @@
 
   <body class="{{ page.bodyclass }}">
 
-    {% include header.html %}
-
     {{ content }}
+
+    {% if jekyll.environment == 'production' %}
+      {% include analytics.html %}
+    {% endif %}
 
   </body>
 
