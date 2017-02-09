@@ -41,53 +41,6 @@ body {
   }
 }
 
-@mixin margin-container {
-  width: auto;
-  margin: 0 $base-line-height*1.5;
-
-  @include media($medium) {
-    margin: 0 $base-line-height*2;
-  }
-
-  @include media($large) {
-    margin: 0 $base-line-height*4;
-  }
-
-  @include media($xlarge) {
-    //margin: 0 $base-line-height*5;
-  }
-
-  @include media($xxlarge) {
-    margin: 0 $base-line-height*6;
-  }
-}
-
-@mixin padding-container {
-  width: auto;
-  margin: 0 auto;
-  padding-left: $base-line-height*1.5;
-  padding-right: $base-line-height*1.5;
-
-  @include media($medium) {
-    padding-left: $base-line-height*2;
-    padding-right: $base-line-height*2;
-  }
-
-  @include media($large) {
-    padding-left: $base-line-height*4;
-    padding-right: $base-line-height*4;
-  }
-
-  @include media($xlarge) {
-    //margin: 0 $base-line-height*5;
-  }
-
-  @include media($xxlarge) {
-    padding-left: $base-line-height*6;
-    padding-right: $base-line-height*6;
-  }
-}
-
 /**
  * Basic typography
  */
@@ -130,26 +83,4 @@ a {
     &:hover, &:focus, &:active {
         color: darken($purple,15);
     }
-}
-
-.btn {
-  display: inline-block;
-  position: relative;
-  @include small-label;
-  border: 0;
-  font-weight: 700;
-  text-align: center;
-  letter-spacing: .1rem;
-  color: white;
-  background: linear-gradient(to top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%), $purple;
-  padding: $base-line-height*0.05 $base-line-height*0.5 0 $base-line-height*0.5;
-  border-radius: $base-line-height;
-  line-height: $base-line-height*0.95;
-  overflow: hidden;
-  transition: background 0.25s ease-in-out;
-
-  &:hover {
-    color: white;
-    background: linear-gradient(to top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%), lighten($purple,20);
-  }
 }

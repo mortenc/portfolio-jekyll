@@ -7,9 +7,7 @@
 
     {{ content }}
 
-    {% if jekyll.environment == 'production' %}
-      {% include analytics.html %}
-    {% endif %}
+    {% if jekyll.environment == 'production' %}{% include analytics.html %}{% endif %}
 
   </body>
 
