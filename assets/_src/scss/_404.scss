@@ -1,0 +1,19 @@
+.four-oh-four {
+  @include container;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    max-width: rem(400px);
+    text-align: center;
+    margin: $base-line-height*2 auto $base-line-height*3;
+    color: white;
+  }
+
+  a {
+    font-family: $mono-font-family;
+    font-size: ms(-1);
+  }
+}

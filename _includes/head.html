@@ -3,8 +3,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.desc-short %}{{ page.desc-long | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <title>{% if page.head-title %}{{ page.head-title | escape }}{% elsif page.title %}{{ page.title | escape }} – Morten Christoffersen{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{% if page.desc-short %}{{ page.desc-short | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="https://cdn.plyr.io/2.0.11/plyr.css">
   <link rel="stylesheet" href="{{ "/assets/css/styles.css" | prepend: site.baseurl }}">

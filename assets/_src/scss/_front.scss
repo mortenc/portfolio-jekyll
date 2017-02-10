@@ -149,7 +149,7 @@
     @include backlight(0, -2rem, 5vw, 0.8, #0fffc1, #7e0fff, 5s);
     animation-play-state: paused;
     opacity: 0;
-    transition: opacity 0.335s ease-in-out;
+    transition: opacity 0.385s ease-in-out;
   }
 
   &__img {
@@ -164,7 +164,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      transition: transform 0.335s ease-in-out;
+      transition: transform 0.385s ease-in-out;
     }
   }
 
@@ -172,7 +172,7 @@
     position: relative;
     padding: $base-line-height;
     background: rgba(255,255,255,.05);
-    transition: background 0.335s ease-in-out 0.1s;
+    transition: background 0.385s ease-in-out 0.1s;
 
     &__client {
       font-weight: 400;

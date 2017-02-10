@@ -4,9 +4,10 @@
 		document.querySelectorAll('.js-video'),
 		{controls: ['play-large', 'play', 'progress', 'fullscreen']
 	});
-	// $( "body" ).delay( 1000 ).queue(function(next){
-  //   $(this).addClass("loaded");
-  //   next();
-	// });
+
+	$( "body" ).delay( 300 ).queue(function(next){
+    $(this).addClass("loaded");
+    next();
+	});
 
 })();
