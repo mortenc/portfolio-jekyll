@@ -106,7 +106,7 @@
   border: none;
 
   &::before {
-    @include backlight(0, -2rem, 5vw, 0.8, #0fffc1, #7e0fff, 5s);
+    @include backlight(0, -1rem, 3.5rem, 0.8, #0fffc1, #7e0fff, 5s);
     animation-play-state: paused;
     opacity: 0;
     transition: opacity 0.385s ease-in-out;
