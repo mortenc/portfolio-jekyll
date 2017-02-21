@@ -119,7 +119,7 @@
 			@include media($large) {
 				@include span-columns(10);
 				@include shift(1);
-				font-size: ms(8);
+				font-size: ms(7);
 				line-height: $base-line-height*2;
 			}
 		}
