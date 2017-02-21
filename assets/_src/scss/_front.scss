@@ -9,8 +9,8 @@
     padding: $base-line-height*2.5 0 $base-line-height*2.5;
 
     @include media($medium) {
-      padding: $base-line-height*6 0 $base-line-height*6;
-      max-width: 32rem;
+      padding: $base-line-height*7 0 $base-line-height*5;
+      max-width: 40rem;
     }
 
     span {
@@ -46,70 +46,25 @@
       color: white;
 
       @include media($small) {
-        //s@include shift(1);
-        //max-width: 32rem;
-        line-height: $base-line-height*1.25;
-        font-weight: 300;
-      }
-
-      @include media($medium) {
-        //@include shift(2);
-      }
-
-      &::before {
-        content:"";
-        display: block;
-        width: $base-line-height;
-        height: 2px;
-        margin-bottom: $base-line-height;
-        background: white;
-      }
-
-      // &:after {
-      //   display: none;
-      //   position: absolute;
-      //   z-index: 300;
-      //   content:" ";
-      //   width: 1px;
-      //   height: auto;
-      //   background: linear-gradient(to top, rgba(255,255,255,.7) 0%,rgba(255,255,255,0) 100%);
-      //   opacity: .5;
-      //
-      //   @include media($small) {
-      //     display: block;
-      //     top: -$base-line-height*2;
-      //     left: -$base-line-height;
-      //     bottom: -$base-line-height*4;
-      //   }
-      //
-      //   @include media($medium) {
-      //     top: -$base-line-height*4;
-      //     left: -$base-line-height*2;
-      //     bottom: -$base-line-height*7;
-      //   }
-      // }
-
-      a {
-        display: block;
-        font-size: ms(0);
-        line-height: $base-line-height*2;
-        font-family: $mono-font-family;
-        font-weight: 100;
-        border: 0;
-
-        @include media($medium) {
-          font-size: ms(2);
-        }
+        font-size: ms(4);
+        font-weight: 200;
+        line-height: $base-line-height*1.5;
       }
     }
 
     p {
-      // @include span-columns(6);
-      // @include shift(3);
       font-family: $mono-font-family;
+      font-size: rem(15px);
       font-size: ms(-1);
       color: $white-transparent;
+      line-height: $base-line-height;
       margin-top: $base-line-height;
+      font-weight: 200;
+
+      @include media($medium) {
+        font-size: rem(15px);
+        line-height: $base-line-height;
+      }
     }
   }
 
@@ -134,10 +89,9 @@
   li {
     padding-bottom: $base-line-height;
     @include span-columns(12);
-    @include omega();
 
     @include media($small) {
-      //@include span-columns(6);
+      @include span-columns(6);
 
       &:nth-child(even) {
         @include omega();
@@ -160,34 +114,24 @@
 
   &__img {
     position: relative;
-    width: 60%;
-    //height: 0;
-    //padding-top: 100%;
+    height: 0;
+    padding-top: 90%;
     overflow: hidden;
     background-size: cover;
 
     img {
-      width: 100%;
       display: block;
-      // position: absolute;
-      // top: 0;
-      // left: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
       transition: transform 0.385s ease-in-out;
     }
   }
 
   &__info {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 40%;
-    height: 100%;
+    position: relative;
     padding: $base-line-height;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    background: rgba(0,0,0,.1);
+    background: rgba(255,255,255,.05);
     transition: background 0.385s ease-in-out 0.1s;
 
     &__client {
@@ -216,7 +160,7 @@
   }
 
   &:hover &__info {
-    background: rgba(255,255,255,.1);
+    //background: rgba(255,255,255,.1);
   }
 }
 

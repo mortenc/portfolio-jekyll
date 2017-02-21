@@ -7,22 +7,20 @@ bodyclass: 'front'
 ---
 
 <div class="front__intro">
-  <!-- <span>Welcome</span> -->
   <h1 class="front__intro__heading">
-    Morten Christoffersen is a multi-disciplinary designer working in the intersection of user experience strategy, interface design and front-end development.
+    Morten Christoffersen is a multi-disciplinary designer, UX strategist and front-end developer.
   </h1>
-  <p>Currently Creative Director at FFW Agency in San Francisco. Previously Copenhagen, Denmark.
+  <p>Currently US Creative Director at FFW Agency in San Francisco. Previously Copenhagen, Denmark. <a href="/about/">More.</a></p>
 </div>
 
 <div class="front__work">
-  <!-- <h2> Featured work</h2> -->
   <ul class="project-list">
     {% assign ordered_projects = site.projects | sort: "order" %}
     {% for project in ordered_projects %}
       <li>
         <a class="project-card {% if project.list-type %} project-list__project--{{ project.list-type }} {% endif %}" href="{{ project.url | prepend: site.baseurl }}">
           <div class="project-card__img">
-            <img src="{{ project.hero }}" alt="Image thumbnail for {{ project.client }} project.">
+            <img src="{{ project.thumb }}" alt="Image thumbnail for {{ project.client }} project.">
           </div>
           <div class="project-card__info">
             <span class="project-card__info__client">{{ project.client }}</span>

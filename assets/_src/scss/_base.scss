@@ -25,15 +25,19 @@ body {
   color: $grey-text;
   margin: 0 auto;
   overflow-x: hidden;
-  background-color: $blue-grey-dark;
+  background-color: $blue-grey-darker;
 }
 
 @mixin container {
   @include outer-container;
   width: calc(100% - #{$base-line-height*2});
-  //
-  @include media($medium) {
+
+  @include media($small) {
     width: calc(100% - #{$base-line-height*4});
+  }
+
+  @include media($medium) {
+    width: calc(100% - #{$base-line-height*6});
   }
 
   @include media($xlarge) {
