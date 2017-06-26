@@ -1,12 +1,15 @@
 <footer class="footer">
-  <p class="footer__legal">Handcrafted with love — All rights reserved © Morten Christoffersen {{ site.time | date: '%Y' }}.</p>
-  <ul class="social-links">
-    <li><a href="https://www.linkedin.com/in/mortenchristoffersen" rel="LinkedIn">LinkedIn</li>
-    <li><a href="https://dribbble.com/morten" rel="Dribbble">Dribbble</li>
-    <li><a href="https://medium.com/@mortenc" rel="Medium">Medium</li>
-    <li><a href="https://medium.com/@mortenc" rel="Medium">Github</li>
-  </ul>
-
+  <div class="footer__inner">
+    <p class="footer__legal">Handcrafted with love — All rights reserved © Morten Christoffersen {{ site.time | date: '%Y' }}.</p>
+    <ul class="social-links">
+      <li><a href="https://www.linkedin.com/in/mortenchristoffersen" rel="LinkedIn">LinkedIn</a></li>
+      <li><a href="https://dribbble.com/morten" rel="Dribbble">Dribbble</a></li>
+      <li><a href="https://medium.com/@mortenc" rel="Medium">Medium</a></li>
+      <li><a href="https://medium.com/@mortenc" rel="Medium">Github</a></li>
+      <li><a href="mailto:contact@mortenchristoffersen.com" rel="Email">Email</a></li>
+    </ul>
+  </div>
 </footer>
 
+<script src="https://cdn.plyr.io/2.0.11/plyr.js"></script>
 <script src="{{ "/assets/js/scripts.js" | prepend: site.baseurl }}" type="text/javascript"></script>

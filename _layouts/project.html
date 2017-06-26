@@ -1,37 +1,63 @@
 ---
 layout: default
-bodyclass: 'body--project'
+bodyclass: 'project'
 ---
-<article class="project" itemscope itemtype="http://schema.org/CreativeWork">
-	<a class="project__sidenav" href="/"><span>Back<i></i></span></a>
-	<header class="project__hero" style="background-image: url('{{ page.hero | prepend: site.baseurl }}')">
+<div class="project__back">
+	<a href="/">Back</a>
+</div>
 
-		{% include visual-grid.html lines="1,8,13" %}
+<div class="project__hero">
 
-		<div class="project__intro">
-			<div class="project__info" style="background-color:{{ page.color }};">
-				<p class="project__info__client">{{ page.client }}</p>
-				<h1 class="project__info__title">{{ page.title }}</h1>
-				<p class="project__info__desc">{{ page.desc }}</p>
-			</div>
-			<ul class="project__details">
-				<li class="project__details__client"><span>Client</span>{{ page.client }}</li>
-				<li class="project__details__role"><span>Role</span>{{ page.role }}</li>
-				<li class="project__details__employer"><span>For</span>{{ page.employer }}</li>
-				<li class="project__details__year"><span>Year</span>{{ page.year }}</li>
-			</ul>
-		</div>
-	</header>
+	<div class="project__hero__inner">
 
-	<div class="project__content">
-		<!-- <ul class="project__info project__info--alt">
-			<li class="project__client"><span>Client</span>{{ page.client }}</li>
-			<li class="project__role"><span>Role</span>{{ page.role }}</li>
-			<li class="project__employer"><span>Employer</span>{{ page.employer }}</li>
-			<li class="project__year"><span>Year</span>{{ page.year }}</li>
-		</ul> -->
-		{{ content }}
-		{% include visual-grid.html lines="1" dark="true" %}
+		<p class="project__hero__client">{{ page.client }}</p>
+		<h1 class="project__hero__heading">{{ page.heading }}</h1>
+		<p class="project__hero__desc">{{ page.desc-long }}</p>
+
+		<ul class="project__hero__details">
+			{% if page.role %}<li class="project__hero__details__role"><span>Role</span>{{ page.role }}</li>{% endif %}
+			{% if page.year %}<li class="project__hero__details__year"><span>Year</span>{{ page.year }}</li>{% endif %}
+			{% if page.employer %}<li class="project__hero__details__employer"><span>Employer</span>{{ page.employer }}</li>{% endif %}
+			{% if page.link %}<li class="project__hero__details__link"><span>View</span>{% if page.link-url %}<a href="{{ page.link-url }}">{{ page.link }}</a>{% else %}{{ page.link }}{% endif %}</li>{% endif %}
+		</ul>
+
 	</div>
 
-</article>
+</div>
+
+<div class="project__img">
+	<img src="{{ page.hero | prepend: site.baseurl }}" />
+</div>
+
+<div class="project__content">
+	{{ content }}
+</div>
+
+{% capture the_collection %}{{page.collection}}{% endcapture %}
+  {% if page.collection %}
+    {% assign  document = (site[the_collection] | sort: 'order') %}
+  {% endif %}
+{% for links in document  %}
+  {% if links.title == page.title %}
+    {% if forloop.last %}
+      {% assign nextproject = document[0] %}
+    {% else %}
+      {% assign nextproject = document[forloop.index] %}
+		{% endif %}
+  {% endif %}
+{% endfor %}
+
+<div class="project__up-next">
+	<div class="project__up-next__inner">
+		<span>Up Next</span>
+		<a href="{{ nextproject.url }}">
+			<img class="project__up-next__img" src="{{ nextproject.thumb }}" alt="Image thumbnail for {{ nextproject.client }} project." />
+			<div class="project__up-next__info">
+				<h3>{{ nextproject.title }}</h3>
+				<p>{{ nextproject.desc-short }}</p>
+			</div>
+		</a>
+	</div>
+</div>
+
+{% include footer.html %}

@@ -1,0 +1,24 @@
+.page {
+
+  &__container {
+    position: relative;
+    @include clearfix;
+    @include media($medium) {
+      margin-left: $base-line-height*3.5;
+    }
+  }
+
+  &__content {
+    @include container;
+    position: relative;
+    //opacity: 0;
+    //transform: translate3d(0,$base-line-height,0);
+    //transition: opacity ease-out .7s, transform ease-out .7s;
+    //transition-delay: 1.5s;
+
+    .loaded & {
+      //opacity: 1;
+      //transform: translate3d(0,0,0);
+    }
+  }
+}

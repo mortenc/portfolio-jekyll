@@ -1,54 +1,36 @@
 ---
-layout: default
-bodyclass: 'body--front'
+layout: page
+title: 'Work'
+head-title: 'Morten Christoffersen - UX & Product Designer'
+navigation_weight: 1
+bodyclass: 'front'
 ---
-{% include visual-grid.html lines="2,4,10,12" %}
 
-<!-- <div class="front__sidebar">
-  hej
-</div> -->
+<div class="front__intro">
+  <h1 class="front__intro__heading">
+    Morten Christoffersen is a multi-disciplinary designer, UX strategist and front-end developer.
+  </h1>
+  <p>Currently US Creative Director at FFW Agency in San Francisco. Previously Copenhagen, Denmark. <a href="/about/">More.</a></p>
+</div>
 
-<div class="front__content">
-  <div class="intro">
-    <div class="intro__name">
-      <h1>Morten Christoffersen</h1>
-    </div>
-    <div class="intro__blurb">
-      <h2>UX & Design Director with a passion for problem-solving and digital technologies.</h2>
-    </div>
-    <div class="intro__desc">
-      <p>I currently live and work in San Francisco, California as Creative Director, US for <a href="www.ffwagency.com">FFW Agency</a>.</p>
-      <p>I work in the cross section between strategy, interaction design, visual design and coding, and believe that the best digital products are made, when we break down the silos between design and development, and instead focus our collective attention on creating intriguing experiences and interactions.</p>
-    </div>
-  </div>
-
+<div class="front__work">
   <ul class="project-list">
-    {% for project in site.projects %}
-      <li class="project-list__project">
-        <a href="{{ project.url | prepend: site.baseurl }}">
-          <div class="project-list__project__info" style="background-color:{{ project.color }};">
-            <span class="project-list__project__client">{{ project.client }}</span>
-            <h3 class="project-list__project__title">{{ project.title }}</h3>
-            <!-- <p class="project-list__project__desc">{{ project.desc }}</p> -->
+    {% assign ordered_projects = site.projects | sort: "order" %}
+    {% for project in ordered_projects %}
+      <li>
+        <a class="project-card {% if project.list-type %} project-list__project--{{ project.list-type }} {% endif %}" href="{{ project.url | prepend: site.baseurl }}">
+          <div class="project-card__img">
+            <img src="{{ project.thumb }}" alt="Image thumbnail for {{ project.client }} project.">
           </div>
-          <div class="project-list__project__img">
-            <img src="{{ project.hero }}" alt="Image for the {{ project.client }} project" />
+          <div class="project-card__info">
+            <span class="project-card__info__client">{{ project.client }}</span>
+            <p class="project-card__info__desc">{{ project.desc-short }}</p>
           </div>
         </a>
       </li>
     {% endfor %}
   </ul>
+  <div class="more-coming-soon">
+    <p>More projects coming soon. Stay tuned! <br> (Or you know, <a href="/about/#contact">get in touch</a>)</p>
+  </div>
 </div>
-
-
-<!--   <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul> -->

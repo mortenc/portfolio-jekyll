@@ -1,0 +1,25 @@
+/**
+ * Mixins
+ */
+ // Backlight mix in - inspired by the awesome George Hastings (http://codepen.io/georgehastings/pen/xgwxgo)
+ @mixin backlight($x, $y, $spread, $size, $colorA, $colorB, $duration) {
+   position: absolute;
+   content: "";
+   top: $y;
+   left: $x;
+   right: 0;
+   height: 100%;
+   width: 100%;
+   margin: 0 auto;
+   transform: scale($size);
+   filter: blur($spread);
+   background: linear-gradient(270deg, $colorA, $colorB);
+   background-size: 200% 200%;
+   animation: animateGlow $duration ease infinite forwards;
+
+   @keyframes animateGlow {
+     0%{background-position:0% 50%}
+     50%{background-position:100% 50%}
+     100%{background-position:0% 50%}
+   }
+ }

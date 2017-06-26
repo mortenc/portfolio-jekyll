@@ -1,0 +1,103 @@
+/**
+ * Sidebar
+ */
+.sidebar {
+  position: relative;
+  min-width: 100vw;
+  padding: 0 $base-line-height;
+  text-align: left;
+  z-index: 900;
+  text-align: center;
+
+  @include media($medium) {
+    position: fixed;
+    padding: 0 $base-line-height*1.5;
+    min-width: 100vh;
+    transform-origin: left top;
+    transform: rotate(-90deg) translate3d(-100%,0,0);
+    text-align: right;
+  }
+
+  &::before {
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to left, rgba($blue-grey-darker, 0) 0%, rgba(255,255,255,.04) 100%);
+    transform: translate3d(100%,0,0);
+    //transition: transform ease-out 1.3s;
+
+    @include media($medium) {
+      background: linear-gradient(to right, rgba($blue-grey-darker, 0) 0%, rgba(255,255,255,.04) 100%);
+    }
+
+    //.loaded & {
+    transform: translate3d(0,0,0);
+    //}
+  }
+
+  li {
+    display: inline-block;
+    opacity: 0;
+    //transition: transform ease-out .6s, opacity ease-out .6s;
+    //transition-delay: .5s;
+    transform: translate3d(-$base-line-height,0,0);
+
+
+    &:nth-child(2) {
+      //transition-delay: .8s;
+    }
+
+    &:nth-child(3) {
+      //transition-delay: 1.1s;
+    }
+
+    //.loaded & {
+      transform: translate3d(0,0,0);
+      opacity: 1;
+    //}
+
+    a {
+      display: inline-block;
+      padding: $base-line-height $base-line-height*0.5;
+      @include small-label;
+      color: white;
+      opacity: .5;
+      border: none;
+      transition: opacity ease-in-out .35s;
+
+      @include media($medium) {
+        padding: $base-line-height*1.25 $base-line-height*0.5;
+      }
+
+      &:hover, &:focus, &:active {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__line {
+    display: none !important;
+    width: 40vh;
+    max-width: $base-line-height*12;
+    margin-right: $base-line-height;
+    height: 1px;
+    vertical-align: middle;
+    background: linear-gradient(to left, rgba(255,255,255,.2) 0%,rgba(255,255,255,0) 100%);
+
+    @include media($medium) {
+      display: inline-block !important;
+    }
+  }
+
+  &__contact {
+    @include media($medium) {
+      display: none !important;
+    }
+  }
+}

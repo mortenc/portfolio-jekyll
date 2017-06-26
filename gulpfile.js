@@ -115,12 +115,33 @@ gulp.task('jekyll', function (done) {
 });
 
 /**
+ * $ gulp jekyll-prod
+ * Build Jekyll Site for production
+ */
+gulp.task('jekyll-prod', function (done) {
+    browserSync.notify('Building Jekyll site for production...');
+    var productionEnv = process.env;
+    productionEnv.JEKYLL_ENV = 'production';
+
+    return childprocess.spawn('jekyll', ['build'], { stdio: 'inherit' , env:productionEnv })
+    .on('close', done);
+});
+
+/**
  * $ gulp serve
  * Serve site, watch for changes and run tasks as needed
  */
 gulp.task('serve', ['sass', 'scripts', 'jekyll', 'browser-sync'], function () {
     gulp.watch(src.scss, ['sass']);
     gulp.watch(src.js, ['scripts']);
-    gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '*.md', '_posts/*', '_projects/*'], ['jekyll']);
+    gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '*.md', '_posts/*', '_projects/*'], ['jekyll']);
     gulp.watch(['_site/**/*.html']).on('change', browserSync.reload);
 });
+
+/**
+ * $ gulp build --production
+ * Builds the site, sass and scripts for production. Remember to set --production flag.
+ */
+ gulp.task('build', ['jekyll-prod', 'sass', 'scripts'], function (done) {
+     browserSync.notify('Building site for production...');
+ });

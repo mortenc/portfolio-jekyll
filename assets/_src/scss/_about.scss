@@ -1,0 +1,205 @@
+/**
+ * About page
+ */
+.about {
+  &__intro {
+    margin-top: $base-line-height;
+    padding-top: $base-line-height*3;
+
+    @include media($medium) {
+      margin-top: $base-line-height*3;
+    }
+
+    &__img {
+      width: rem(160px);
+      position: relative;
+      margin: 0 auto;
+
+      @include media($small) {
+        @include span-columns(5);
+        padding: 0 2.5rem;
+      }
+
+      @include media($large) {
+        @include span-columns(4);
+        padding: 0 2.5rem;
+      }
+
+      @include media($xlarge) {
+        @include span-columns(3);
+        @include shift(1)
+        padding: 0 2.5rem;
+      }
+
+      img {
+        display: block;
+      }
+
+      &::before {
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateY(-65%);
+        z-index: 100;
+        content:" ";
+        width: 1px;
+        height: 75%;
+        background: linear-gradient(to bottom, transparent 0%, white 100%);
+        z-index: 200;
+      }
+    }
+
+    &__blurb {
+      @include span-columns(12);
+      @include omega();
+      margin-top: $base-line-height;
+
+      @include media($small) {
+        @include span-columns(7);
+        @include omega();
+      }
+
+      @include media($large) {
+        margin-top: 0;
+      }
+
+      @include media($xlarge) {
+        @include span-columns(6);
+        @include omega();
+      }
+
+      span {
+        @include small-label;
+        color: $white-transparent;
+      }
+
+      h1 {
+        font-family: $base-font-family;
+        font-size: ms(7);
+        font-weight: 200;
+        color: white;
+        margin-top: $base-line-height*0.75;
+      }
+
+      p {
+        margin-top: $base-line-height*0.75;
+        color: $white-transparent;
+        font-weight: 300;
+
+        &:first-of-type {
+          margin-top: $base-line-height*1.25;
+          font-size: rem(15px);
+          font-weight: 400;
+          font-family: $mono-font-family;
+          color: $white-transparent-lighter;
+
+          @include media($large) {
+            margin-bottom: $base-line-height*3;
+          }
+        }
+      }
+    }
+  }
+
+  &__section {
+    @include row();
+    clear: both;
+    padding-top: $base-line-height*2;
+
+    @include media($medium) {
+      padding-top: $base-line-height*3;
+    }
+
+    h2 {
+      @include span-columns(12);
+      @include small-label;
+      color: $white-transparent;
+
+      @include media($small) {
+        @include span-columns(4);
+        @include shift(1);
+      }
+
+      @include media($large) {
+        @include span-columns(3);
+        @include shift(1);
+      }
+
+      @include media($xlarge) {
+        @include span-columns(2);
+        @include shift(2);
+      }
+    }
+
+    &__content {
+      font-weight: 300;
+      @include span-columns(12);
+      @include omega();
+      color: $white-transparent-lighter;
+
+      @include media($small) {
+        @include span-columns(7);
+        @include omega();
+      }
+
+      @include media($large) {
+        margin-top: 0;
+      }
+
+      @include media($xlarge) {
+        @include span-columns(6);
+        @include omega();
+      }
+
+      * + p {
+        margin-top: $base-line-height*0.5;
+      }
+    }
+  }
+
+  &__contact {
+    margin-bottom: $base-line-height*4;
+
+    li {
+      color: white;
+      font-family: $mono-font-family;
+
+      span {
+        display: block;
+      }
+
+      a {
+        font-family: $base-font-family;
+        color: $white-transparent;
+        border: none;
+      }
+    }
+  }
+
+  // &__writing {
+  //   @include outer-container;
+  //   clear: both;
+  //
+  //   .writing-list {
+  //     @include span-columns(10);
+  //     @include omega();
+  //
+  //     li {
+  //       margin-bottom: $base-line-height;
+  //       color: $white-transparent;
+  //       h3 {
+  //         a {
+  //           color: white;
+  //           border: none;
+  //         }
+  //       }
+  //       span {
+  //         display: block;
+  //         font-size: ms(-3);
+  //       }
+  //     }
+  //   }
+  // }
+
+}

@@ -13,6 +13,7 @@ html {
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   overflow-x: hidden;
+  background-color: $blue-grey-darker;
 
   @include media($xxlarge) {
     font-size: 20px;
@@ -21,18 +22,26 @@ html {
 
 body {
   font: $base-font-weight 1rem/#{$base-line-height} $base-font-family;
-  color: $text-color;
-  background-color: $background-color;
+  color: $grey-text;
   margin: 0 auto;
   overflow-x: hidden;
+  background-color: $blue-grey-darker;
 }
 
 @mixin container {
   @include outer-container;
-  width: calc(100% - #{$base-line-height});
+  width: calc(100% - #{$base-line-height*2});
+
+  @include media($small) {
+    width: calc(100% - #{$base-line-height*4});
+  }
 
   @include media($medium) {
-    width: calc(100% - #{$base-line-height*4});
+    width: calc(100% - #{$base-line-height*6});
+  }
+
+  @include media($xlarge) {
+    width: calc(100% - #{$base-line-height*9});
   }
 }
 
@@ -40,12 +49,12 @@ body {
  * Basic typography
  */
 h1, h2, h3, h4, h5, h6 {
-  font-family: $headings-font-family;
-  color: darken($text-color, 10%);
+  font-family: $mono-font-family;
   line-height: $base-line-height;
 }
 
 @mixin small-label {
+  font-family: $base-font-family;
   text-transform: uppercase;
   letter-spacing: .4em;
   font-size: ms(-4);
@@ -65,16 +74,17 @@ img {
  * Links
  */
 a {
-    color: $grey-light;
+    color: $purple;
     text-decoration: none;
     border-bottom: 1px solid;
+    padding-bottom: 0.15rem;
     transition: color .2s ease-in-out;
 
     &:visited {
-        color: $grey-light;
+        color: $purple;
     }
 
-    &:hover {
-        color: $grey-dark;
+    &:hover, &:focus, &:active {
+        color: darken($purple,15);
     }
 }

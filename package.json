@@ -1,7 +1,7 @@
 {
   "name": "jekyll-portfolio",
-  "version": "0.0.1",
-  "description": "My new portfolio built in Jekyll with Gulp magicks for the sass, autoprefixer, browsersync stuffs",
+  "version": "1.0.0",
+  "description": "My new portfolio built in Jekyll with Gulp magicks for the sass, autoprefixer, browsersync stuff",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
