@@ -7,3 +7,5 @@ This is the repo for my personal website, [mortenchristoffersen.com](http://mort
 
 * [Jekyll](https://jekyllrb.com/) – Jekyll is the static site generator powering the new site
 * [Gulp](http://gulpjs.com/) – Task manager and automation. Gulp is responsible for running all the small tasks like compiling and automatically reloading browsers.
+
+I built a boilerplate for easily getting going with Jekyll/Gulp development, check it out here: https://github.com/mortenc/gulp-jekyll
