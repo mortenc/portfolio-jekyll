@@ -10,7 +10,7 @@
 
     @include media($medium) {
       padding: $base-line-height*7 0 $base-line-height*5;
-      max-width: 40rem;
+      max-width: 44rem;
     }
 
     span {
@@ -46,15 +46,14 @@
       color: white;
 
       @include media($small) {
-        font-size: ms(4);
+        font-size: ms(6);
         font-weight: 200;
-        line-height: $base-line-height*1.5;
+        line-height: $base-line-height*1.75;
       }
     }
 
     p {
       font-family: $mono-font-family;
-      font-size: rem(15px);
       font-size: ms(-1);
       color: $white-transparent;
       line-height: $base-line-height;
@@ -62,8 +61,9 @@
       font-weight: 200;
 
       @include media($medium) {
-        font-size: rem(15px);
-        line-height: $base-line-height;
+        font-size: ms(0);
+        line-height: $base-line-height*1.2;
+        margin-top: $base-line-height*1.5;
       }
     }
   }

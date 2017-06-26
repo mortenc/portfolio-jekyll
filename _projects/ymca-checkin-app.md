@@ -8,7 +8,7 @@ client: "YMCA Twin Cities"
 heading:  "Checking in at the YMCA"
 desc-long:  "<span>The YMCA of Greater Twin Cities</span> needed a a way to expedite the member check-in process at their gyms and branches during peak hours. So we built an new iOS app that allows employees to scan membership cards on the fly."
 desc-short:  "Checking in at the YMCA with a new mobile app"
-role: "Research, UX, UI"
+role: "Research · UX · UI"
 employer: "FFW Agency"
 year: 2016
 hero: "/assets/img/ymca-hero.jpg"

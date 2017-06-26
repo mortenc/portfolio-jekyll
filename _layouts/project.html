@@ -18,7 +18,7 @@ bodyclass: 'project'
 			{% if page.role %}<li class="project__hero__details__role"><span>Role</span>{{ page.role }}</li>{% endif %}
 			{% if page.year %}<li class="project__hero__details__year"><span>Year</span>{{ page.year }}</li>{% endif %}
 			{% if page.employer %}<li class="project__hero__details__employer"><span>Employer</span>{{ page.employer }}</li>{% endif %}
-			{% if page.link %}<li class="project__hero__details__link"><span>View</span><a href="{{ page.link }}">{% if page.link-desc %}{{ page.link-desc }}{% else %}Link{% endif %}</a></li>{% endif %}
+			{% if page.link %}<li class="project__hero__details__link"><span>View</span>{% if page.link-url %}<a href="{{ page.link-url }}">{{ page.link }}</a>{% else %}{{ page.link }}{% endif %}</li>{% endif %}
 		</ul>
 
 	</div>

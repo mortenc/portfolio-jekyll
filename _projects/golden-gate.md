@@ -10,7 +10,6 @@ desc-long: "The Golden Gate Bridge, Highway & Transportation District needed a n
 role: "Strategy · UX · UI"
 employer: "FFW Agency"
 link: "[Work-in-progress]"
-link-desc: "Visit Website"
 year: "2016-17"
 type: "Website"
 hero: "/assets/img/ggb-hero.jpg"
