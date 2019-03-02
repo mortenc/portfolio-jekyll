@@ -4,7 +4,7 @@
     position: relative;
     @include clearfix;
     @include media($medium) {
-      margin-left: $base-line-height*3.5;
+      //margin-left: $base-line-height*3.5;
     }
   }
 

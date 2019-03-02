@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.23.6",
-    "gulp": "^3.9.*",
+    "gulp": "3.9.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "*",
     "gulp-filter": "^5.1.0",

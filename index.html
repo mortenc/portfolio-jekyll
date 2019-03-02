@@ -7,13 +7,18 @@ bodyclass: 'front'
 ---
 
 <div class="front__intro">
+  <span>Introduction —</span>
   <h1 class="front__intro__heading">
-    Morten Christoffersen is a multi-disciplinary designer and user experience strategist.
+    Morten Christoffersen is a multi-disciplinary designer, working in the intersection of UX, product strategy and interaction design.
   </h1>
-  <p>Currently UX & Product Design Lead at DR in Copenhagen, Denmark. Previously US Creative Director at FFW in San Francisco. <a href="/about/">More.</a></p>
+  <div class="front__intro__bio">
+    <p>Currently — UX & Product Design Lead at DR, the largest public service media company in Denmark.</p>
+    <p>Previously — Creative Director at FFW Agency in San Francisco. Over the years he has worked with clients such as Stanford University, GE, Pfizer, the YMCA, the Golden Gate Bridge and USC Marshall. <a href="/about/">More.</a></p>
+  </div>
 </div>
 
 <div class="front__work">
+  <span>Work —</span>
   <ul class="project-list">
     {% assign ordered_projects = site.projects | sort: "order" %}
     {% for project in ordered_projects %}
@@ -23,7 +28,7 @@ bodyclass: 'front'
             <img src="{{ project.thumb }}" alt="Image thumbnail for {{ project.client }} project.">
           </div>
           <div class="project-card__info">
-            <span class="project-card__info__client">{{ project.client }}</span>
+            <h3 class="project-card__info__client">{{ project.client }}</h3>
             <p class="project-card__info__desc">{{ project.desc-short }}</p>
           </div>
         </a>
