@@ -1,38 +1,54 @@
 ---
 layout: project
-order: 4
+order: 1
 bodyclass: "project"
 list-type: "mobile"
-title:  "YMCA Twin Cities"
-client: "YMCA Twin Cities"
-heading:  "Checking in at the YMCA"
-desc-long:  "<span>The YMCA of Greater Twin Cities</span> needed a a way to expedite the member check-in process at their gyms and branches during peak hours. So we built an new iOS app that allows employees to scan membership cards on the fly."
-desc-short:  "Checking in at the YMCA with a new mobile app"
-role: "Research · UX · UI"
-employer: "FFW Agency"
-year: 2016
+title:  "DR, Danmarks Radio"
+client: "DR, Danmarks Radio"
+heading:  "Leading UX & Product Design at DR"
+desc-long:  "<span>DR</span> is Denmark's largest public service media company (the Danish equivalent to the BBC). I currently oversee UX and lead a team of talented strategists and designers working on our digital product portfolio."
+desc-short:  "Leading UX & Product Design at DR"
+role: "Management · UX · Strategy · Design"
+employer: "DR"
+year: "2018-Present"
 hero: "/assets/img/ymca-hero.jpg"
 thumb: "/assets/img/ymca-thumb.jpg"
 color: "#52527b"
 ---
 
-## The Problem
-The YMCA of Greater Twin Cities serves more than 250,000 members across more than 25 locations in Minneapolis and St. Paul. This makes it one of the largest YMCAs in the US – but that success also comes with a set of challenges.
+## Digital Public Service
+DR – the Danish Broadcasting Corporation – is Denmark's public service media enterprise (think: the BBC of Denmark). Each week nearly every single Dane interact with one of DR's touch points; whether that's tuning into a TV channel, turning on the radio or using on of DR's digital products.
 
-One such challenge is handling the large number of members checking into gym during peak hours. Employees working at the front desk are often under a lot of pressure to scan membership cards, while also assisting with other inquiries during peak hours. This challenge prompted the need for a new, more portable, check-in solution, that the staff could utilize to help expedite the check-in process during busy times.
+I'm currently leading the talented 10-person UX team that designs digital products at DR. Our product portfolio includes dr.dk (the most visited Danish website), DRTV and Radio streaming apps, DR's news app, the children's apps Ramasjang and Ultra, and many other products aimed at providing great public service for the Danish people.
 
-> ### Problem Statement
-> How might we design a mobile solution that allows YMCA employees to speed up the check-in process at their gyms during peak hours? The solution must be be fast, simple and cost-effective.
+Below are some of the ongoing and past projects, I've worked on at DR.
 
-### The Team
-As the sole designer on the project, I was responsible for all things design-related; from research and ideation through UX and UI design to prototyping and testing. I worked closely with a Project Manager and iOS Developer, who made up the rest of the team.
+### Redesigning dr.dk home page (Work-in-progress)
+The home page of dr.dk is the most visited Danish website. We are currently in the process of redesigning it to ensure that it is personal and relevant to our users' needs.
+
+### Dual Track Agile + Continuous Discovery
+I've worked to implement Dual Track Agile across the department, and ensure that continuous discovery practices such as user research, prototyping and experimentation are first-class citizens in our teams' backlogs.
+
+### A/B Testing and Experimentation
+We've recently introduced a new A/B testing tool, and I'm currently spearheading an effort to onboard and train our Product Managers, Product Owners and UX Designers.
+
+### FIFA World Cup Russia
+Planned and m
+
+### Dual Track Agile + Continuous Discovery
+Implementing Dual Track Agile across the department, and ensuring that continuous discovery practices such as user research, iteration and experimentation are first-class citizens in our teams' backlogs.
+
+### Design System - DR Elements
+Responsible for our cross-team design efforts like our design system for dr.dk, our UX Playbook, and other cross-product strategic initiatives (Personalization, etc).
+
+Grew the team from 7 to 10 fantastic UX strategists and product designers.
+Transitioning from an “internal agency” model to a hub-and-spoke model with UX’ers and designers embedded in each of our cross-functional product teams.
+Implementing Dual-Track Agile and Continuous Discovery practices.
+Aligning UX tools and processes across the teams, and running UX meetings, design reviews, and weekly 1-on-1s.
+Responsible for cross-team design efforts like our UX Playbook, design system (DR Elements), and key cross-product strategic initiatives (Personalization, etc).
+
 
 {% include project-image.html type="grid" file="ymca-3-screens.jpg" caption="Screens from the final app design." %}
-
-## User Research at the YMCA
-In order to fully understand the challenge with the existing check-in flow, I visited the Southdale YMCA branch in Minneapolis. Here I was introduced to the existing check-in system, and saw how the staff handled member check-ins.
-
-A big part of the problem was that the staff could only check in members using a sole scanner hooked up to stationary desktop computer behind the front desk. That meant that during rush hour, lines would start to form at the front desk, as staff struggled to simultanously scan membersip cards and answer other questions and inquiries from behind the desk.
 
 {% include project-image.html file="ymca-research-branch.jpg" caption="Photos from my research at the Southdale YMCA." %}
 

@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 3
+order: 5
 bodyclass: "project"
 client: "Discovery Networks Sweden"
 title:  "Discovery Networks Sweden"

@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 4
+order: 6
 bodyclass: "project"
 client: "Nordisk Film Cinemas"
 title:  "Nordisk Film Cinemas"

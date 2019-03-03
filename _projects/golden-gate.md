@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 1
+order: 3
 bodyclass: "project"
 client: "Golden Gate Bridge"
 title:  "Golden Gate Bridge"

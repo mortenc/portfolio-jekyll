@@ -2,7 +2,6 @@
  * Navigation
  */
 .navigation {
-  //border-top: 4px solid rgba(0,0,0,0.1);
   display: flex;
   position: relative;
   padding: $base-line-height;
@@ -22,9 +21,31 @@
     bottom: 0;
     height: 100%;
     width: 100%;
-    //@include backlight(0, -3rem, 6rem, 1.1, #0fffc1, #7e0fff, 10s);
+    @include backlight(6rem, -3rem, 6rem, 1.1, #0fffc1, #7e0fff, 10s);
     opacity: 0.75;
     z-index: 1;
+    //background: linear-gradient(to right, rgba($blue-grey-darker, 0) 0%, rgba(255,255,255,.04) 100%);
+
+    @include media($medium) {
+      display: none;
+      @include backlight(25%, -4rem, 8rem, 1.1, #0fffc1, #7e0fff, 10s);
+      opacity: 0.5;
+    }
+  }
+
+  &::after {
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    opacity: .35;
+    background-color: black;
+    z-index: 100;
     //background: linear-gradient(to right, rgba($blue-grey-darker, 0) 0%, rgba(255,255,255,.04) 100%);
   }
 

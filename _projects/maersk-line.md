@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 3
+order: 6
 published: false
 bodyclass: "project"
 list-type: "desktop"

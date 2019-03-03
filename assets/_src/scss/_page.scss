@@ -10,6 +10,7 @@
 
   &__content {
     @include container;
+    max-width: rem(1040px);
     position: relative;
     //opacity: 0;
     //transform: translate3d(0,$base-line-height,0);

@@ -6,10 +6,10 @@
   &__intro {
     @include span-columns(12);
     @include omega();
-    padding: $base-line-height*8 0 $base-line-height*2.5;
+    padding: $base-line-height*4 0 $base-line-height*2.5;
 
     @include media($medium) {
-      padding: $base-line-height*4 0 $base-line-height*5;
+      padding: $base-line-height*5 0 $base-line-height*6;
     }
 
     span {
@@ -52,17 +52,30 @@
       }
 
       @include media($medium) {
-        @include span-columns(8);
+        @include span-columns(10);
         @include omega();
         margin-bottom: $base-line-height*2;
+      }
+
+      @include media($large) {
+        @include span-columns(8);
       }
     }
 
     &__bio {
       @include media($medium) {
+        @include span-columns(12);
+        @include omega();
+      }
+
+      @include media($large) {
+        @include span-columns(10);
+        @include shift(1);
+      }
+
+      @include media($xlarge) {
         @include span-columns(8);
         @include shift(2);
-        @include omega();
       }
     }
 
@@ -76,13 +89,12 @@
 
       @include media($medium) {
         @include span-columns(6);
+        //@include shift(1);
+      }
 
-        &:last-child {
-          @include omega();
-        }
-        //font-size: ms(0);
-        //line-height: $base-line-height*1.2;
-        //margin-top: $base-line-height*1.5;
+      @include media($large) {
+        //@include span-columns(5 of 10);
+        //@include shift(1);
       }
     }
   }
@@ -90,6 +102,11 @@
   &__work {
     @include span-columns(12);
     @include omega();
+
+    @include media($large) {
+      //@include span-columns(10);
+      //@include shift(1);
+    }
 
     span {
       @include small-label;
@@ -113,7 +130,7 @@
 
 .project-list {
   li {
-    padding-bottom: $base-line-height;
+    padding-bottom: $base-line-height*0.75;
     @include span-columns(12);
 
     @include media($small) {
@@ -171,11 +188,9 @@
       letter-spacing: 0.03rem;
       line-height: $base-line-height;
       color: white;
-      //margin-bottom: $base-line-height*0.25;
 
       @include media($small) {
-        font-size: ms(0);
-        line-height: $base-line-height*1.25;
+        font-size: ms(-1);
       }
     }
 
