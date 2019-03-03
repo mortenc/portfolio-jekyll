@@ -6,10 +6,10 @@
   &__intro {
     @include span-columns(12);
     @include omega();
-    padding: $base-line-height*2.5 0 $base-line-height*2.5;
+    padding: $base-line-height*8 0 $base-line-height*2.5;
 
     @include media($medium) {
-      padding: $base-line-height*7 0 $base-line-height*5;
+      padding: $base-line-height*4 0 $base-line-height*5;
     }
 
     span {
@@ -39,11 +39,11 @@
     &__heading {
       position: relative;
       font-family: $base-font-family;
-      font-size: rem(18px);
+      font-size: rem(22px);
       font-weight: 300;
-      line-height: $base-line-height;
+      line-height: $base-line-height*1.125;
       color: white;
-      margin-bottom: $base-line-height;
+      margin-bottom: $base-line-height*2;
 
       @include media($small) {
         font-size: ms(3);
@@ -160,6 +160,10 @@
     background: rgba(255,255,255,.05);
     transition: background 0.385s ease-in-out 0.1s;
 
+    @include media($small) {
+      padding: $base-line-height;
+    }
+
     &__client {
       font-family: $base-font-family;
       font-size: rem(16px);
@@ -170,17 +174,16 @@
       //margin-bottom: $base-line-height*0.25;
 
       @include media($small) {
-        font-size: ms(3);
-        font-weight: 200;
+        font-size: ms(0);
         line-height: $base-line-height*1.25;
       }
     }
 
     &__desc {
       font-family: $mono-font-family;
-      font-size: ms(-1);
+      font-size: ms(-2);
       color: $white-transparent;
-      line-height: $base-line-height*0.85;
+      line-height: $base-line-height*0.75;
     }
   }
 
