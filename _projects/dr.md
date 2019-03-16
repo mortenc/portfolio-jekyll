@@ -16,20 +16,28 @@ thumb: "/assets/img/dr-thumb.jpg"
 color: "#52527b"
 ---
 ## The Danish Broadcasting Corporation
-DR – the Danish Broadcasting Corporation – is Denmark's public service media enterprise (essentially Danish equivalent to the BBC). Each week nearly every single Dane interacts with one of DR's touch points; tuning into a TV channel, turning on the radio or using one of DR's digital products.
+DR – the Danish Broadcasting Corporation – is Denmark's public service media enterprise. Each week nearly every single Dane interacts with one of DR's touch points; tuning into a TV channel, turning on the radio or using one of DR's digital products.
 
-I'm currently leading the talented 10-person UX team that designs digital products at DR. Our product portfolio includes dr.dk (the most visited Danish website), DRTV and Radio streaming apps, DR's news app, the children's apps Ramasjang and Ultra, and many other products aimed at providing great public service for the Danish people.
+### My Role
+I'm currently leading the talented 10-person UX team that designs digital products at DR. Our product portfolio includes dr.dk (the most visited Danish website), DRTV and Radio streaming apps, DR's news app, children's apps, and many other products aimed at providing great public service for the Danish people.
 
-+ Employees need to be able to quickly and easily tell if a check-in is successful or failed, when they scan a card.
-+ Employees rely on profile photos to verify members' identities, when they scan their cards – so being able to see a large photo is important.
-+ Each member has a "nickname", which is their preferred name for being addressed by staff. These need to be easy to read, when a card is scanned.
-+ The solution should must portable, so that it can also be used at outdoor events or in other situations, where member cards need to be scanned.
+Furthermore, I am responsble for our product discovery practices across the product management organization, where am working to ensure a *continuous discovery* mindset focused around user research, rapid prototyping and experimentation.
 
+Among other things, I've been responsible for:
 
-Below are some of the ongoing and past projects, I've worked on at DR.
++ Growing the team from 6 to 10 fantastic UX strategists and product designers.
++ Transitioning from an “internal agency” model to a hub-and-spoke model with UX’ers and designers embedded in each of our cross-functional product teams.
++ Implementing Dual-Track Agile and Continuous Discovery practices.
++ Aligning UX tools and processes across the teams, and running UX meetings, design reviews, and weekly 1-on-1s.
++ Responsible for cross-team design efforts like our UX Playbook, design system (DR Elements), and key cross-product strategic initiatives (Personalization, etc).
 
-### Redesigning the front page of dr.dk (Work-in-progress)
-DR.dk is one of the most visited Danish websites. We are currently in the process of redesigning the front page to ensure that it is personal and relevant to our users' needs.
+## Selected Work
+Below are examples of the work, I'm invovled in at DR – both currently on-going and past projects.
+
+### Redesigning the Front Page of dr.dk (Work-In-Progress)
+[DR.dk](https://www.dr.dk/) is one of the most visited Danish websites, and the front page – with its more than 1.2 million unique visitors a week – plays a particularly important role for Danish news and media consumption.
+
+We are currently in the process of redesigning and testing the front page to ensure that it is personal and relevant to our users' diverse needs. We expect a staged beta rollout to happen during the summer of 2019.
 
 {% include project-image.html type="grid" file="dr-hero.jpg" caption="A redesigned audio player was recently added to the design system." %}
 
@@ -54,11 +62,11 @@ This is part of a larger effort to instill a continuous discovery mindset in the
 
 {% include project-image.html type="grid" file="dr-double-diamond.png" caption="Our DR Double Diamond process for product discovery work." %}
 
-### Events and on-going projects
-Aside from the on-going work on the core product portfolio, we often work on time sensitive or event-based projects throughout the year; large sport events, elections and the likes.
+### Events and On-Going Projects
+Aside from the on-going work on the core product portfolio, we often work on time-sensitive or event-based projects throughout the year. This includes one-off websites and apps for things like sport championships, national or international elections, or the passing of a significant cultural figure or royalty.
 
-As we work on these projects, we seek to use established patterns and design systems for consistency, but often use the opportuity to expand our systems and new needs arise.
+As we work on these projects, we seek to use established patterns and design systems for consistency, but often use the opportunity to expand our design systems as new needs arise.
 
-{% include project-image.html type="grid" file="dr-vm-flows.png" caption="User flows and Jobs-to-be-Done for the FIFA World Cup Russia event website." %}
+{% include project-image.html type="grid" file="dr-vm-flows.png" caption="User flows and Jobs-to-be-Done for DR's FIFA World Cup 2018 event website." %}
 
 {% include project-image.html type="grid" file="dr-audioplayer.png" caption="Variations of a new audio player designed for dr.dk." %}
