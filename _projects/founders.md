@@ -52,12 +52,12 @@ I was involved in the initial product conceptualization, including:
 - User story mapping for initial releases, and mapping out the relevant task flows for the product.
 - Designing the UI, in collaboration with the talented Denis Moulin.
 
-{% include project-image.html type="grid" file="founders-dayone-flows.jpg" caption="Initial task flows from DayOne" %}
+{% include project-image.html type="grid" file="founders-dayone-flows.jpg" caption="A few of the initial task flows for DayOne" %}
 
 ## Tempo
-[Tempo](https://www.yourtempo.co/) is an email client that allows you to take back control of your inbox. It aims to do away with the constant stream of interruptions mess up with your work. It does so by allowing users to sort through new mail in batches with focused sorting and smart features – so they can clean up their inbox and get back to work quickly.
+[Tempo](https://www.yourtempo.co/) is the email client to help you to take back control of your inbox. It aims to do away with the constant stream of interruptions that mess with your work. It does so by allowing users to sort through new mail in batches with focused sorting and smart features – so they can clean up their inbox and get back to work quickly.
 
-The product is primarily conceptualized and designed by the awesome Founders partners, Sebastian Stockmarr and Stefano Zorzi. I helped out with initial product design work on the MVP.
+The product was primarily conceptualized and designed by the awesome Founders partners, Sebastian Stockmarr and Stefano Zorzi. I merely helped out with some initial product design iterations on the MVP.
 
 {% include project-image.html type="grid" file="founders-tempo-1.jpg" caption="Tempo allows users to take back control of their inbox through batched sorting." %}
 

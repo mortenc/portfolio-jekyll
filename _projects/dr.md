@@ -39,7 +39,7 @@ Below are examples of the work, I'm invovled in at DR – both currently on-goin
 
 We are currently in the process of redesigning and testing the front page to ensure that it is personal and relevant to our users' diverse needs. We expect a staged beta rollout to happen during the summer of 2019.
 
-{% include project-image.html type="grid" file="dr-hero.jpg" caption="A redesigned audio player was recently added to the design system." %}
+{% include project-image.html type="grid" file="dr-hero.jpg" caption="We are currently in the process of redesigning the front page of dr.dk." %}
 
 ### Dual Track Agile + Continuous Discovery
 Over the past year the team and I have worked to implement Dual Track Agile across the department, and ensure that continuous discovery practices such as user research, prototyping and experimentation are first-class citizens in our teams' backlogs.
@@ -65,8 +65,8 @@ This is part of a larger effort to instill a continuous discovery mindset in the
 ### Events and On-Going Projects
 Aside from the on-going work on the core product portfolio, we often work on time-sensitive or event-based projects throughout the year. This includes one-off websites and apps for things like sport championships, national or international elections, or the passing of a significant cultural figure or royalty.
 
-As we work on these projects, we seek to use established patterns and design systems for consistency, but often use the opportunity to expand our design systems as new needs arise.
-
 {% include project-image.html type="grid" file="dr-vm-flows.png" caption="User flows and Jobs-to-be-Done for DR's FIFA World Cup 2018 event website." %}
 
-{% include project-image.html type="grid" file="dr-audioplayer.png" caption="Variations of a new audio player designed for dr.dk." %}
+As we work on these projects, we seek to use established patterns and design systems for consistency, but often use the opportunity to expand our design system, as new needs arise.
+
+{% include project-image.html type="grid" file="dr-audioplayer.png" caption="Variations of a new audio player recently designed for dr.dk." %}
