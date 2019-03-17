@@ -35,7 +35,7 @@ Among other things, I've been responsible for:
 Below are examples of the work, I'm invovled in at DR – both currently on-going and past projects.
 
 ### Redesigning the Front Page of dr.dk (Work-In-Progress)
-[DR.dk](https://www.dr.dk/) is one of the most visited Danish websites, and the front page – with its more than 1.2 million unique visitors a week – plays a particularly important role for Danish news and media consumption.
+[DR.dk](https://www.dr.dk){:rel="noreferrer"} is one of the most visited Danish websites, and the front page – with its more than 1.2 million unique visitors a week – plays a particularly important role for Danish news and media consumption.
 
 We are currently in the process of redesigning and testing the front page to ensure that it is personal and relevant to our users' diverse needs. We expect a staged beta rollout to happen during the summer of 2019.
 

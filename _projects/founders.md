@@ -17,7 +17,7 @@ color: "#52527b"
 ---
 
 ## Founders
-[Founders](https://www.founders.as/){:rel=”noreferrer”} is a startup studio that partners with entrepreneurs, designers and developers to take companies from zero to traction.
+[Founders](https://www.founders.as){:rel="noreferrer"} is a startup studio that partners with entrepreneurs, designers and developers to take companies from zero to traction.
 
 Over the course of 7 months, I was part of the small team that conceptualized and launched the alpha version of Wonderwerk, a learning and development platform for the modern workforce. While working on Wonderwerk, I also helped out other teams at Founders with ideation, conceptualisation and design on their products.
 
@@ -55,9 +55,9 @@ I was involved in the initial product conceptualization, including:
 {% include project-image.html type="grid" file="founders-dayone-flows.jpg" caption="A few of the initial task flows for DayOne" %}
 
 ## Tempo
-[Tempo](https://www.yourtempo.co/) is the email client to help you to take back control of your inbox. It aims to do away with the constant stream of interruptions that mess with your work. It does so by allowing users to sort through new mail in batches with focused sorting and smart features – so they can clean up their inbox and get back to work quickly.
+[Tempo](https://www.yourtempo.co){:rel="noreferrer"} is the email client to help you to take back control of your inbox. It aims to do away with the constant stream of interruptions that mess with your work, by allowing you to sort through new mail in batches with focused sorting and smart features.
 
-The product was primarily conceptualized and designed by the awesome Founders partners, Sebastian Stockmarr and Stefano Zorzi. I merely helped out with some initial product design iterations on the MVP.
+The product was conceptualized and designed by the awesome Founders partners, Sebastian Stockmarr and Stefano Zorzi. I pitched in with some initial product design work on the MVP.
 
 {% include project-image.html type="grid" file="founders-tempo-1.jpg" caption="Tempo allows users to take back control of their inbox through batched sorting." %}
 
